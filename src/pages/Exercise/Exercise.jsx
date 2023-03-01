@@ -4,7 +4,8 @@ import './Exercise.css'
 //REACt SYNTAXT HIGHLIGHTER
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialOceanic } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
+//MONAKO EDITOR REACT
+import Editor from "@monaco-editor/react";
 
 ////////////////////////////////////
 export const Exercise = () => {
@@ -24,9 +25,13 @@ export const Exercise = () => {
 
       {/* CODE */}
       <div className='exercise__container-code'>
-
+        <Editor
+          height="100%"
+          defaultLanguage="javascript"
+          defaultValue="console.log('Hola mundo')"
+          theme='vs-dark'
+        />
       </div>
-
 
 
       {/* PROBLEMA */}
