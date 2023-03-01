@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  background: #1b1b1e;
 }
 
 .section-page404__mask{
@@ -18,6 +19,7 @@
   font-size: 2rem;
   text-align: center;
   margin: 1rem 50px 2rem;
+  color: aliceblue;
 }
 .section-page404__container{
   display: flex;

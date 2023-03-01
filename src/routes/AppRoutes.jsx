@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Footer } from '../components/Footer/Footer'
 import { Header } from '../components/Header/Header'
 import { AppContext } from '../context/AppContext'

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './Exercise.css'
 //REACt SYNTAXT HIGHLIGHTER
@@ -28,8 +28,15 @@ export const Exercise = () => {
         <Editor
           height="100%"
           defaultLanguage="javascript"
-          defaultValue="console.log('Hola mundo')"
+          defaultValue="const sumar = (num1, num2) => {
+    return num1 + num2
+}
+        
+const suma = sumar(45, 68)
+        
+console.log(suma) // 113"
           theme='vs-dark'
+          // onChange={(value) => setContent(value)}
         />
       </div>
 
@@ -48,7 +55,11 @@ export const Exercise = () => {
         </SyntaxHighlighter>
 
         <p className='exercise__text'>
-        Como ves, el papel de regalo envuelve el string. Por arriba y por abajo, para no dejar ningún hueco, las esquinas también están cubiertas por el papel de regalo.
+          Como ves, el papel de regalo envuelve el string. Por arriba y por abajo, para no dejar ningún hueco, las esquinas también están cubiertas por el papel de regalo. Nota: El carácter \n representa un salto de línea.
+
+          ¡Ojo! Asegúrate que pones el número correcto de * para envolver completamente el string. Pero no demasiados. Sólo los necesarios para cubrir el string.
+
+          Ah, y no modifiques (mutes) el array original.
         </p>
       </div>
 

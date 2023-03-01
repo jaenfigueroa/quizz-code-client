@@ -27,6 +27,7 @@
 
 .exercise__text{
   color: #c2c4c7;
+  line-height: 28px;
 }
 
 .exercise__code{
@@ -50,7 +51,7 @@ span.token {
   /* CODE */
 .exercise__container-code{
   width: 60%;
-  height: 600px;
+  height: 500px;
 }
 
 /* PROBLEM */
