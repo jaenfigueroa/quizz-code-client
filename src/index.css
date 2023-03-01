@@ -31,7 +31,9 @@ a {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: lightblue;
+  background: #111111;
+  /* background: #131316; */
+  color: #e5e7eb;
 }
 
 /* MAIN (contenedor)///////////*/

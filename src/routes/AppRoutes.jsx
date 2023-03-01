@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-route
 import { Footer } from '../components/Footer/Footer'
 import { Header } from '../components/Header/Header'
 import { AppContext } from '../context/AppContext'
+import { Exercise } from '../pages/Exercise/Exercise'
 import { Home } from '../pages/Home/Home'
 import { Login } from '../pages/Login/Login'
 import { Page404 } from '../pages/Page404/Page404'
@@ -30,9 +31,10 @@ export const AppRoutes = () => {
 
         {
           isAuthenticated && (
-            <Route path='/home' element={<Home/>}/>
-            // <Route path='/home' element={<Home/>}/>
-            // <Route path='/home' element={<Home/>}/>
+            <>
+              <Route path='/home' element={<Home/>}/>
+              <Route path='/exercise/:number' element={<Exercise/>}/>
+            </>
           )
         }
 
