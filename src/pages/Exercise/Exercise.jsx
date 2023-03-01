@@ -8,6 +8,8 @@ import { materialOceanic } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import Editor from "@monaco-editor/react";
 import { Header } from '../../components/Header/Header';
 
+import pointerImg from '../../assets/pointer.png'
+
 ////////////////////////////////////
 export const Exercise = () => {
 
@@ -46,7 +48,10 @@ export const Exercise = () => {
             // onChange={(value) => setContent(value)}
           />
 
-          <button className='exercise__container-code-button'>Enviar Solucion</button>
+          <div className='exercise__container-button'>
+            <button className='exercise__container-code-button'>Enviar Solucion</button>
+            <img src={pointerImg} alt="" className='pointerImg'/>
+          </div>
         </div>
 
 

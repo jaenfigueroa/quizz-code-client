@@ -42,7 +42,9 @@ export const FormLog = ({title, otherUrl, img, action}) => {
             {otherUrl.text1} <Link to={otherUrl.url}>{otherUrl.text2}</Link>
           </p>
 
-          <input type="submit" value={'Listo'}/>
+          <div>
+            <input type="submit" value={'Listo'}/>
+          </div>
 
         </form>
       </div>
