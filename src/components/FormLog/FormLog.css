@@ -1,0 +1,85 @@
+.formlog{
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formlog__mask{
+  width: 250px;
+  height: 250px;
+}
+
+/* .formlog__block */
+.formlog__title{
+  font-size: 3rem;
+  padding: 1rem 1rem 2rem;
+  text-align: center;
+}
+
+.formlog__form{
+  /* background: violet; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.formlog__form label{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.formlog__form input{
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  border: 2px solid gray;
+  outline: none;
+}
+
+.formlog__form input:focus{
+  border: 2px solid blue;
+}
+
+.formlog__form input[type=submit]{
+  border: none;
+  padding: 1rem 2.5rem;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.formlog__form input[type=submit]:hover{
+  background-color: rgb(13, 97, 13);
+}
+
+.form-log__ask{
+  padding: 1rem;
+  text-align: center;
+}
+
+
+@media (min-width: 720px) {
+  .formlog{
+    flex-direction: row;
+    gap: 6rem;
+  }
+
+  .formlog__mask{
+    width: 350px;
+    height: 350px;
+  }
+  .formlog__block{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .formlog__title{
+    font-size: 4rem;
+  }
+}
