@@ -1,4 +1,4 @@
-.exercise{
+.exercise {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -7,32 +7,51 @@
   background: #1b1b1e;
   font-family: initial;
   gap: 3rem;
+  flex-direction: column-reverse; /* PROV */
 }
 
-/* CODE */
-.exercise__container-code{
+/* CODE //////////////////////////////////////////////////*/
+.exercise__container-code {
   background: #131316;
   width: 100%;
   height: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* PROBLEM */
-.exercise__container-problem{
+/* .exercise__code{
+  font-size: 2rem;
+} */
+
+.exercise__container-code-button {
+  background: #333;
+  color: #dfe1e5;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.exercise__container-code-button:hover{
+  background: #5145cd;
+}
+/* PROBLEM //////////////////////////////////////////////////*/
+.exercise__container-problem {
   /* background: green; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-
-.exercise__text{
+.exercise__text {
   color: #c2c4c7;
   line-height: 28px;
 }
 
-.exercise__code{
-  background: green;
-  border-radius: .5rem;
+.exercise__code {
+  /* background: green; */
+  border-radius: 0.5rem;
   overflow: hidden;
   width: 100%;
   font-family: initial;
@@ -44,22 +63,26 @@ span.token {
 }
 
 @media (min-width: 1024px) {
-  .exercise{
+  .exercise {
     flex-direction: row;
   }
 
   /* CODE */
-.exercise__container-code{
-  width: 60%;
-  height: 500px;
-}
+  .exercise__container-code {
+    width: 60%;
+    height: 600px;
+  }
 
-/* PROBLEM */
-.exercise__container-problem{
-  /* background: green; */
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 40%;
-}
+  .exercise__container-code-button {
+    font-size: 2.5rem;
+  }
+
+  /* PROBLEM */
+  .exercise__container-problem {
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+  }
 }

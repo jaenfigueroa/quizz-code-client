@@ -21,7 +21,7 @@ export const AppRoutes = () => {
     <BrowserRouter>
 
       {/* HEADER Y NAV */}
-      <Header/>
+      {/* <Header/> */}
 
       {/* CUERPO */}
       <Routes>
@@ -42,7 +42,7 @@ export const AppRoutes = () => {
       </Routes>
 
       {/* FOOTER */}
-      <Footer/>
+      {/* <Footer/> */}
 
     </BrowserRouter>
   )
