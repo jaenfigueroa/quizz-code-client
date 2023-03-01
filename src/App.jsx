@@ -5,7 +5,7 @@ import { AppRoutes } from './routes/AppRoutes'
 
 function App() {
 
-  const [isAuthenticated, setIsAutenticated] = useState(false)
+  const [isAuthenticated, setIsAutenticated] = useState(true)
   let { user, setUser } = useState({})
 
   let listState = {
