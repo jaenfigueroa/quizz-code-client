@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Editor from "@monaco-editor/react";
 import { text } from './Text';
 
 //////////////////////////////////////////////////
 export const EditorTR = () => {
 
+  const [textCode, setTextCode] = useState('')
 
+  useEffect(()=> {
+
+    console.log(textCode)
+
+  },[textCode])
   //////////////////////////////////////////////////
   return (
     <Editor
@@ -14,7 +20,7 @@ export const EditorTR = () => {
       defaultLanguage="javascript"
       defaultValue={text}
       theme='vs-dark'
-    // onChange={(value) => setContent(value)}
+      onChange={(value) => setTextCode(value)}
     />
   )
 }
