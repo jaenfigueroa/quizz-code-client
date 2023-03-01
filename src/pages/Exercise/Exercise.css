@@ -50,6 +50,7 @@
   top: 20px;
   transition: 300ms;
   display: none;
+  transform: rotate(10deg);
 }
 
 .exercise__container-button:hover .exercise__container-code-button{
