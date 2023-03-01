@@ -23,6 +23,11 @@
   font-size: 2rem;
 } */
 
+.exercise__container-button{
+  position: relative;
+  overflow: hidden;
+}
+
 .exercise__container-code-button {
   background: #333;
   color: #dfe1e5;
@@ -31,10 +36,30 @@
   padding: 1rem 2rem;
   transition: 300ms;
   cursor: pointer;
+  width: 100%;
 }
 
-.exercise__container-code-button:hover{
+/* .exercise__container-code-button:hover{
   background: #5145cd;
+} */
+
+.pointerImg{
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: 300ms;
+  display: none;
+}
+
+.exercise__container-button:hover .exercise__container-code-button{
+  background: #5145cd;
+}
+
+.exercise__container-button:hover .pointerImg{
+  transform: scale(1.7) rotate(-5deg);
+  top: 17px;
+  right: 60px;
 }
 /* PROBLEM //////////////////////////////////////////////////*/
 .exercise__container-problem {
@@ -75,6 +100,10 @@ span.token {
 
   .exercise__container-code-button {
     font-size: 2.5rem;
+  }
+
+  .pointerImg{
+    display: initial;
   }
 
   /* PROBLEM */
