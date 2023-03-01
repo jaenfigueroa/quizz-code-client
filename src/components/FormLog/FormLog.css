@@ -17,6 +17,7 @@
   font-size: 3rem;
   padding: 1rem 1rem 2rem;
   text-align: center;
+  color: #dadce0;
 }
 
 .formlog__form{
@@ -32,6 +33,7 @@
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  color: #dadce0;
 }
 
 .formlog__form input{
@@ -63,6 +65,11 @@
 .form-log__ask{
   padding: 1rem;
   text-align: center;
+  color: #dadce0;
+}
+
+.form-log__ask a{
+  color: green;
 }
 
 
