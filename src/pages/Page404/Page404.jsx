@@ -18,8 +18,7 @@ export const Page404 = () => {
       <p className='section-page404__text'>Esta pagina no existe o no tienes acceso</p>
 
       <div className='section-page404__container'>
-        <Link className='section-page404__button' to='/login'>Iniciar Sesion</Link>
-        <Link className='section-page404__button' to='/register'>Registrate</Link>
+        <Link className='section-page404__button' to='/'>Ir al inicio</Link>
       </div>
     </section>
   )
