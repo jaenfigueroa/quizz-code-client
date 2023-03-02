@@ -9,7 +9,7 @@ export const Page404 = () => {
 
   //////////////////////////////////////////
   return (
-    <div className='section-page404'>
+    <section className='section-page404'>
 
       <div className='section-page404__mask'>
         <img src={img} alt="imagen 404 de un gato jugando con una lana" />
@@ -21,6 +21,6 @@ export const Page404 = () => {
         <Link className='section-page404__button' to='/login'>Iniciar Sesion</Link>
         <Link className='section-page404__button' to='/register'>Registrate</Link>
       </div>
-    </div>
+    </section>
   )
 }

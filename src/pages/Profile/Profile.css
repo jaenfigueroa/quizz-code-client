@@ -1,0 +1,22 @@
+.section-profile {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.section-profile form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  border: 1px solid orange;
+  height: max-content;
+  gap: 2rem;
+}
+
+.section-profile form div {
+  width: 80px;
+  height: 80px;
+  background: gray;
+  border-radius: 50%;
+}

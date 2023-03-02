@@ -1,5 +1,6 @@
 .section-exercise{
   background: #1b1b1e;
+  flex-grow: 1;
 }
 .exercise {
   flex-grow: 1;
@@ -10,7 +11,7 @@
   background: #1b1b1e;
   font-family: initial;
   gap: 3rem;
-  flex-direction: column-reverse; /* PROV */
+  flex-direction: column; /* PROV */
 }
 
 /* CODE //////////////////////////////////////////////////*/
@@ -124,7 +125,7 @@ span.token {
 @media (min-width: 1024px) {
 
   .section-exercise{
-    height: 100vh;
+    min-height: 100vh;
   }
 
 

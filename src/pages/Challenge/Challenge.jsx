@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 // import { useParams } from 'react-router-dom'
-import './Exercise.css'
-import { Header } from '../../components/Header/Header';
+import './Challenge.css'
+import { Header } from './Header/Header';
 import pointerImg from '../../assets/pointer.png'
 import { Code } from '../../components/Code/Code';
 import { EditorTR } from '../../components/EditorTR/EditorTR';
 
 ////////////////////////////////////
-export const Exercise = () => {
+export const Challenge = () => {
 
   // const { number } = useParams()
 
