@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../../../context/AppContext'
 import './User.css'
 
 //////////////////////////////////////
 export const User = () => {
 
+  const {setIsAuthenticated} = useContext(AppContext)
   const [componentActive, setComponentActive] = useState(false)
 
   const alternProfile = () => {
@@ -22,6 +24,7 @@ export const User = () => {
           <li className='user__name'>Jaen Figueroa</li>
           <li className='user__description'>Aqui va una descripcion del usuario</li>
           <Link className='user__button-edit' to='/profile'>Editar Perfil</Link>
+          <Link className='user__button-edit' to='/' onClick={() => setIsAuthenticated(false)}>Cerrar sesion</Link>
         </ul>
         )
       }
