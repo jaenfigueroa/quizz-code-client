@@ -13,18 +13,18 @@ export const Header = () => {
   ///////////////////////////////////////////////////////
   return (
     <header className='header'>
-      <div className='header__logo'>Quizz Code</div>
+      <Link to={!isAuthenticated ? '/login' : '/home'} className='header__logo'>Quizz Code</Link>
       <nav className='header__nav'>
         <ul>
           {
             isAuthenticated && (
               <>
-                <Link to='/home'>Home</Link>
+                <Link className='header__item' to='/home'>Home</Link>
                 {/* <Link to='/home'>Retos</Link> */}
               </>
             )
           }
-          <Link to='/ranking'>Ranking</Link>
+          <Link className='header__item' to='/ranking'>Ranking</Link>
         </ul>
         {
           isAuthenticated && (

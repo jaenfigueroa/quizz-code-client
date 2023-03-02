@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Category } from '../components/Category/Category'
 import { Footer } from '../components/Footer/Footer'
 import { Header } from '../components/Header/Header'
 import { AppContext } from '../context/AppContext'
-import { Exercise } from '../pages/Exercise/Exercise'
+import { Challenge } from '../pages/Challenge/Challenge'
 import { Home } from '../pages/Home/Home'
 import { Login } from '../pages/Login/Login'
 import { Page404 } from '../pages/Page404/Page404'
@@ -38,8 +39,9 @@ export const AppRoutes = () => {
           ): (
             <>
               <Route path='/home' element={<Home/>}/> {/* SELECTOR DEL AREA DE PREGUNTAS */}
-              <Route path='/exercise/:number' element={<Exercise/>}/> {/* EJERCICIO UNICO */}
+              <Route path='/challenge/:category/:number' element={<Challenge/>}/> {/* EJERCICIO UNICO */}
               <Route path='/profile' element={<Profile/>}/> {/* EDITAR PERFIL */}
+              <Route path='/category/:category' element={<Category/>}/> {/* VER LOS EJERCICIOS DE LA CATEGORIA */}
             </>
           )
         }

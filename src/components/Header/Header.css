@@ -9,16 +9,17 @@
 
 /* LOGO */
 .header__logo{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 
 /* NAV */
 .header__nav{
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -27,4 +28,7 @@
 .header__nav ul{
   display: flex;
   gap: 1rem;
+}
+.header__item{
+  color: white;
 }

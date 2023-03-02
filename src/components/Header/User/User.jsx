@@ -5,7 +5,7 @@ import './User.css'
 //////////////////////////////////////
 export const User = () => {
 
-  const [componentActive, setComponentActive] = useState(true)
+  const [componentActive, setComponentActive] = useState(false)
 
   const alternProfile = () => {
     setComponentActive(!componentActive)
@@ -21,7 +21,7 @@ export const User = () => {
         <ul className='user__information'>
           <li className='user__name'>Jaen Figueroa</li>
           <li className='user__description'>Aqui va una descripcion del usuario</li>
-          <Link className='user__button-edit' to='/profile'>Editar</Link>
+          <Link className='user__button-edit' to='/profile'>Editar Perfil</Link>
         </ul>
         )
       }

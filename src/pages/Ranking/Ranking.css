@@ -1,3 +1,90 @@
 .section-ranking{
   flex-grow: 1;
+  background: greenyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* TARJETA DEL USUARIO */
+.section-ranking__user{
+  background: crimson;
+  width: 300px;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-ranking__user-title{
+  /* background: blue; */
+  font-size: 2rem;
+}
+
+.section-ranking__user-main{
+  /* background: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.section-ranking__user-main-mask{
+  background: gray;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* TABLA DE USUARIOS */
+.section-ranking__table{
+  background: blue;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.section-ranking__table header{
+  background: green;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+.section-ranking__table header span{
+  display: flex;
+  justify-content: center;
+}
+
+.section-ranking__table main{
+  background: darkorchid;
+}
+
+.section-ranking__table article{
+  background: hotpink;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  align-items: center;
+}
+
+.section-ranking__table article span{
+  /* width: 40px;
+  height: 40px; */
+  background: gray;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.section-ranking__table article span img{
+  width: 40px;
+  height: 40px;
+  background: darkred;
+  border-radius: 50%;
+}
+
+.section-ranking__table p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
