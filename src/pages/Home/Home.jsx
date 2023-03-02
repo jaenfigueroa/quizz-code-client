@@ -1,4 +1,5 @@
 import React from 'react'
+import './Home.css'
 // import { useNavigate } from 'react-router-dom'
 
 // import {AppContext} from '../../context/AppContext'
@@ -10,6 +11,6 @@ export const Home = () => {
 
   //////////////////////////////////////////////
   return (
-    <div>Home</div>
+    <section className='section-home'>Home</section>
   )
 }
