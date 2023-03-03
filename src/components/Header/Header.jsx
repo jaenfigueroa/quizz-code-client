@@ -15,7 +15,7 @@ export const Header = () => {
     <header className='header'>
       <Link to={!isAuthenticated ? '/login' : '/home'} className='header__logo'>Quizz Code</Link>
       <nav className='header__nav'>
-        <ul>
+        <ul className='header__nav-list'>
           {
             isAuthenticated && (
               <>

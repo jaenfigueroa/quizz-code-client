@@ -1,13 +1,14 @@
 .user__container{
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   position: relative;
+  z-index: 3;
+  cursor: pointer;
   /* border: 1px solid violet; */
 }
 
 .user__img{
-  width: 40px;
-  height: 40px;
+  width: 100%;
   border-radius: 50%;
 }
 
@@ -17,21 +18,24 @@
   position: absolute;
   right: 0;
   top: 50px;
-  padding: 1rem;
   border-radius: .5rem;
   width: max-content;
-  max-width: 150px;
+  max-width: 210px;
   word-wrap: break-word;
-  background: #333;
+  background: #1430bd;
+  padding: 2rem;
+  gap: 1.5rem;
 }
 
 .user__name{
   font-weight: bold;
-  color: green;
+  color: yellow;
 }
 
 .user__description{
-  color: crimson;
+  color: white;
+  /* background: red; */
+  word-wrap: break-word;
 }
 
 .user__button-edit{
@@ -39,7 +43,6 @@
   border: none;
   border-radius: .5rem;
   cursor: pointer;
-  margin-top: 1rem;
   background: white;
   color: black;
   text-align: center;
@@ -48,4 +51,13 @@
 
 .user__button-edit:hover{
   background: rgb(208, 202, 202);
+}
+
+@media (min-width: 720px) {
+
+  .user__information{
+    right: 0;
+    max-width: 250px;
+    top: 55px;
+  }
 }

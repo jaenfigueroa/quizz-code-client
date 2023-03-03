@@ -32,15 +32,15 @@ export const Home = () => {
         
         <div>
           <article>
-            html
-            <Link className='button-pb' to='/category/html'>Entrar</Link>
+            HTML
+            <Link className='button-pb' to='/category/HTML'>Entrar</Link>
           </article>
           <article>
-            css
-            <Link className='button-pb' to='/category/css'>Entrar</Link>
+            CSS
+            <Link className='button-pb' to='/category/CSS'>Entrar</Link>
           </article>
           <article>
-            javascript
+            JavaScript
             <Link className='button-pb' to='/category/javascript'>Entrar</Link>
           </article>
         </div>

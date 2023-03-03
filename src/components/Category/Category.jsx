@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './Category.css'
 
@@ -8,10 +8,14 @@ export const Category = () => {
   const {category} = useParams()
 
 
+  useEffect(()=> {
+    window.scrollTo(0, 0)
+  }, [])
+
   /////////////////////////////////////
   return (
     <section className='section-category'>
-      <h2>{category}</h2>
+      <h2>Categoria: {category}</h2>
       
       <div className='section-category__container'>
         <article>
