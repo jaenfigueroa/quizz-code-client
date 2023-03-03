@@ -17,10 +17,14 @@ export const Header = () => {
       <nav className='header__nav'>
         <ul className='header__nav-list'>
           {
-            isAuthenticated && (
+            isAuthenticated ? (
               <>
                 <Link className='header__item' to='/home'>Home</Link>
-                {/* <Link to='/home'>Retos</Link> */}
+              </>
+            ) :(
+              <>
+                <Link className='header__item' to='/login'>Iniciar Sesion</Link>
+                <Link className='header__item' to='/register'>Registrarse</Link>
               </>
             )
           }

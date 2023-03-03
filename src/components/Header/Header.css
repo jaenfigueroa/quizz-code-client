@@ -23,12 +23,13 @@
   align-items: center;
   gap: 1.5rem;
 
-  gap: 3rem;
+  /* gap: 3rem; */
 }
 
 .header__nav-list {
   display: flex;
-  gap: 2.5rem;
+  /* gap: 2.5rem; */
+  gap: 1.5rem;
 }
 .header__item {
   color: white;
