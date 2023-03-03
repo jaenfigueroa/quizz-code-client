@@ -1,4 +1,4 @@
-.header{
+.header {
   background: #000;
   color: white;
   display: flex;
@@ -8,7 +8,7 @@
 }
 
 /* LOGO */
-.header__logo{
+.header__logo {
   /* border: 1px solid red; */
   display: flex;
   justify-content: center;
@@ -16,19 +16,34 @@
   color: white;
 }
 
-
 /* NAV */
-.header__nav{
+.header__nav {
   /* border: 1px solid yellow; */
   display: flex;
   align-items: center;
   gap: 1.5rem;
+
+  gap: 3rem;
 }
 
-.header__nav ul{
+.header__nav-list {
   display: flex;
-  gap: 1rem;
+  gap: 2.5rem;
 }
-.header__item{
+.header__item {
   color: white;
+}
+
+@media (min-width: 720px) {
+  .header {
+    padding: 3rem;
+  }
+
+  .header__nav {
+    gap: 2.5rem;
+  }
+
+  .header__nav-list {
+    gap: 2.5rem;
+  }
 }
