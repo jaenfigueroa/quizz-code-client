@@ -134,6 +134,11 @@
   align-items: center;
 }
 
+
+.ranking-table-numbers{
+  color: #faca15;
+}
+
 @media (min-width: 720px) {
 
   .section-ranking{
@@ -178,6 +183,12 @@
     gap: 2rem;
     padding: 1rem 1rem 1rem 2rem; 
   }
+
+
+  
+  .ranking-table-name{
+    font-weight: 700;
+  }
 }
 
 
@@ -188,6 +199,7 @@
   }
   .section-ranking__user{
     max-width: 500px;
+    border: 3px solid white;
   }
   
   .section-ranking__user-title{
