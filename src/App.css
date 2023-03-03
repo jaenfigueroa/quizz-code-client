@@ -1,9 +1,21 @@
 :root{
   /* PALETA DE COLORES */
-  --bg: #1b1b1e;
-  --text: #dadce0;
-  --header: #000000;
-  --primary: rgb(49, 36, 197);
+  /* --bg: #1b1b1e; */
+  /* --text: #dadce0; */
+  /* --header: #000000; */
+  /* --primary: rgb(49, 36, 197); */
+
+  --bacground: #16161a;
+  --headline: #fffffe;
+  --paragraph: #94a1b2;
+  --button: #7f5af0;
+  --button-text: #fffffe;
+
+  --stroke: #010101;
+  --main: #fffffe;
+  --headline: #7f5af0;
+  --secondary: #72757e;
+  --tertiary: #2cb67d;
 
   /* FUENTES DE TEXTO */
   --font-1: 'Tilt Warp', cursive;
