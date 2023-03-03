@@ -9,6 +9,7 @@ import { Home } from '../pages/Home/Home'
 import { Login } from '../pages/Login/Login'
 import { Page404 } from '../pages/Page404/Page404'
 import { Profile } from '../pages/Profile/Profile'
+import { QUizz } from '../pages/Quizz/QUizz'
 import { Ranking } from '../pages/Ranking/Ranking'
 import { Register } from '../pages/Register/Register'
 
@@ -42,6 +43,8 @@ export const AppRoutes = () => {
               <Route path='/challenge/:category/:number' element={<Challenge/>}/> {/* EJERCICIO UNICO */}
               <Route path='/profile' element={<Profile/>}/> {/* EDITAR PERFIL */}
               <Route path='/category/:category' element={<Category/>}/> {/* VER LOS EJERCICIOS DE LA CATEGORIA */}
+
+              <Route path='/ruta34/' element={<QUizz/>}/> {/* */}
             </>
           )
         }
