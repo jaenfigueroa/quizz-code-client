@@ -84,6 +84,7 @@
 
 .section-home__categories article{
   background: linear-gradient(45deg, var(--blue), var(--white));
+  background: radial-gradient( rgb(201, 201, 255), var(--blue));
   width: 300px;
   height: 300px;
   display: flex;
