@@ -17,7 +17,7 @@ export const User = () => {
   //////////////////////////////////////
   return (
     <div className='user__container' onClick={alternProfile }>
-      <img className='user__img' src="https://avatars.githubusercontent.com/u/69079292?v=4" alt="" />
+      <img className='user__img' src={`https://randomuser.me/api/portraits/men/${ Math.floor(Math.random() * 99) + 1}.jpg`} alt="" />
       {
         componentActive && (
         <ul className='user__information'>

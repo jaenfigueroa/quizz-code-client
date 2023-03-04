@@ -26,7 +26,7 @@ export const Ranking = () => {
           <h4 className='section-ranking__user-title'>Tus resultados</h4>
           <main className='section-ranking__user-main'>
             <div className='section-ranking__user-main-mask'>
-              <img src="https://avatars.githubusercontent.com/u/69079292?v=4" alt="" />
+              <img src={`https://randomuser.me/api/portraits/men/${ Math.floor(Math.random() * 99) + 1}.jpg`} alt="" />
             </div>
             <div>
               <p>458</p>
