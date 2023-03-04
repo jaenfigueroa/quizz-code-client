@@ -1,9 +1,18 @@
 :root{
-  /* PALETA DE COLORES */
-  --bg: #1b1b1e;
-  --text: #dadce0;
-  --header: #000000;
-  --primary: rgb(49, 36, 197);
+  /* ELEMENTS COLORS */
+  --gradient: linear-gradient(90deg, var(--black-2), #111);
+  --black-1: #010101;
+  --black-2: #16161a;
+  --black-3: #202023;
+  --black-4: #18181b;
+  --black-5: #27272a;
+  --white: #e5e7eb;
+  --gray-1: #94a1b2;
+  --gray-2: #72757e;
+  --blue: #7f5af0;
+  --blue-2: #5145cd;
+  /* --green: #2cb67d; */
+  --green: #43d397;
 
   /* FUENTES DE TEXTO */
   --font-1: 'Tilt Warp', cursive;
@@ -19,7 +28,9 @@
   --size-3-5: 3.5rem;
   --size-4: 4rem;
   --size-5: 5rem;
+  --size-5-5: 5.5rem;
   --size-6: 6rem;
+  --size-6-5: 6.5rem;
   --size-7: 7rem;
 }
 

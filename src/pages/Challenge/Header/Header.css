@@ -1,59 +1,61 @@
-.challenge-header{
+.challenge-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: #111111;
   color: #e5e7eb;
-  background: #292929;
   padding: 1rem;
 }
 
-.challenge-header h4{
+.challenge-header h4 {
   padding: 2rem 1.5rem;
   text-align: center;
-  background-color: #292929;
+  /* background-color: #292929; */
+  /* background: red; */
 }
-.challenge-header div{
+.challenge-header div {
   display: flex;
   gap: 1rem;
+  /* background: red; */
 }
 
-.challenge-header span{
-  background: #ffd739;
+.challenge-header span {
+  /* background: #ffd739; */
+  background: var(--blue);
   color: black;
-  border-radius: .5rem;
+  color: var(--black-5);
+
+  border-radius: 0.5rem;
   width: max-content;
-  padding: .2rem 1.5rem;
+  padding: 0.2rem 1.5rem;
   margin: 0;
   border-radius: 3rem;
 }
 
-.challenge-header span:last-child{
+.challenge-header span:last-child {
   background: #31c48d;
 }
 
 @media (min-width: 720px) {
-  .challenge-header{
+  .challenge-header {
     flex-direction: row;
     justify-content: start;
     padding: 1rem 1rem;
     gap: 1rem;
   }
 
-  .challenge-header h4{
+  .challenge-header h4 {
     font-size: 1.8rem;
-    background-color: #1a1818;
+    /* background: red; */
+    background-color: #141313;
     padding: 1rem 1.5rem;
     border-radius: 3rem;
   }
 
-  .challenge-header span{
+  .challenge-header span {
     width: max-content;
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
     margin: 0;
     border-radius: 3rem;
   }
-
-  
 }

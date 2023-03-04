@@ -6,11 +6,15 @@
   align-items: center;
   gap: 2rem;
   padding: 2rem;
+  background: var(--gradient);
 }
 
 /* TARJETA DEL USUARIO */
 .section-ranking__user{
   background: crimson;
+  /* background: linear-gradient(45deg, var(--blue), white); */
+  /* background: linear-gradient(45deg, var(--blue), rgb(222, 221, 255)); */
+  background: radial-gradient(rgb(222, 221, 255), var(--blue) );
   padding: 1rem 2rem 2rem;
   width: 300px;
   border-radius: .5rem;
@@ -24,12 +28,15 @@
   width: 90%;
 
   border: 2px solid white;
+  box-shadow: 0 0 20px 10px #000000;
+  transition: 300ms;
 }
+
 
 .section-ranking__user-title{
   /* background: blue; */
-  color: white;
-  font-size: var(--size-2);
+  font-size: var(--size-1-5);
+  text-transform: uppercase;
 }
 
 .section-ranking__user-main{
@@ -69,7 +76,7 @@
 
 /* TABLA DE USUARIOS */
 .section-ranking__table{
-  background: blue;
+  /* background: blue; */
   display: flex;
   flex-direction: column;
   min-width: 300px;
@@ -77,6 +84,8 @@
   width: 90%;
   border-radius: .5rem;
   overflow: hidden;
+
+  box-shadow: 0 0 20px 10px #00000029;
 }
 
 .section-ranking__table header{
@@ -93,8 +102,13 @@
   padding: 1.5rem 1rem; /* PROV */
 }
 
+.section-ranking__table header span:first-child{
+  justify-content: start;
+  padding-left: 2rem;
+}
+
 .section-ranking__table main{
-  background: darkorchid;
+  /* background: darkorchid; */
 }
 
 .section-ranking__table article{
@@ -106,7 +120,7 @@
   color: white;
 }
 
-.section-ranking__table article:nth-child(2n){
+.section-ranking__table article:nth-child(2n - 1){
   background: #18181b;
 }
 
@@ -136,7 +150,7 @@
 
 
 .ranking-table-numbers{
-  color: #faca15;
+  color:var(--green);
 }
 
 @media (min-width: 720px) {
@@ -151,13 +165,17 @@
     max-width: 420px;
     gap: 1rem;
   }
+
+  .section-ranking__user:hover{
+    transform: scale(1.15);
+  }
   
   .section-ranking__user-title{
-    font-size: var(--size-2-5);
+    font-size: var(--size-2);
   }
   
   .section-ranking__user-main{
-    gap: 1rem;
+    gap: 2rem;
     justify-content: space-evenly;
   }
   .section-ranking__user-main p{
@@ -185,6 +203,7 @@
   }
 
 
+
   
   .ranking-table-name{
     font-weight: 700;
@@ -198,12 +217,12 @@
     gap: 6rem;
   }
   .section-ranking__user{
-    max-width: 500px;
+    max-width: 550px;
     border: 3px solid white;
   }
   
   .section-ranking__user-title{
-    font-size: var(--size-3);
+    font-size: var(--size-2);
   }
   
   .section-ranking__user-main{

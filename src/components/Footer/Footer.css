@@ -6,3 +6,9 @@
   background: #111111;
   color: #e5e7eb;
 }
+
+@media (min-width: 720px) {
+  .footer{
+    height: 12rem;
+  }
+}
