@@ -36,5 +36,5 @@
   cursor: pointer;
 }
 .section-page404__button:hover{
-  background: #4640ff;
+  background: var(--blue);
 }
