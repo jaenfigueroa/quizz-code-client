@@ -35,7 +35,10 @@
   align-items: center;
   border-radius: 1rem;
   box-shadow: 0 0 20px 10px #00000098;
+  transition: 300ms;
 }
+
+
 
 @media (min-width: 720px) {
 
@@ -46,6 +49,10 @@
   .section-category h2{
     font-size: var(--size-3);
     margin: 2rem 0rem 5rem;
+  }
+
+  .section-category__container article:hover{
+    transform: scale(1.05);
   }
 }
 

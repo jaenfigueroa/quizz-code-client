@@ -92,6 +92,7 @@
   align-items: center;
   border-radius: 1rem;
   box-shadow: 0 0 20px 10px #00000029;
+  transition: 300ms;
 }
 
 .section-home__categories article button{
@@ -117,6 +118,10 @@
     padding: 4rem 0;
   }
 
+  .section-home__categories article:hover{
+    transform: scale(1.05);
+  }
+
   .section-home__categories h5{
     font-size: var(--size-3);
     margin: 2rem 0 5rem;
@@ -139,6 +144,9 @@
     font-family: var(--font-1);
     font-size: var(--size-4);
   }
+
+
+
 }
 
 @media (min-width: 1024px) {
