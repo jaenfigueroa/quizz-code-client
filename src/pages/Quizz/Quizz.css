@@ -1,63 +1,97 @@
+/* # */
+
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #1D1D1D;
+  background-color:  #1B1B1E  ;
   color: white;
 }
 
-.section-quizz{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 50px;
-    margin-top: 50px;
-    gap: 50px;
+.section-quizz {
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin: 50px;
+  /* flex-grow: 1; */
 }
 
-.question-title{
-    font-size: 40px;
+.quizz-timer{
+  background-color: #ff37529a;
+  padding: 20px 40px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.picture-question{
-    width: 500px;
-    border-radius: 10px;
+.ask-title {
+  font-size: 4rem;
+  width: auto;
 }
 
-.status-quizz{
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.ask-options{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
 }
 
-.ask-title{
-    font-size: 30px;
+.ask-option-btn-1{
+  padding: 50px 60px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  background-color: #31AFBA;
+  color: white;
+  border: none;
 }
 
-.question-timer{
-    
+
+.ask-option-btn-2{
+  padding: 50px 60px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  background-color: #2F6DAE;
+  color: white;
+  border: none;
 }
 
 
-.btn-option {
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    font-weight: bold;
-    border: none;
-    background-color: #1d1d1d86;
-    border: #FACA15 2px solid;
-    color: white;
-    cursor: pointer;
-    font-size: 30px;
+.ask-option-btn-0{
+  padding: 100px 60px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  background-color: #ECA82C;
+  color: white;
+  border: none;
 }
 
-  .btn-next {
-    background-color: #288bee;
-  }
-  
-  .btn-check {
-    background-color: #00d665;
-  }
-  
+
+/* .ask-option-btn{
+  padding: 50px 100px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  background-color:#1d1d1d;
+  color: white;
+  border: none;
+  outline: 5px solid #43d39776;
+} */
+
+/* .question-timer-movement{
+    animation: latitude_animation 300ms infinite alternate-reverse;
+}
+
+@keyframes latitude_animation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+} */
