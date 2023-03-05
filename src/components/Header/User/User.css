@@ -23,23 +23,24 @@
   max-width: 210px;
   word-wrap: break-word;
   background: #1430bd;
+  background: var(--blue);
   padding: 2rem;
   gap: 1.5rem;
 }
 
 .user__name{
   font-weight: bold;
-  color: yellow;
+  font-size: var(--size-2);
 }
 
 .user__description{
-  color: white;
-  /* background: red; */
   word-wrap: break-word;
+  margin-bottom: 1rem;
+  color: var(--white);
 }
 
 .user__button-edit{
-  padding: .5rem;
+  padding: 1rem;
   border: none;
   border-radius: .5rem;
   cursor: pointer;
@@ -50,10 +51,14 @@
 }
 
 .user__button-edit:hover{
-  background: rgb(208, 202, 202);
+  background: rgb(225, 225, 225);
 }
 
 @media (min-width: 720px) {
+
+  .user__name{
+    font-size: var(--size-2-5);
+  }
 
   .user__information{
     right: 0;

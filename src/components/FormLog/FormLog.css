@@ -45,13 +45,13 @@
 }
 
 .formlog__form input:focus{
-  border: 2px solid blue;
+  border: 2px solid var(--blue);
 }
 
 .formlog__form input[type=submit]{
   border: none;
   padding: 1rem 3rem;
-  background-color: green;
+  background-color: var(--blue);
   color: white;
   cursor: pointer;
   transition: 300ms;
@@ -59,7 +59,7 @@
 }
 
 .formlog__form input[type=submit]:hover{
-  background-color: rgb(13, 97, 13);
+  background-color: var(--blue);
 }
 
 .form-log__ask{
@@ -69,7 +69,7 @@
 }
 
 .form-log__ask a{
-  color: green;
+  color: var(--blue);
 }
 
 

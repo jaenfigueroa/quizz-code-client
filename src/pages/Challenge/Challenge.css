@@ -8,7 +8,7 @@
   flex-direction: column;
   /* align-items: center; */
   padding: 2rem;
-  background: #1b1b1e;
+  background: var(--gradient);
   font-family: initial;
   gap: 3rem;
   flex-direction: column; /* PROV */
@@ -58,7 +58,9 @@
 }
 
 .exercise__container-button:hover .exercise__container-code-button{
-  background: #5145cd;
+  /* background: #5145cd; */
+  background: var(--blue);
+  color: white;
 }
 
 .exercise__container-button:hover .pointerImg{
@@ -76,6 +78,7 @@
   padding: 1rem 2rem;
   border-radius: 2rem;
   background: #faca15;
+  background: var(--green);
   font-weight: bold;
   border: 1px solid white;
   background: transparent;
@@ -84,17 +87,18 @@
 }
 .exercise-button--active{
   background: #faca15;
+  background: var(--green);
   color: black;
   border: 1px solid transparent;
 }
 
 .exercise-button:hover{
-  border: 1px solid #faca15;
-  color: #faca15;
+  border: 1px solid var(--green);
+  color: var(--green);
 }
 
 .exercise-button--active:hover{
-  border: 1px solid #faca15;
+  border: 1px solid var(--green);
   color: #000;
 }
 

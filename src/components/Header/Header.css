@@ -1,5 +1,5 @@
 .header {
-  background: #000000;
+  background: var(--black-1);
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
@@ -9,11 +9,10 @@
 
 /* LOGO */
 .header__logo {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(238, 255, 0);
+  color: var(--green);
 }
 
 /* NAV */
@@ -37,7 +36,8 @@
 
 @media (min-width: 720px) {
   .header {
-    padding: 3rem;
+    height: 8rem;
+    padding: 0 3rem;
   }
 
   .header__nav {
