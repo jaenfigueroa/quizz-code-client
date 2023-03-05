@@ -1,4 +1,4 @@
-.section-home{
+.section-home {
   flex-grow: 1;
   background: #333;
   display: flex;
@@ -7,7 +7,7 @@
 }
 
 /* SECCION 1 - HERO */
-.section-home__hero{
+.section-home__hero {
   /* background: green; */
   display: flex;
   flex-direction: column;
@@ -19,34 +19,32 @@
 }
 
 /* HERO 1////////////// */
-.section-home-1{
+.section-home-1 {
   /* background: blue; */
   color: white;
   width: 80%;
 }
 
-.section-home-1 p{
+.section-home-1 p {
   text-align: center;
   font-family: var(--font-1);
   font-size: 3rem;
 }
 
-
 /* HERO 2////////////// */
-.section-home-2{
+.section-home-2 {
   /* background: red; */
   display: flex;
   justify-content: center;
 }
 
-.section-home__mask{
+.section-home__mask {
   width: 250px;
   /* border: 1px solid yellow; */
 }
 
-
 /* SECCION 2 - CATEGORIAS //////////////////////////////////*/
-.section-home__categories{
+.section-home__categories {
   background: gray;
   display: flex;
   flex-direction: column;
@@ -55,7 +53,7 @@
   /* gap: 5rem; */
   padding: 2rem 0;
 }
-.section-home__categories h5{
+.section-home__categories h5 {
   text-align: center;
   /* font-size: 2.5rem; */
   /* background: cadetblue; */
@@ -63,7 +61,7 @@
   margin: 3rem;
 }
 
-.section-home__categories div{
+.section-home__categories div {
   display: flex;
   gap: 2rem;
   /* border: 1px solid yellow; */
@@ -71,8 +69,8 @@
   justify-content: center;
 }
 
-.section-home__categories article{
-  background: cornflowerblue;
+.section-home__categories article {
+  background: linear-gradient(45deg, #1e40af, #2563eb);
   width: 300px;
   height: 300px;
   display: flex;
@@ -80,46 +78,57 @@
   justify-content: space-evenly;
   align-items: center;
   border-radius: 1rem;
+  color: white;
+  font-weight: 600;
 }
 
-.section-home__categories article button{
+.section-home__button {
   padding: 1rem;
   background: white;
+  border-radius: 6px;
+  color: black;
+  width: 90px;
+  display: flex;
+  justify-content: center;
 }
 
+.section-home__category-name {
+  letter-spacing: 0.8px;
+  font-size: 22px;
+}
 @media (min-width: 720px) {
-  .section-home{
+  .section-home {
     width: 100%;
   }
-  .section-home__hero{
+  .section-home__hero {
     flex-direction: row;
     padding: 0 8rem;
     gap: 5rem;
   }
 
   /* SECCION 2 - CATEGORIAS //////////////////////////////////*/
-  .section-home__categories{
+  .section-home__categories {
     padding: 4rem 0;
   }
 
-  .section-home__categories h5{
+  .section-home__categories h5 {
     font-size: var(--size-3);
     margin: 2rem 0 5rem;
   }
 
-  .section-home__hero .section-home__mask{
+  .section-home__hero .section-home__mask {
     width: 400px;
   }
 
-  .section-home-1{
+  .section-home-1 {
     width: 60%;
   }
-  
-  .section-home-2{
+
+  .section-home-2 {
     width: 40%;
   }
 
-  .section-home-1 p{
+  .section-home-1 p {
     text-align: center;
     font-family: var(--font-1);
     font-size: var(--size-4);
@@ -127,13 +136,13 @@
 }
 
 @media (min-width: 1024px) {
-  .section-home-1 p{
+  .section-home-1 p {
     font-family: var(--font-3);
     font-size: var(--size-6);
     font-weight: 700;
   }
 
-  .section-home__categories h5{
+  .section-home__categories h5 {
     font-size: var(--size-4);
   }
 }
