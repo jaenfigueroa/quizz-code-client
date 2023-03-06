@@ -16,7 +16,7 @@
 
 /* CODE //////////////////////////////////////////////////*/
 .exercise__container-code {
-  background: #131316;
+  /* background: #131316; */
   width: 100%;
   height: 300px;
   display: flex;
@@ -77,7 +77,6 @@
 .exercise-button{
   padding: 1rem 2rem;
   border-radius: 2rem;
-  background: #faca15;
   background: var(--green);
   font-weight: bold;
   border: 1px solid white;
@@ -86,7 +85,6 @@
   cursor: pointer;
 }
 .exercise-button--active{
-  background: #faca15;
   background: var(--green);
   color: black;
   border: 1px solid transparent;

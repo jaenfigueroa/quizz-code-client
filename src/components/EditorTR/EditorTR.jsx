@@ -16,7 +16,7 @@ export const EditorTR = () => {
   return (
     <Editor
       // className='exercise__code'
-      height="100%"
+      height="88%"
       defaultLanguage="javascript"
       defaultValue={text}
       theme='vs-dark'

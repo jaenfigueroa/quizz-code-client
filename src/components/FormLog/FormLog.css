@@ -1,9 +1,10 @@
 .formlog{
-  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 7rem 0;
+  /* height: calc(100vh - 8rem); */
 }
 
 .formlog__mask{
@@ -15,9 +16,12 @@
 /* .formlog__block */
 .formlog__title{
   font-size: 3rem;
-  padding: 1rem 1rem 2rem;
+  padding: 2rem 0 5rem 0;
   text-align: center;
-  color: #dadce0;
+  background: linear-gradient(45deg, var(--blue), var(--white));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .formlog__form{
@@ -26,32 +30,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  /* gap: 2.5rem; */
+  gap: 2rem;
 }
 
 .formlog__form label{
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 1rem;
   color: #dadce0;
 }
 
 .formlog__form input{
   padding: 1rem 1rem;
   border-radius: 5px;
-  border: 2px solid gray;
+  border: 2px solid rgb(192, 192, 192);
+  /* border: 2px solid transparent; */
   outline: none;
   width: 250px;
 }
 
 .formlog__form input:focus{
-  border: 2px solid var(--blue);
+  border: 2px solid var(--blue-3);
 }
 
 .formlog__form input[type=submit]{
   border: none;
   padding: 1rem 3rem;
-  background-color: var(--blue);
+  background-color: var(--black-5);
   color: white;
   cursor: pointer;
   transition: 300ms;
@@ -60,18 +66,23 @@
 
 .formlog__form input[type=submit]:hover{
   background-color: var(--blue);
+  transform: scale(1.2);
 }
 
 .form-log__ask{
   padding: 1rem;
   text-align: center;
   color: #dadce0;
+  margin: 1.5rem;
 }
 
 .form-log__ask a{
+  color: var(--blue-3);
+  transition: 300ms;
+}
+.form-log__ask a:hover{
   color: var(--blue);
 }
-
 
 @media (min-width: 720px) {
   .formlog{
@@ -94,4 +105,34 @@
     font-size: 4rem;
   }
   
+}
+
+@media (min-width: 1024px) {
+  .formlog{
+    /* background: crimson; */
+    gap: 15rem;
+  }
+  
+
+  .formlog__mask{
+    width: 450px;
+    height: 450px;
+    display: initial;
+    /* background: blue; */
+  }
+
+  .formlog__title{
+    font-size: 5rem;
+    padding: 2rem 0 5rem 0;
+  }
+
+  .formlog__form input{
+    width: 300px;
+    padding: 1.2rem;
+  }
+
+  .formlog__form input[type=submit]{
+    transform: scale(1.2);
+    padding: 1.2rem 5rem;
+  }
 }
