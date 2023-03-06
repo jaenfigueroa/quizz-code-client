@@ -1,33 +1,54 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./Quizz.css";
 import questions from "./data/questions";
 
+////////////////////////////////////////////////
 export const Quizz = () => {
-	
-	// const [time, setTime] = useState(10);
-	// useEffect(() => {
-	// }, [time]);
 
-	let time = 10;
-	const timeInterval = setInterval(() => {
-		if (time === 0) return clearInterval(timeInterval);
-		console.log(time -= 1);
-	}, 1500);
+	let time = 20;
 
+
+	useEffect(()=> {
+    window.scrollTo(0, 0)
+  }, [])
+
+	////////////////////////////////////////////////
 	return (
 		<section className="section-quizz">
-			<div className="quizz-timer">{time}s</div>
-			<h2 className="ask-title">{questions[1].title}</h2>
-			<div className="ask-options">
+
+			<h4 className="component-title">Categoria: CSS</h4>
+
+			{/* TEMPORIZADOR */}
+			<div className="section-quizz__timer">
+				{time}s
+			</div>
+
+			{/* PREGUNTA */}
+			<h2 className="section-quizz__ask">{questions[1].title}</h2>
+
+			{/* CONTENEDOR DE OPCIONES */}
+			<div className="section-quizz__options-container">
 				{questions[0].options.map((option, index) => (
 					<button
 						key={`${index}-${option.answertext}`}
-						className={`ask-option-btn-${index}`}
-					>
-						{option.answertext}
+						className='section-quizz__option'>
+						
+						{/* CIRCLE */}
+						<div className="section-quizz__option-result">
+							<i class="fa-solid fa-check"></i>
+							{/* <i class="fa-regular fa-check"></i> */}
+							{/* <i class="fa-sharp fa-regular fa-check"></i> */}
+						</div>
+
+						{/* {option.answertext} */}
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquam asperiores totam laborum earum similique aut sunt sit veritatis illum.
 					</button>
 				))}
 			</div>
+
+			{/* BOTON CONFIRMA RESPUESTA */}
+			<button className="section-quizz__submit">Comprobar</button>
+
 		</section>
 	);
 };

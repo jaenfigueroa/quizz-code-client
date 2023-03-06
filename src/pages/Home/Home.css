@@ -75,13 +75,6 @@
   /* gap: 5rem; */
   padding: 2rem 0;
 }
-.section-home__categories h5 {
-  text-align: center;
-  font-size: var(--size-2-5);
-  margin: 3rem;
-  color: var(--white);
-  text-shadow: 0 0 40px #000000c6;
-}
 
 @media (min-width: 720px) {
   .section-home {
@@ -99,13 +92,6 @@
   .section-home__categories{
     padding: 3rem 0 10rem;
   }
-
-  .section-home__categories h5{
-    font-size: var(--size-3);
-    margin: 2rem 0 5rem;
-    /* background: green; */
-  }
-
 
   .section-home__hero .section-home__mask {
     width: 400px;
@@ -134,9 +120,5 @@
     font-family: var(--font-3);
     font-size: var(--size-5-5);
     font-weight: 600;
-  }
-
-  .section-home__categories h5 {
-    font-size: var(--size-4);
   }
 }

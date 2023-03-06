@@ -1,0 +1,26 @@
+/* TITULOS PRINCIPALES ////////////////////////*/
+.component-title {
+  text-align: center;
+  font-size: var(--size-2-5);
+  margin: 3rem;
+  color: var(--white);
+  text-shadow: 0 0 40px #000000c6;
+  /* background: blue; */
+  font-weight: bold;
+  width: max-content;
+}
+
+@media (min-width: 720px) {
+  .component-title {
+    font-size: var(--size-3);
+    margin: 2rem 0 5rem;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .component-title {
+    font-size: var(--size-4);
+  }
+}
+
+/* ///////////////////////////////////////////// */

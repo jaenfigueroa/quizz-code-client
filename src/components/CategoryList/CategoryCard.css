@@ -74,6 +74,12 @@
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, var(--blue), var(--green) 30%, var(--gray-2) 10%);
 }
+
+.card-language__button-container{
+  display: flex;
+  gap: 1.5rem;
+}
+
 .card-language__button{
   background: var(--gray-2);
   color: white;

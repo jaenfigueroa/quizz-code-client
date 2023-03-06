@@ -19,13 +19,17 @@ const CategoryCard = ({ category }) => {
       <span className="card-language__title">{name}</span>
 
       {/* NUMERO DE EJERCICIOS */}
-      <p className='card-language__number'>5/20 completados</p>
+      <p className='card-language__number'>5/20 Retos completados</p>
 
       {/* BARRA DE EJERCICIOS COMPLETADOS */}
       <div className='card-language__bar'></div>
       
       {/* BOTON ENTRAR */}
-      <Link className='card-language__button' to={`/category/${name}`}>Entrar</Link>
+      <div className='card-language__button-container'>
+        <Link className='card-language__button' to={`/practice/${name}`}>Repaso</Link>
+        <Link className='card-language__button' to={`/category/${name}`}>Retos</Link>
+      </div>
+
     </article>
   )
 }

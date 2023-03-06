@@ -25,8 +25,8 @@ export const Header = () => {
               </>
             ) :(
               <>
-                <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/login'>Iniciar Sesion</NavLink>
-                <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/register'>Registrarse</NavLink>
+                <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/login'>Iniciar</NavLink>
+                <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/register'>Registrar</NavLink>
               </>
             )
           }

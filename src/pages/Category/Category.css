@@ -7,13 +7,6 @@
   background: var(--gradient);
 }
 
-.section-category h2{
-  font-size: 3rem;
-  font-size: var(--size-2);
-  margin: 1rem 0rem 3rem;
-  color: white;
-}
-
 .section-category__container{
   gap: 2rem;
   gap: 3rem;
@@ -31,15 +24,5 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .section-category h2{
-    font-size: var(--size-3);
-  }
 }
 
-@media (min-width: 1024px) {
-  .section-category h2{
-    font-size: var(--size-4);
-    padding: 1rem;
-    margin-bottom: 4rem;
-  }
-}

@@ -42,9 +42,8 @@ export const AppRoutes = () => {
               <Route path='/home' element={<Home/>}/> {/* SELECTOR DEL AREA DE PREGUNTAS */}
               <Route path='/challenge/:category/:number' element={<Challenge/>}/> {/* EJERCICIO UNICO */}
               <Route path='/profile' element={<Profile/>}/> {/* EDITAR PERFIL */}
-              <Route path='/category/:category' element={<Category/>}/> {/* VER LOS EJERCICIOS DE LA CATEGORIA */}
-
-              <Route path='/ruta34/:number' element={<Quizz/>}/> {/* */}
+              <Route path='/category/:category' element={<Category/>}/> {/* VER LOS EJERCICIOS CON EDITOR */}
+              <Route path='/practice/:category' element={<Quizz/>}/> {/* VER LOS QUIZZ CON OPCIONES*/}
             </>
           )
         }

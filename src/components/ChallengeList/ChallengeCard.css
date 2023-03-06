@@ -15,6 +15,11 @@
   box-shadow: 0 0 25px #7f5af05d;
 }
 
+.challenge-card--lock:hover{
+  box-shadow: 0 0 25px #bcbcbc5d;
+  border: 1px solid #dcdcdc5d;
+}
+
 .challenge-card__icon-mask{
   min-width: 60px;
   min-height: 60px;
@@ -43,7 +48,12 @@
   color: var(--blue-3);
 }
 
-.challenge-card__difficulty{
+.challenge-card__tags-container{
+  display: flex;
+  gap: .5rem;
+}
+
+.challenge-card__tag{
   /* background-color: violet; */
   padding: .1rem 1rem;
   width: max-content;
@@ -55,21 +65,38 @@
   margin-top: -10px;
 }
 
+.challenge-card__tag--blue{
+  border: 1px solid rgb(21, 15, 193);
+  color: rgb(25, 20, 194);
+  background: rgb(221, 227, 255);
+}
+
 .challenge-card__description{
   line-height: 25px;
 }
 
 .challenge-card__button{
-  background: orangered;
   background: rgb(64, 64, 64);
   color: var(--white);
   padding: 1rem;
   border-radius: .5rem;
+
+  background: transparent;
+}
+
+
+
+.challenge-card__button i{
+  font-size: 2.5rem;
 }
 
 .challenge-card__button:hover{
   background: var(--blue);
   color: var(--white);
+}
+
+.challenge-card__button--gray:hover{
+  background: rgb(64, 64, 64);
 }
 
 @media (min-width: 1024px) {
@@ -91,7 +118,7 @@
   .challenge-card__name{
     font-size: 2.5rem;
   }
-  .challenge-card__difficulty{
+  .challenge-card__tag{
     margin-top: 0px;
   }
 }
