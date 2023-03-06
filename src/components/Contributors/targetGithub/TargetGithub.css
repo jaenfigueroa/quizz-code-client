@@ -17,6 +17,7 @@
   background: #202023;
   background: linear-gradient(45deg, #111, var(--black-6));
   box-shadow: -5px 5px 5px #2c2c2c33;
+  box-shadow: -10px 10px 20px #2c2c2c33;
 }
 
 /* .card-github:hover{
