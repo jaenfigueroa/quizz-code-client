@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { Category } from '../components/Category/Category'
+import { Category } from '../pages/Category/Category'
 import { Footer } from '../components/Footer/Footer'
 import { Header } from '../components/Header/Header'
 import { AppContext } from '../context/AppContext'
