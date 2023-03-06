@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import heroImg from '../../assets/hero2.svg'
 import CategoryList from '../../components/CategoryList'
+import { Contributors } from '../../components/Contributors/Contributors';
 
 //////////////////////////////////////////////
 const categories = [
@@ -43,6 +44,10 @@ export const Home = () => {
         <h5>Categorias</h5>
           <CategoryList categories={categories} />
       </section>
+
+
+      {/* SECCION DE CONTRIBUIDORES */}
+      <Contributors/>
 
     </main>
   )
