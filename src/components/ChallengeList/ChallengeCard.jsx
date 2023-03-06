@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ContainerTags, Tag } from '../ContainerTags/ContainerTags';
 import './ChallengeCard.css'
 
 ////////////////////////////////////////////////////
@@ -17,10 +18,14 @@ const ChallengeCard = ({ challenge, category }) => {
 
       <div className='challenge-card__block2'>
         <span className="challenge-card__name">{name}</span>
-        <div className='challenge-card__tags-container'>
-          <p className='challenge-card__tag'>Facil</p>
-          <p className='challenge-card__tag challenge-card__tag--blue'>Completado</p>
-        </div>
+
+        <ContainerTags tags={
+          <>
+            <Tag text='Facil'/>
+            <Tag text='Completado' color='blue'/>
+          </>
+        }/>
+        
         <p className='challenge-card__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aliquam!</p>
       </div>
 

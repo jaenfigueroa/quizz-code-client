@@ -48,28 +48,7 @@
   color: var(--blue-3);
 }
 
-.challenge-card__tags-container{
-  display: flex;
-  gap: .5rem;
-}
 
-.challenge-card__tag{
-  /* background-color: violet; */
-  padding: .1rem 1rem;
-  width: max-content;
-  border: 1px solid var(--green);
-  border-radius: 1rem;
-  color: var(--green);
-  background: rgb(238, 255, 238);
-  color: rgb(29, 99, 29);
-  margin-top: -10px;
-}
-
-.challenge-card__tag--blue{
-  border: 1px solid rgb(21, 15, 193);
-  color: rgb(25, 20, 194);
-  background: rgb(221, 227, 255);
-}
 
 .challenge-card__description{
   line-height: 25px;
@@ -83,8 +62,6 @@
 
   background: transparent;
 }
-
-
 
 .challenge-card__button i{
   font-size: 2.5rem;
@@ -117,8 +94,5 @@
 
   .challenge-card__name{
     font-size: 2.5rem;
-  }
-  .challenge-card__tag{
-    margin-top: 0px;
   }
 }
