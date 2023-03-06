@@ -12,7 +12,7 @@
 
 /* TARJETA DEL USUARIO */
 .section-ranking__user{
-  background: crimson;
+  /* background: crimson; */
   /* background: linear-gradient(45deg, var(--blue), white); */
   /* background: linear-gradient(45deg, var(--blue), rgb(222, 221, 255)); */
   background: radial-gradient(rgb(222, 221, 255), var(--blue) );
@@ -114,7 +114,6 @@
 }
 
 .section-ranking__table article{
-  background: hotpink;
   background: #27272a;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
@@ -140,7 +139,7 @@
 .section-ranking__table article span img{
   width: 40px;
   height: 40px;
-  background: darkred;
+  /* background: darkred; */
   border-radius: 50%;
 }
 

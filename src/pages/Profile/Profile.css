@@ -18,7 +18,7 @@
   padding: 2rem;
 }
 
-.section-profile form div {
+.section-profile__display-image {
   width: 100px;
   height: 100px;
   background: gray;
@@ -48,4 +48,11 @@
 .section-profile button:hover{
   background: var(--blue);
   color: white;
+}
+
+.section-profile__form-error {
+  color: green;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 5px;
 }
