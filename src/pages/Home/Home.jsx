@@ -2,12 +2,22 @@ import React from 'react'
 import './Home.css'
 import heroImg from '../../assets/hero2.svg'
 import { Link } from 'react-router-dom'
+import CategoryList from '../../components/CategoryList'
 
 //////////////////////////////////////////////
+const categories = [
+  {
+    name: "HTML"
+  },
+  {
+    name: "CSS"
+  },
+  {
+    name: "JavaScript"
+  }
+];
+
 export const Home = () => {
-
-
-
   //////////////////////////////////////////////
   return (
     <main className='section-home'>
@@ -29,21 +39,7 @@ export const Home = () => {
       {/* SECTION CATEGORIAS */}
       <section className='section-home__categories'>
         <h5>Categorias</h5>
-        
-        <div>
-          <article>
-            HTML
-            <Link className='button-pb' to='/category/HTML'>Entrar</Link>
-          </article>
-          <article>
-            CSS
-            <Link className='button-pb' to='/category/CSS'>Entrar</Link>
-          </article>
-          <article>
-            JavaScript
-            <Link className='button-pb' to='/category/javascript'>Entrar</Link>
-          </article>
-        </div>
+          <CategoryList categories={categories} />
       </section>
 
     </main>
