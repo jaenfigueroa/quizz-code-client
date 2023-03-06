@@ -12,8 +12,8 @@ export const Login = () => {
   return (
     <div className='login'>
       <FormLog
-        title={'Inicia Sesion'}
-        otherUrl={{text1: '¿Aun no tienes una cuenta?', text2: 'registrate', url: '/register'}}
+        title='Iniciar Sesion'
+        otherUrl={{text1: '¿Aun no tienes una cuenta?', text2: 'Registrate', url: '/register'}}
         img={imgLogin}
         action={getLogin}/>
     </div>

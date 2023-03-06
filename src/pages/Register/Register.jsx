@@ -14,7 +14,7 @@ export const Register = () => {
     <div className='register'>
       <FormLog
         title={'Registrate'}
-        otherUrl={{text1: '¿Ya tienes una cuenta?',text2: 'Inicia Sesion', url: '/login'}}
+        otherUrl={{text1: '¿Ya tienes una cuenta?',text2: 'Iniciar Sesion', url: '/login'}}
         img={imgRegister}
         action={getRegister}/>
     </div>

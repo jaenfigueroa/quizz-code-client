@@ -29,6 +29,7 @@ export const FormLog = ({ title, otherUrl, img, action }) => {
 
       <div className='formlog__block'>
         <h3 className='formlog__title'>{title}</h3>
+        {/* <h3 className='component-title'>{title}</h3> */}
 
         <form className='formlog__form' onSubmit={getForm}>
           {/* <label>Nombre Usuario

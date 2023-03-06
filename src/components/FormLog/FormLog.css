@@ -5,6 +5,7 @@
   align-items: center;
   padding: 7rem 0;
   /* height: calc(100vh - 8rem); */
+
 }
 
 .formlog__mask{
@@ -22,6 +23,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-weight: bold;
 }
 
 .formlog__form{
