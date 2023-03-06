@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     <header className='header'>
       <Link to={!isAuthenticated ? '/login' : '/home'} className="header__link" >
-        <span className='header__logo'>Quizz Code</span>
+        <span className='header__logo'>QuizzCode</span>
       </Link>
       <nav className='header__nav'>
         <ul className='header__nav-list'>
