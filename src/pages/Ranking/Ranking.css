@@ -12,10 +12,7 @@
 
 /* TARJETA DEL USUARIO */
 .section-ranking__user{
-  /* background: crimson; */
-  /* background: linear-gradient(45deg, var(--blue), white); */
-  /* background: linear-gradient(45deg, var(--blue), rgb(222, 221, 255)); */
-  background: radial-gradient(rgb(222, 221, 255), var(--blue) );
+  background: linear-gradient(45deg, var(--blue), white);
   padding: 1rem 2rem 2rem;
   width: 300px;
   border-radius: .5rem;
