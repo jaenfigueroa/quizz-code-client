@@ -1,9 +1,14 @@
-import React, { useId } from 'react'
+import React from 'react'
 import CategoryCard from "./CategoryCard";
+// import './CategoryList'
 
+/////////////////////////////////////////
 const CategoryList = ({ categories }) => {
+
+
+  /////////////////////////////////////////
   return (
-    <div>
+    <div className='container-cards-languages'>
       {categories.map((category, index) => (
         <CategoryCard category={category} key={`${category.name}-${index}`} />
       ))}

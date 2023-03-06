@@ -83,15 +83,16 @@
   text-shadow: 0 0 40px #000000c6;
 }
 
-.section-home__categories div {
+/* CONTENEDOR DE CARDS */
+/* .section-home__categories div {
   display: flex;
   gap: 2rem;
-  /* border: 1px solid yellow; */
+  border: 1px solid yellow;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
-.section-home__categories article{
+/* .section-home__categories article{
   background: linear-gradient(45deg, var(--blue), var(--white));
   background: radial-gradient( rgb(201, 201, 255), var(--blue));
   width: 300px;
@@ -103,9 +104,9 @@
   border-radius: 1rem;
   box-shadow: 0 0 20px 10px #00000029;
   transition: 300ms;
-}
+} */
 
-.section-home__button {
+/* .section-home__button {
   padding: 1rem;
   background: white;
   border-radius: 6px;
@@ -113,12 +114,12 @@
   width: 90px;
   display: flex;
   justify-content: center;
-}
+} */
 
-.section-home__category-name {
+/* .section-home__category-name {
   letter-spacing: 0.8px;
   font-size: 22px;
-}
+} */
 @media (min-width: 720px) {
   .section-home {
     width: 100%;
@@ -131,20 +132,28 @@
     height: calc(100vh - 8rem);
   }
 
-
-  /* SECCION 2 - CATEGORIAS //////////////////////////////////*/
-  .section-home__categories {
-    padding: 4rem 0;
-  }
-
-  .section-home__categories article:hover{
-    transform: scale(1.05);
+  /* SECCION CATEGORIAS */
+  .section-home__categories{
+    padding: 3rem 0 10rem;
   }
 
   .section-home__categories h5{
     font-size: var(--size-3);
     margin: 2rem 0 5rem;
+    /* background: green; */
   }
+
+
+  /* SECCION 2 - CATEGORIAS //////////////////////////////////*/
+  /* .section-home__categories {
+    padding: 4rem 0;
+  } */
+
+  /* .section-home__categories article:hover{
+    transform: scale(1.05);
+  } */
+
+
 
   .section-home__hero .section-home__mask {
     width: 400px;
@@ -165,7 +174,6 @@
   }
 
 
-
 }
 
 @media (min-width: 1024px) {
@@ -173,8 +181,6 @@
   .section-home-1 p{
     font-family: var(--font-3);
     font-size: var(--size-5-5);
-    /* font-size: var(--size-6); */
-    /* font-size: var(--size-6-5); */
     font-weight: 600;
   }
 
