@@ -16,7 +16,15 @@
   background: var(--black-6);
   background: #202023;
   background: linear-gradient(45deg, #111, var(--black-6));
-  box-shadow: -5px 5px 5px #2c2c2c33;
+  cursor: pointer;
+  transition: 300ms;
+  box-shadow: -10px 10px 20px #2c2c2c33;
+}
+
+.card-github:hover{
+  transform: scale(1.1);
+  transform: scale(1.05);
+  /* box-shadow: -10px 10px 20px #2c2c2ca3; */
 }
 
 /* .card-github:hover{
@@ -59,8 +67,16 @@
   color: var(--blue-3);
 }
 
+.card-github__name:hover{
+  text-decoration: underline;
+}
+
 .card-github__user{
   color: var(--white);
+}
+
+.card-github__user:hover{
+  text-decoration: underline;
 }
 
 .card-github__create{
