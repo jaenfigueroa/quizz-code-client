@@ -43,6 +43,7 @@
   /* background: blue; */
   font-size: 2rem;
   font-weight: bold;
+  color: var(--blue-3);
 }
 
 .challenge-card__difficulty{
@@ -54,7 +55,7 @@
   color: var(--green);
   background: rgb(238, 255, 238);
   color: rgb(29, 99, 29);
-  margin-top: -15px;
+  margin-top: -10px;
 }
 
 .challenge-card__button{
@@ -71,6 +72,9 @@
 }
 
 @media (min-width: 1024px) {
+  .challenge-card{
+    padding: 2.5rem 3rem 3rem 2rem;
+  }
   .challenge-card__icon-mask{
     display: initial;
   }
@@ -81,5 +85,12 @@
   }
   .challenge-card__button:hover{
     transform: scale(1.1);
+  }
+
+  .challenge-card__name{
+    font-size: 2.5rem;
+  }
+  .challenge-card__difficulty{
+    margin-top: 0px;
   }
 }
