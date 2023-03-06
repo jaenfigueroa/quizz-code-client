@@ -66,7 +66,7 @@ export const Category = () => {
   /////////////////////////////////////
   return (
     <section className='section-category'>
-      <h2>Categoria: {category}</h2>
+      <h2 className='component-title'>Categoria: {category}</h2>
       <ChallengeList challenges={challenges} category={category}/>
     </section>
   )

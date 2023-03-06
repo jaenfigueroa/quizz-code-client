@@ -3,7 +3,7 @@ import './ChallengeCard.css'
 
 ////////////////////////////////////////////////////
 const ChallengeCard = ({ challenge, category }) => {
-  const { id, name } = challenge;
+  const { id, name, lock = true } = challenge;
 
 
 
@@ -17,11 +17,26 @@ const ChallengeCard = ({ challenge, category }) => {
 
       <div className='challenge-card__block2'>
         <span className="challenge-card__name">{name}</span>
-        <p className='challenge-card__difficulty'>Facil</p>
+        <div className='challenge-card__tags-container'>
+          <p className='challenge-card__tag'>Facil</p>
+          <p className='challenge-card__tag challenge-card__tag--blue'>Completado</p>
+        </div>
         <p className='challenge-card__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aliquam!</p>
       </div>
 
-      <Link className='challenge-card__button' to={`/challenge/${category}/${id}`}>Entrar</Link>
+
+      {
+        lock ? (
+          <Link className='challenge-card__button' to={`/challenge/${category}/${id}`}>
+            <i class="fa-solid fa-chevron-right"></i> 
+          </Link>
+          ):(
+          <Link className='challenge-card__button challenge-card__button--gray'>
+            <i class="fa-solid fa-lock"></i>
+          </Link>
+        )
+      }
+
     </article>
   )
 }

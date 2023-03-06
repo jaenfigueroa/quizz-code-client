@@ -9,7 +9,9 @@ export const Contributors = () => {
   //////////////////////////////////////////////
   return (
     <section className='section-contributors'>
-      <h4 className='section-contributors__title'>Contribuidores</h4>
+      
+      <h4 className='component-title'>Contribuidores</h4>
+
       <div className='section-contributors__container'>
         <div className='section-contributors__card'>
           <article className='section-contributors__img-mask'>

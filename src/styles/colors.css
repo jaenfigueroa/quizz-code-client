@@ -1,0 +1,20 @@
+:root{
+  --gradient: linear-gradient(90deg, var(--black-2), #1e1e1e);
+  --black-1: #010101;
+  --black-2: #16161a;
+  --black-3: #202023;
+  --black-4: #18181b;
+  --black-5: #27272a;
+  --black-6: #2a2a2d;
+  --black-7: #2e2e2e;
+  --white: #e5e7eb;
+  --gray-1: #94a1b2;
+  --gray-2: #72757e;
+  --blue: #7f5af0;
+  --blue-2: #5145cd;
+  --blue-3: #a78dff;
+  --blue-4: #bfabff;
+  --green: #43d397;
+  --green-2: #24ab73;
+  --red: #a52c3d;
+}

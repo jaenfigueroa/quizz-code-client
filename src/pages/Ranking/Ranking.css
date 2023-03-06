@@ -7,7 +7,6 @@
   gap: 2rem;
   padding: 2rem;
   background: var(--gradient);
-  /* background: #111111; */
 }
 
 /* TARJETA DEL USUARIO */
@@ -23,7 +22,7 @@
 
   min-width: 300px;
   max-width: 350px;
-  width: 90%;
+  width: 100%;
 
   border: 2px solid white;
   box-shadow: 0 0 20px 10px #00000057;
@@ -80,10 +79,9 @@
   flex-direction: column;
   min-width: 300px;
   max-width: 600px;
-  width: 90%;
+  width: 100%;
   border-radius: .5rem;
   overflow: hidden;
-
   box-shadow: 0 0 20px 10px #00000029;
 }
 

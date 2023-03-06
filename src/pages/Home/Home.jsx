@@ -41,7 +41,7 @@ export const Home = () => {
 
       {/* SECTION CATEGORIAS */}
       <section className='section-home__categories'>
-        <h5>Categorias</h5>
+        <h5 className='component-title'>Categorias</h5>
           <CategoryList categories={categories} />
       </section>
 
