@@ -1,0 +1,38 @@
+.container-tags{
+  display: flex;
+  gap: .5rem;
+}
+
+.container-tags__tag{
+  padding: .1rem 1rem;
+  width: max-content;
+  border-radius: 1rem;
+  margin-top: -5px;
+  background: rgb(238, 255, 238);
+  color: rgb(29, 99, 29);
+}
+
+.container-tags__tag--green{
+  background: rgb(238, 255, 238);
+  color: rgb(29, 99, 29);
+  border: 1px solid var(--green);
+}
+
+.container-tags__tag--blue{
+  background: rgb(221, 227, 255);
+  color: rgb(25, 20, 194);
+  border: 1px solid rgb(21, 15, 193);
+}
+
+.container-tags__tag--orange-solid{
+  background: crimson;
+  color: var(--white);
+}
+.container-tags__tag--blue-solid{
+  background: rgb(25, 20, 194);
+  color: white;
+}
+.container-tags__tag--yellow-solid{
+  background: gold;
+  color: white;
+}
