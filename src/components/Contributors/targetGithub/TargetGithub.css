@@ -1,0 +1,137 @@
+
+/* CARD GITHUB */
+.card-github{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100%; */
+  /* width: max-content; */
+  min-width: 300px;
+  max-width: 400px;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: .5rem;
+
+  background: gray;
+  background: var(--black-6);
+  background: #202023;
+  background: linear-gradient(45deg, #111, var(--black-6));
+  box-shadow: -5px 5px 5px #2c2c2c33;
+}
+
+/* .card-github:hover{
+  box-shadow: 0 0 10px #202023;
+} */
+
+/* CAJA 1 */
+.card-github__block1{
+  /* background: blue; */
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.card-github__img-mask {
+  width: 110px;
+  height: 110px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: gray;
+}
+.card-github__img {
+  width: 100%;
+}
+
+/* informacion */
+.card-github__block1--container{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  /* gap: 1rem; */
+}
+
+.card-github__name{
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue-3);
+}
+
+.card-github__user{
+  color: var(--white);
+}
+
+.card-github__create{
+  /* color: var(--blue-5); */
+  /* color: var(--green); */
+  /* margin-top: 1rem; */
+  color: rgb(181, 181, 181);
+}
+
+/* BIOGRAFIA */
+.card-github__bio{
+  /* background: violet; */
+  width: 100%;
+  margin: 1rem 0;
+}
+
+
+/* BLOCK 2 */
+.card-github__block2{
+  display: flex;
+  /* padding: 2rem; */
+  width: 100%;
+  border-radius: .5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  gap: 2rem;
+  /* gap: .5rem; */
+  padding: 1rem;
+
+  background: #333;
+  background: #1b1b1e;
+  border: .5px solid var(--blue-3);
+}
+
+.card-github__block2 label{
+  display: flex;
+  flex-direction: column;
+  /* padding: .5rem 1rem; */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* background: crimson; */
+  /* border: 1px dashed yellow; */
+}
+
+.card-github__block2-title{
+  color: blue;
+  color: rgb(177, 177, 177);
+}
+
+.card-github__block2-number{
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--green);
+}
+
+
+@media (min-width: 720px) {
+  .card-github{
+    /* background: red; */
+    padding: 2rem;
+    width: 360px;
+    gap: 2rem;
+    gap: 2.5rem;
+  }
+
+  /* informacion */
+  .card-github__block1--container{
+    gap: .8rem;
+  }
+}
