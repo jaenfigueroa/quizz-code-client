@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import heroImg from '../../assets/hero.svg'
+import heroImg from '../../assets/hero2.svg'
 import { Link } from 'react-router-dom'
 
 //////////////////////////////////////////////
@@ -16,7 +16,7 @@ export const Home = () => {
       <section className='section-home__hero'>
 
         <div className='section-home-1'>
-          <p>¡Acepta el reto y lleva tus habilidades de CSS, HTML y JavaScript al siguiente nivel!</p>
+          <p>¡Acepta el reto y lleva tus habilidades de <span>HTML, CSS y JavaScript</span> al siguiente nivel!</p>
         </div>
 
         <div className='section-home-2'>

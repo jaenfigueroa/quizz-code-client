@@ -3,14 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #333;
   padding: 2rem 0;
   background: var(--gradient);
-  background: var(--black-3);
 }
 
 .section-category h2{
-  /* background-color: lightblue; */
   font-size: 3rem;
   font-size: var(--size-2-5);
   margin: 1rem 0rem 3rem;
@@ -18,7 +15,6 @@
 }
 
 .section-category__container{
-  /* background-color: greenyellow; */
   display: flex;
   justify-content: center;
   gap: 2rem;

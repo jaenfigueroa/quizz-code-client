@@ -37,6 +37,16 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  color: white;
+}
+
+.section-home-1 p span{
+  font-size: inherit;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 800;
 }
 
 
