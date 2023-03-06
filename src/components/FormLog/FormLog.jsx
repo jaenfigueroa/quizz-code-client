@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './FormLog.css'
 
 ////////////////////////////////////
-export const FormLog = ({title, otherUrl, img, action}) => {
+export const FormLog = ({ title, otherUrl, img, action }) => {
 
   const getForm = (e) => {
     e.preventDefault()
@@ -31,11 +31,14 @@ export const FormLog = ({title, otherUrl, img, action}) => {
         <h3 className='formlog__title'>{title}</h3>
 
         <form className='formlog__form' onSubmit={getForm}>
-          <label>Email
-            <input type='email' name='userEmail'/>
+          {/* <label>Nombre Usuario
+            <input type='text' name='userName' />
+          </label> */}
+          <label>Correo Electronico
+            <input type='email' name='userEmail' />
           </label>
-          <label>Password
-            <input type='password' name='userPassword'/>
+          <label>Contraseña
+            <input type='password' name='userPassword' />
           </label>
 
           <p className='form-log__ask'>
@@ -43,12 +46,12 @@ export const FormLog = ({title, otherUrl, img, action}) => {
           </p>
 
           <div>
-            <input type="submit" value={'Listo'}/>
+            <input type="submit" value={'Listo'} />
           </div>
 
         </form>
       </div>
-      
+
     </div>
   )
 }

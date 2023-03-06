@@ -18,7 +18,7 @@ const ChallengeCard = ({ challenge, category }) => {
       <div className='challenge-card__block2'>
         <span className="challenge-card__name">{name}</span>
         <p className='challenge-card__difficulty'>Facil</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aliquam!</p>
+        <p className='challenge-card__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aliquam!</p>
       </div>
 
       <Link className='challenge-card__button' to={`/challenge/${category}/${id}`}>Entrar</Link>

@@ -1,11 +1,8 @@
 .challenge-card{
   background: var(--black-5);
-  /* height: 140px; */
   border-radius: .5rem;
   display: flex;
-  /* flex-direction: column; */
   transition: 300ms;
-  /* justify-content: center; */
   align-items: center;
   gap: 2rem;
   padding: 1.5rem;
@@ -14,8 +11,7 @@
 
 .challenge-card:hover{
   border: 1px solid var(--blue);
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.674);
+  transform: scale(1.01);
   box-shadow: 0 0 25px #7f5af05d;
 }
 
@@ -57,6 +53,10 @@
   background: rgb(238, 255, 238);
   color: rgb(29, 99, 29);
   margin-top: -10px;
+}
+
+.challenge-card__description{
+  line-height: 25px;
 }
 
 .challenge-card__button{
