@@ -1,45 +1,24 @@
 import React from 'react'
 import './Contributors.css'
+import { TargetGithub } from './targetGithub/TargetGithub'
 
 //////////////////////////////////////////////
 export const Contributors = () => {
 
-
+  let list = ['jaenfigueroa', 'ragomez7', 'LuDevvv', 'SamVilorioA']
 
   //////////////////////////////////////////////
   return (
     <section className='section-contributors'>
-      
+
       <h4 className='component-title'>Contribuidores</h4>
 
       <div className='section-contributors__container'>
-        <div className='section-contributors__card'>
-          <article className='section-contributors__img-mask'>
-            <img className='section-contributors__img' src={`https://randomuser.me/api/portraits/men/${ Math.floor(Math.random() * 99) + 1}.jpg`} alt="" />
-          </article>
-          <p className='section-contributors__name'>@userName</p>
-        </div>
-
-        <div className='section-contributors__card'>
-          <article className='section-contributors__img-mask'>
-            <img className='section-contributors__img' src={`https://randomuser.me/api/portraits/men/${ Math.floor(Math.random() * 99) + 1}.jpg`} alt="" />
-          </article>
-          <p className='section-contributors__name'>@userName</p>
-        </div>
-
-        <div className='section-contributors__card'>
-          <article className='section-contributors__img-mask'>
-            <img className='section-contributors__img' src={`https://randomuser.me/api/portraits/men/${ Math.floor(Math.random() * 99) + 1}.jpg`} alt="" />
-          </article>
-          <p className='section-contributors__name'>@userName</p>
-        </div>
-
-        <div className='section-contributors__card'>
-          <article className='section-contributors__img-mask'>
-            <img className='section-contributors__img' src={`https://randomuser.me/api/portraits/men/${ Math.floor(Math.random() * 99) + 1}.jpg`} alt="" />
-          </article>
-          <p className='section-contributors__name'>@userName</p>
-        </div>
+        {
+          list.map((user, index) => (
+            <TargetGithub userName={user} key={index} />
+          ))
+        }
       </div>
     </section>
   )
