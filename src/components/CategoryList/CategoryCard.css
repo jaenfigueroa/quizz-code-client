@@ -12,7 +12,6 @@
 /* //////////////////////////////////////// */
 /* //////////////////////////////////////// */
 .card-language{
-  background: red;
   background: var(--black-6);
   min-width: 250px;
   flex-grow: 1;
@@ -43,17 +42,15 @@
   align-items: center;
 }
 
-
 .card-language__icon{
   width: 100px;
-  filter: grayscale(100);
-  transition: 300ms;
+  filter: grayscale(1);
   transition: 500ms;
 }
 
 .card-language:hover .card-language__icon{
   filter: grayscale(0);
-  transform: rotateY(360deg);
+  transform: rotateX(360deg);
 }
 
 .card-language__title{
@@ -135,7 +132,7 @@
     /* border: 1px dashed yellow; */
   }
   .card-language__icon{
-    width: 150px;
+    width: 130px;
   }
 
   .card-language__title{
