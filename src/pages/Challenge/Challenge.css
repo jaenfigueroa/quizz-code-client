@@ -39,7 +39,6 @@
   border-radius: 1rem;
   padding: 1rem 2rem;
   transition: 300ms;
-  cursor: pointer;
   width: 100%;
 }
 
@@ -82,7 +81,6 @@
   border: 1px solid white;
   background: transparent;
   color: white;
-  cursor: pointer;
 }
 .exercise-button--active{
   background: var(--green);

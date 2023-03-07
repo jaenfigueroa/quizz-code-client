@@ -18,19 +18,16 @@ export const Header = () => {
       </Link>
       <nav className='header__nav'>
         <ul className='header__nav-list'>
+          <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/home'>Home</NavLink>
+          <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/ranking'>Ranking</NavLink>
           {
-            isAuthenticated ? (
-              <>
-                <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/home'>Home</NavLink>
-              </>
-            ) :(
+            !isAuthenticated && (
               <>
                 <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/login'>Iniciar</NavLink>
                 <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/register'>Registrar</NavLink>
               </>
             )
           }
-          <NavLink className={({isActive})=>isActive? 'header__item--active':'header__item'} to='/ranking'>Ranking</NavLink>
         </ul>
         {
           isAuthenticated && (

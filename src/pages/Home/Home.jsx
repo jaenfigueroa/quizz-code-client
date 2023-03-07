@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Home.css'
 import heroImg from '../../assets/hero2.svg'
 import CategoryList from '../../components/CategoryList'
 import { Contributors } from '../../components/Contributors/Contributors';
+import { AppContext } from '../../context/AppContext';
+import { Link } from 'react-router-dom';
 
 //////////////////////////////////////////////
 const categories = [
@@ -21,6 +23,12 @@ const categories = [
 ];
 
 export const Home = () => {
+
+  const {isAuthenticated} = useContext(AppContext)
+
+
+
+
   //////////////////////////////////////////////
   return (
     <main className='section-home'>
@@ -29,21 +37,33 @@ export const Home = () => {
       <section className='section-home__hero'>
 
         <div className='section-home-1'>
-          <p>¡Acepta el reto y lleva tus habilidades de <span>HTML, CSS y JavaScript</span> al siguiente nivel!</p>
+          {/* <p>¡Acepta el reto y lleva tus habilidades de <span>HTML, CSS y JavaScript</span> al siguiente nivel!</p> */}
+          <p>¡Acepta los retos y lleva tus habilidades de <span>HTML, CSS y JavaScript</span> al siguiente nivel!</p>
+          {
+            isAuthenticated ? (
+              <a href='#section-categories' className='section-home__button-acept'>Aceptar</a>
+            ) : (
+              <Link to='/register' className='section-home__button-acept'>Aceptar</Link>
+            )
+          }
         </div>
 
-        <div className='section-home-2'>
+        {/* <div className='section-home-2'>
           <div className='section-home__mask'>
-            {/* <img src={heroImg} alt="" /> */}
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* SECTION CATEGORIAS */}
-      <section className='section-home__categories'>
-        <h5 className='component-title'>Categorias</h5>
-          <CategoryList categories={categories} />
-      </section>
+
+      {
+        isAuthenticated && (
+          <section className='section-home__categories' id='section-categories'>
+            <h5 className='component-title'>Categorias</h5>
+              <CategoryList categories={categories} />
+          </section>
+        )
+      } 
 
 
       {/* SECCION DE CONTRIBUIDORES */}

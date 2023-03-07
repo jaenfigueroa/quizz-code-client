@@ -14,3 +14,8 @@
 body{
   color: var(--white);
 }
+
+/* PARA QUE AL USAR EL BOTON ACEPTAR LOS RETOS, ME REDIRIJA BIEN HACIA ABAJO */
+section[id] {
+  scroll-margin-top: 8rem;
+}
