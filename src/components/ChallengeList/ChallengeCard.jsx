@@ -33,11 +33,11 @@ const ChallengeCard = ({ challenge, category }) => {
       {
         lock ? (
           <Link className='challenge-card__button' to={`/challenge/${category}/${id}`}>
-            <i class="fa-solid fa-chevron-right"></i> 
+            <i className="fa-solid fa-chevron-right"></i> 
           </Link>
           ):(
           <Link className='challenge-card__button challenge-card__button--gray'>
-            <i class="fa-solid fa-lock"></i>
+            <i className="fa-solid fa-lock"></i>
           </Link>
         )
       }
