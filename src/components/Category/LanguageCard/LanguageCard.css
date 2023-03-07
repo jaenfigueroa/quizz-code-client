@@ -1,17 +1,10 @@
-/* CONTENEDOR DE CARDS */
-.container-cards-languages {
-  /* border: 1px dashed yellow; */
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  width: 90%;
-}
+
 
 /* //////////////////////////////////////// */
 /* //////////////////////////////////////// */
 /* //////////////////////////////////////// */
 /* //////////////////////////////////////// */
-.card-language{
+.languageCard{
   background: var(--black-6);
   min-width: 250px;
   flex-grow: 1;
@@ -27,50 +20,32 @@
   border: 1px solid transparent;
 }
 
-.card-language:hover{
+.languageCard:hover{
   border: 1px solid var(--blue);
 }
 
-/* .card-language--locked{
-  position: relative;
-  overflow: hidden;
-}
-.card-language--locked:after{
-  content: 'Bloqueado';
-  width: 100%;
-  height: 100%;
-  background: var(--black-6);
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  filter: blur(0px);
-} */
 
-
-.card-language__icon-mask{
+.languageCard__icon-mask{
   width: 125px;
   height: 125px;
   overflow: hidden;
-  /* border: 1px dashed yellow; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card-language__icon{
+.languageCard__icon{
   width: 100px;
   filter: grayscale(1);
   transition: 500ms;
 }
 
-.card-language:hover .card-language__icon{
+.languageCard:hover .languageCard__icon{
   filter: grayscale(0);
   transform: rotateX(360deg);
 }
 
-.card-language__title{
+.languageCard__title{
   font-size: var(--size-2-5);
   font-weight: bold;
   /* background: red; */
@@ -78,10 +53,10 @@
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.611);
   color: var(--blue-3);
 }
-.card-language__number{
-  /* background: violet; */
-}
-.card-language__bar{
+/* .languageCard__number{
+  background: violet;
+} */
+.languageCard__bar{
   background: green;
   background: var(--gray-2);
   height: 15px;
@@ -92,54 +67,48 @@
   background: linear-gradient(90deg, var(--blue), var(--green) 30%, var(--gray-2) 10%);
 }
 
-.card-language__button-container{
+.languageCard__button-container{
   display: flex;
   gap: 1.5rem;
 }
 
-.card-language__button{
+.languageCard__button{
   background: var(--gray-2);
   color: white;
   padding: 1rem 3rem;
   border-radius: .5rem ;
   transition: 300ms;
 }
-.card-language__button:hover{
+.languageCard__button:hover{
   background: var(--blue);
   transform: scale(1.15);
 }
 
 /* //////////////////////////////////////////////////////7 */
 @media (min-width: 720px) {
-  .container-cards-languages {
-    grid-template-columns: 1fr 1fr;
-  }
 
-  .card-language{
+  .languageCard{
     gap: 1.5rem;
     padding: 4rem;
   }
 
-  .card-language:hover{
-    /* transform: scale(1.02); */
+  .languageCard:hover{
     box-shadow: 0 0 20px 0px #131315;
-    /* box-shadow: 0 0 25px 0px #7f5af049; */
   }
   
-  .card-language__icon-mask{
+  .languageCard__icon-mask{
     width: 120px;
     height: 120px;
-    /* border: 1px dashed yellow; */
   }
-  .card-language__icon{
+  .languageCard__icon{
     width: 100px;
   }
 
-  .card-language__title{
+  .languageCard__title{
     font-size: var(--size-2-5);
   }
 
-  .card-language__button{
+  .languageCard__button{
     padding: 1.5rem 3rem;
   }
 
@@ -147,20 +116,16 @@
 
 /* //////////////////////////////////////////////////////7 */
 @media (min-width: 1024px) {
-  .container-cards-languages {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 
-  .card-language__icon-mask{
+  .languageCard__icon-mask{
     width: 180px;
     height: 180px;
-    /* border: 1px dashed yellow; */
   }
-  .card-language__icon{
+  .languageCard__icon{
     width: 130px;
   }
 
-  .card-language__title{
+  .languageCard__title{
     font-size: var(--size-3);
   }
 }
