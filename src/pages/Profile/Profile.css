@@ -9,6 +9,7 @@
   padding: 1.5rem;
   padding: 4rem 1rem;
   position: relative;
+  min-height: calc(100vh - 8rem);
 }
 
 .section-profile:before{

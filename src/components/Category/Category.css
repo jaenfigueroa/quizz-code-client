@@ -1,0 +1,36 @@
+.section-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+  background: var(--gradient);
+}
+
+/* CONTENEDOR DE CARDS */
+.section-category__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  width: 90%;
+}
+
+/* //////////////////////////////////////////////////////7 */
+@media (min-width: 720px) {
+  .section-category{
+    padding: 3rem 0 10rem;
+  }
+
+  .section-category__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* //////////////////////////////////////////////////////7 */
+@media (min-width: 1024px) {
+  .section-category__container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
