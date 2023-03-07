@@ -38,7 +38,6 @@
   background: var(--black-7);
   color: white;
   transition: 300ms;
-  cursor: pointer;
   line-height: 25px;
   max-width: 500px;
 
@@ -94,7 +93,6 @@
   background: var(--gray-2);
   border: none;
   transition: 300ms;
-  cursor: pointer;
 }
 .section-quizz__submit:hover{
   background: var(--green-2);

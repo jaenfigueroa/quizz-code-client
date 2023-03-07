@@ -28,9 +28,6 @@
   border-radius: .5rem;
   background: var(--gray-7);
   height: max-content;
-
-  /* box-shadow: 10px 10px 20px #0000004b; */
-  /* box-shadow: 10px 10px 20px #00000032; */
   box-shadow: 10px 10px 20px #00000043;
 }
 
@@ -114,7 +111,6 @@
   background: #444;
   transition: 300ms;
   border: none;
-  cursor: pointer;
   background: var(--gray-4);
 }
 

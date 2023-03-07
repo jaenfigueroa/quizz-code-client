@@ -16,7 +16,7 @@
   background: var(--black-6);
   background: #202023;
   background: linear-gradient(45deg, #111, var(--black-6));
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: 300ms;
   box-shadow: -10px 10px 20px #2c2c2c33;
 }
@@ -24,7 +24,6 @@
 .card-github:hover{
   transform: scale(1.1);
   transform: scale(1.05);
-  /* box-shadow: -10px 10px 20px #2c2c2ca3; */
 }
 
 /* .card-github:hover{

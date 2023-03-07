@@ -14,7 +14,7 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  min-height: 700px;
+  /* min-height: 700px; */
   background: var(--gradient);
   /* background: red; */
   height: 100vh;
@@ -33,6 +33,9 @@
 
   background: linear-gradient(140deg, #111 40%, #111111cd, transparent), url(../../assets/patron.png);
   background-size: cover;
+
+  /* background: red; */
+  padding-bottom: 8rem;
 }
 
 
@@ -43,7 +46,19 @@
   /* background: blue; */
   color: var(--white);
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
 }
+
+/* @media (min-width: 720px) {
+  .section-home-1{
+    flex-direction: row;
+    gap: 0rem;
+  }
+} */
 
 .section-home-1 p {
   text-align: center;
@@ -66,19 +81,64 @@
   font-weight: 800;
 }
 
+.section-home__button-acept{
+  padding: 2rem 4rem;
+  padding: 2rem 6rem;
+  border-radius: 1rem;
+  font-size: var(--size-3);
+  font-weight: bold;
+  position: relative;
+  background: linear-gradient(90deg, var(--blue), var(--green));
+  background: linear-gradient(130deg, var(--blue), var(--green));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  transition: 100ms;
+  border: none;
 
+  box-shadow: -20px -20px 50px #7f5af0, 20px 20px 50px #43d397;
+  box-shadow: -20px -20px 60px #7f5af0, 20px 20px 60px #43d397;
+  box-shadow: -20px -20px 60px #7f5af0c7, 20px 20px 60px #43d397d1;
+  box-shadow: -20px -20px 60px rgba(127, 89, 240, 0.5), 20px 20px 60px rgba(67, 211, 151, 0.5);
+  box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5);
+  /* box-shadow: -20px -20px 70px #7f5af0, 20px 20px 70px #43d397; */
+}
+
+
+
+.section-home__button-acept:after{
+  content: 'Aceptar';
+  /* content: '!Aceptar los retos¡'; */
+  /* content: 'Aceptar el reto'; */
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  background: rgba(255, 255, 0, 0.59);
+  position: absolute;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111111;
+  color: white;
+}
+
+.section-home__button-acept:hover{
+  transform: rotateZ(-5deg);
+}
 
 
 /* HERO 2////////////// */
 .section-home-2 {
-  /* background: red; */
   display: flex;
   justify-content: center;
+  background: red;
+  display: none !important;
 }
 
 .section-home__mask {
   width: 250px;
-  /* border: 1px solid yellow; */
+  border: 1px solid yellow;
 }
 
 /* SECCION 2 - CATEGORIAS //////////////////////////////////*/
@@ -101,11 +161,31 @@
   .section-home__hero {
     flex-direction: row;
     padding: 0 8rem;
+    /* padding: 0 7rem;
+    padding: 0 6rem;
+    padding: 0 5rem;
+    padding: 0 4rem;
+    padding: 0 0rem; */
     gap: 5rem;
 
     height: calc(100vh - 8rem);
   }
 
+  .section-home__button-acept{
+    padding: 2rem 10rem;
+    padding: 2rem 12rem;
+    padding: 2.2rem 12rem;
+
+    padding: 2.5rem 12rem;
+    padding: 2.5rem 14rem;
+    padding: 2.5rem 16rem;
+    /* padding: 2.5rem 10rem; */
+  }
+
+  .section-home__button-acept:after{
+    content: '!Aceptar los retos¡';
+    font-size: 3.5rem;
+  }
   /* SECCION CATEGORIAS */
   .section-home__categories{
     padding: 3rem 0 10rem;
@@ -127,6 +207,10 @@
     text-align: center;
     font-family: var(--font-1);
     font-size: var(--size-4);
+    font-size: 4.5rem;
+
+    /* background: red; */
+    min-width: 600px;
   }
 
 
@@ -136,17 +220,37 @@
 
   .section-home__hero{
     animation: fondo 5s infinite alternate-reverse;
+    justify-content: start;
   }
 
   .section-home-1 p{
     font-family: var(--font-3);
-    /* font-size: var(--size-5-5); */
+    font-weight: 600;
+    width: 200px;
+    /* border: 1px dashed gray; */
+  }
+}
+
+
+@media (min-width: 1200px) {
+
+  /* .section-home__hero{
+    justify-content: start;
+  } */
+
+  .section-home-1 p{
+    /* font-family: var(--font-3); */
     font-size: 5rem;
     font-size: 5.5rem;
-    /* font-size: 5.8rem; */
-    /* font-size: 6rem; */
-    /* font-size: var(--size-6); */
     font-weight: 600;
+    width: 800px;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .section-home__hero {
+    padding: 0 0;
   }
 }
 

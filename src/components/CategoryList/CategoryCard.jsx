@@ -1,14 +1,20 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom'
+import { AppContext } from '../../context/AppContext';
 import './CategoryCard.css'
 
 //////////////////////////////////////
 const CategoryCard = ({ category }) => {
+
+  const {isAuthenticated} = useContext(AppContext)
+
   const { name } = category;
 
 
 
   //////////////////////////////////////
   return (
+    // <article className={`card-language ${!isAuthenticated && 'card-language--locked'}`}>
     <article className='card-language'>
       {/* LOGO */}
       <div className='card-language__icon-mask'>

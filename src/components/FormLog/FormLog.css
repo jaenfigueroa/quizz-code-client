@@ -61,7 +61,6 @@
   padding: 1rem 3rem;
   background-color: var(--black-5);
   color: white;
-  cursor: pointer;
   transition: 300ms;
   width: max-content;
 }

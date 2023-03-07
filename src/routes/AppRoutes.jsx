@@ -28,8 +28,10 @@ export const AppRoutes = () => {
 
       {/* CUERPO */}
       <Routes>
-        <Route path='/' element={<Navigate to={!isAuthenticated ? '/login' : '/home'}/>}/>
+        {/* <Route path='/' element={<Navigate to={!isAuthenticated ? '/login' : '/home'}/>}/> */}
+        <Route path='/' element={<Navigate to={'/home'}/>}/>
         <Route path='/ranking' element={<Ranking/>}/> {/* RANKING DE PUNTAJES */}
+        <Route path='/home' element={<Home/>}/> {/* SELECTOR DEL AREA DE PREGUNTAS */}
 
         {
           !isAuthenticated ? (
@@ -39,7 +41,6 @@ export const AppRoutes = () => {
             </>
           ): (
             <>
-              <Route path='/home' element={<Home/>}/> {/* SELECTOR DEL AREA DE PREGUNTAS */}
               <Route path='/challenge/:category/:number' element={<Challenge/>}/> {/* EJERCICIO UNICO */}
               <Route path='/profile' element={<Profile/>}/> {/* EDITAR PERFIL */}
               <Route path='/category/:category' element={<Category/>}/> {/* VER LOS EJERCICIOS CON EDITOR */}
