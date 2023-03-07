@@ -1,5 +1,6 @@
 :root{
   --gradient: linear-gradient(90deg, var(--black-2), #1e1e1e);
+  /* --gradient-2: linear-gradient(90deg, var(--black-2), #1e1e1e); */
   --black-1: #010101;
   --black-2: #16161a;
   --black-3: #202023;
@@ -15,7 +16,10 @@
   --blue-3: #a78dff;
   --blue-4: #bfabff;
   --blue-5: #d8cbff;
+  --blue-6: #5842a2;
   --green: #43d397;
   --green-2: #24ab73;
-  --red: #a52c3d;
+  /* --red: #a52c3d; */
+  /* --red: #FF3D8B; */
+  --red: #f40f6a;
 }

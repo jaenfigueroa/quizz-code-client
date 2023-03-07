@@ -18,7 +18,24 @@
   background: var(--gradient);
   /* background: red; */
   height: 100vh;
+  /* background: linear-gradient(90deg, #16161a, transparent), url(../../assets/patron.png);
+  background: linear-gradient(90deg, #111 50%, transparent), url(../../assets/patron.png);
+  background: linear-gradient(45deg, #111 50%, transparent), url(../../assets/patron.png);
+  background: linear-gradient(45deg, #111 60%, transparent), url(../../assets/patron.png);
+  background: linear-gradient(30deg, #111 60%, transparent), url(../../assets/patron.png);
+  background: linear-gradient(70deg, #111 50%, transparent), url(../../assets/patron.png);
+  background: linear-gradient(70deg, #111 55%, #111111b1, transparent), url(../../assets/patron.png);
+  background: linear-gradient(70deg, #111 45%, #111111b1, transparent), url(../../assets/patron.png); */
+  
+  /* background: linear-gradient(70deg, #111 40%, #111111cd, transparent), url(../../assets/patron.png); */
+  /* background-size: cover; */
+  /* animation: fondo 5s infinite alternate-reverse; */
+
+  background: linear-gradient(140deg, #111 40%, #111111cd, transparent), url(../../assets/patron.png);
+  background-size: cover;
 }
+
+
 
 
 /* HERO 1////////////// */
@@ -67,13 +84,14 @@
 /* SECCION 2 - CATEGORIAS //////////////////////////////////*/
 .section-home__categories {
   background: gray;
-  background: var(--black-3);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   /* gap: 5rem; */
   padding: 2rem 0;
+  /* background: var(--black-3); */
+  background: var(--gradient);
 }
 
 @media (min-width: 720px) {
@@ -116,9 +134,34 @@
 
 @media (min-width: 1024px) {
 
+  .section-home__hero{
+    animation: fondo 5s infinite alternate-reverse;
+  }
+
   .section-home-1 p{
     font-family: var(--font-3);
-    font-size: var(--size-5-5);
+    /* font-size: var(--size-5-5); */
+    font-size: 5rem;
+    font-size: 5.5rem;
+    /* font-size: 5.8rem; */
+    /* font-size: 6rem; */
+    /* font-size: var(--size-6); */
     font-weight: 600;
+  }
+}
+
+
+@keyframes fondo {
+  0%{
+    background: linear-gradient(70deg, #111 40%, #111111cd, transparent), url(../../assets/patron.png);
+    background-size: cover;
+  }
+  50%{
+    background: linear-gradient(70deg, #111 40%, #111111cd, transparent), url(../../assets/patron2.png);
+    background-size: cover;
+  }
+  100%{
+    background: linear-gradient(70deg, #111 40%, #111111cd, transparent), url(../../assets/patron3.png);
+    background-size: cover;
   }
 }

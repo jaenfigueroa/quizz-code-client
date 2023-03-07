@@ -6,7 +6,16 @@
   align-items: center;
   gap: 2rem;
   padding: 2rem;
+  /* background: linear-gradient(110deg, #111 50%, #111111cd, #11111167), url(../../assets/patron.png);
+  background: linear-gradient(110deg, #111 50%, #111111cd, #11111126), url(../../assets/patron.png);
+  background: linear-gradient(110deg, #111 50%, #111111cd, #11111100), url(../../assets/patron.png);
+  background: linear-gradient(110deg, #111 40%, #111111cd, #11111100), url(../../assets/patron.png); */
+  background: linear-gradient(110deg, #111 30%, #111111cd, #11111100), url(../../assets/patron.png);
+  /* background: linear-gradient(110deg, #111 40%, #111111cd, #11111167), url(../../assets/patron.png); */
+  /* background: linear-gradient(110deg, #111 30%, #111111cd, #11111167), url(../../assets/patron.png); */
+  /* background: linear-gradient(110deg, #111 30%, #1111118a, #11111167), url(../../assets/patron.png); */
   background: var(--gradient);
+  background-size: cover;
 }
 
 /* TARJETA DEL USUARIO */
@@ -26,6 +35,8 @@
 
   border: 2px solid white;
   box-shadow: 0 0 20px 10px #00000057;
+  /* box-shadow: 0 0 20px 10px #0000009d; */
+  /* box-shadow: 0 0 20px 10px #000000; */
   transition: 300ms;
   color: var(--black-4);
 }
@@ -82,7 +93,10 @@
   width: 100%;
   border-radius: .5rem;
   overflow: hidden;
-  box-shadow: 0 0 20px 10px #00000029;
+  /* box-shadow: 0 0 20px 10px #00000029; */
+  /* box-shadow: 0 0 20px 10px #00000081; */
+  /* box-shadow: 10px 10px 20px 0px #0000003d; */
+  box-shadow: 10px 10px 20px 0px #00000047;
 }
 
 .section-ranking__table header{
@@ -154,6 +168,8 @@
   .section-ranking{
     padding: 4rem 1rem;
     gap: 4rem;
+    background: linear-gradient(110deg, #111 30%, #111111cd, #11111100), url(../../assets/patron.png);
+    background-size: contain;
   }
 
   .section-ranking__user{
@@ -164,7 +180,7 @@
 
   .section-ranking__user:hover{
     transform: scale(1.15);
-    box-shadow: 0 0 20px 10px #7f5af03e;
+    box-shadow: 0 0 20px 10px #ffffff18;
   }
   
   .section-ranking__user-title{

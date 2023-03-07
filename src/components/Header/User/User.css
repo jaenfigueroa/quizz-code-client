@@ -10,6 +10,7 @@
 .user__img{
   width: 100%;
   border-radius: 50%;
+  background: #111111;
 }
 
 .user__information{

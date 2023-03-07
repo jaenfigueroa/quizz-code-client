@@ -16,7 +16,7 @@ export const Contributors = () => {
       <div className='section-contributors__container'>
         {
           list.map((user, index) => (
-            <a href={`https://github.com/${user}`} key={index}>
+            <a href={`https://github.com/${user}`} key={index} target='_blank'>
               <TargetGithub userName={user}  />
             </a>
           ))

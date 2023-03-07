@@ -24,7 +24,7 @@ export const FormLog = ({ title, otherUrl, img, action }) => {
     <div className='formlog'>
 
       <div className='formlog__mask'>
-        <img src={img} alt="" />
+        {/* <img src={img} alt="" /> */}
       </div>
 
       <div className='formlog__block'>

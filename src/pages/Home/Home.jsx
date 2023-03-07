@@ -34,7 +34,7 @@ export const Home = () => {
 
         <div className='section-home-2'>
           <div className='section-home__mask'>
-            <img src={heroImg} alt="" />
+            {/* <img src={heroImg} alt="" /> */}
           </div>
         </div>
       </section>
