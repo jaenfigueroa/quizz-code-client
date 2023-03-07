@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Profile.css";
 
 ////////////////////////////////////////
@@ -52,6 +52,9 @@ export const Profile = () => {
 
   }
 
+  useEffect(()=> {
+    window.scrollTo(0, 0)
+  }, [])
 
   ////////////////////////////////////////
   return (
