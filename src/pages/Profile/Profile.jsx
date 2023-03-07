@@ -77,7 +77,7 @@ export const Profile = () => {
                       {/* INPUT CON EL VALOR */}
                       <input className={`section-profile__table-value section-profile__table-value--active`} defaultValue={element.value} disabled={element.active? 0 : 1} placeholder={element.placeholder}/>
                       {/* INPUT PARA PONER LA CONTRASEÑA*/}
-                      <input className={`section-profile__table-value ${element.active && 'section-profile__table-value--active'}`} placeholder={element.textConfirm}/>
+                      <input type='password' className={`section-profile__table-value ${element.active && 'section-profile__table-value--active'}`} placeholder={element.textConfirm}/>
                     </>
                   )
                 }
