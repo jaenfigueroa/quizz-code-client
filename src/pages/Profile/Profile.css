@@ -1,58 +1,151 @@
 .section-profile {
   flex-grow: 1;
-  background: rgb(255, 114, 114);
   background: var(--gradient);
-  padding: 2rem;
   display: flex;
   justify-content: center;
+  padding: 1.5rem;
+  padding: 4rem 1rem;
 }
 
-.section-profile form {
+.section-profile__block{
+  background: var(--black-6);
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  border-radius: .5rem;
+  /* background: crimson; */
+}
+
+.section-profile__title{
+  /* background-color: aqua; */
+  color: black;
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.section-profile__table{
+  /* background: blue; */
+  min-height: 100px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 300px;
-  /* border: 1px solid rgb(5, 255, 9); */
-  height: max-content;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
 }
 
-.section-profile__display-image {
-  width: 100px;
-  height: 100px;
-  background: gray;
-  border-radius: 50%;
-}
+.section-profile__table-line{
+  color: black;
 
-.section-profile input{
+  /* display: grid; */
+  /* grid-template-columns: 2fr 2fr 1fr; */
+
+  display: flex;
+  flex-direction: column;
+
   padding: 1rem;
-  border-radius: 1rem;
-  border: none;
-  outline: none;
-  border: 2px solid transparent;
-}
-
-.section-profile input:focus{
-  border: 2px solid var(--blue);
-}
-
-.section-profile button{
-  padding: 1.5rem;
   border-radius: .5rem;
-  border: none;
-  cursor: pointer;
-  transition: 300ms;
+  background: var(--gray-2);
+  background: var(--white);
+  background: white;
+
+  gap: .2rem;
+  /* background: yellow; */
 }
 
-.section-profile button:hover{
+.section-profile__table-title{
+  color: red;
+  color: var(--white);
+  color: var(--black);
+}
+
+.section-profile__table-value{
+  color: green;
+  font-weight: bold;
+  color: var(--blue);
+  font-size: 1.6rem;
+  font-size: 1.8rem;
+  border: none;
+  /* outline: none; */
+}
+
+.section-profile__table-button-container{
+  /* background: red; */
+  display: flex;
+  gap: 1rem;
+}
+
+.section-profile__table-value--active{
+  padding: 1rem;
+  border: 2px solid var(--blue);
+  border: 2px solid black;
+  border: 2px solid gray;
+  border-radius: .5rem;
+  margin-top: 1rem;
+}
+
+.section-profile__table-button-edit{
+  color: violet;
+  margin-top: 1rem;
+  color: black;
+  background: violet;
+  padding: 1rem;
+  width: max-content;
+  border-radius: .5rem;
   background: var(--blue);
   color: white;
+  background: #333;
+  background: #444;
+  transition: 300ms;
+  border: none;
+  cursor: pointer;
 }
 
-.section-profile__form-error {
-  color: green;
-  font-size: 12px;
-  margin-top: 5px;
-  margin-left: 5px;
+.section-profile__table-button-edit:hover{
+  background: var(--blue);
+}
+
+.section-profile__table-button-edit--green:hover{
+  background: var(--green-2);
+}
+.section-profile__table-button-edit--red:hover{
+  background: var(--red);
+}
+
+@media (min-width: 720px) {
+
+  .section-profile__block{
+    width: 100%;
+    max-width: 550px;
+    padding: 1.5rem;
+    padding: 2rem;
+  }
+
+  .section-profile__title{
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-profile__table-line{
+    padding: 1.5rem;
+    padding: 1.5rem 2rem;
+    gap: .2rem;
+    /* gap: .5rem; */
+    /* background: yellow; */
+  }
+
+  .section-profile__table-title{
+    font-size: 2rem;
+  }
+  
+  .section-profile__table-value{
+    font-size: 1.8rem;
+    font-size: 2.2rem;
+  }
+
+  .section-profile__table-button-edit{
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+  }
 }
