@@ -88,7 +88,6 @@
   font-size: var(--size-3);
   font-weight: bold;
   position: relative;
-  background: linear-gradient(90deg, var(--blue), var(--green));
   background: linear-gradient(130deg, var(--blue), var(--green));
   display: flex;
   justify-content: center;
@@ -96,16 +95,9 @@
   color: transparent;
   transition: 100ms;
   border: none;
-
-  box-shadow: -20px -20px 50px #7f5af0, 20px 20px 50px #43d397;
-  box-shadow: -20px -20px 60px #7f5af0, 20px 20px 60px #43d397;
-  box-shadow: -20px -20px 60px #7f5af0c7, 20px 20px 60px #43d397d1;
-  box-shadow: -20px -20px 60px rgba(127, 89, 240, 0.5), 20px 20px 60px rgba(67, 211, 151, 0.5);
   box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5);
-  /* box-shadow: -20px -20px 70px #7f5af0, 20px 20px 70px #43d397; */
+  cursor: default;
 }
-
-
 
 .section-home__button-acept:after{
   content: 'Aceptar';
