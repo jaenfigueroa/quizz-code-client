@@ -1,12 +1,9 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import { AppContext } from '../../context/AppContext'
+import React from 'react'
+import { GlowButton } from './glowButton/glowButton'
 import './Hero.css'
 
 //////////////////////////////////
 export const Hero = () => {
-
-  const {isAuthenticated} = useContext(AppContext)
 
   //////////////////////////////////
   return (
@@ -16,14 +13,7 @@ export const Hero = () => {
 
         <p className='section-hero__text'>¡Acepta los retos y lleva tus habilidades de <span>HTML, CSS y JavaScript</span> al siguiente nivel!</p>
         
-        {
-          isAuthenticated ? (
-            <a href='#section-categories' className='section-hero__button-acept'>Aceptar</a>
-          ) : (
-            <Link to='/login' className='section-hero__button-acept'>Aceptar</Link>
-          )
-        }
-
+        <GlowButton/>
       </div>
     </section>
   )

@@ -41,41 +41,16 @@
   font-weight: 800;
 }
 
-.section-hero__button-acept{
-  padding: 2rem 4rem;
-  padding: 2rem 6rem;
-  border-radius: 1rem;
-  font-size: var(--size-3);
-  font-weight: bold;
-  position: relative;
-  background: linear-gradient(130deg, var(--blue), var(--green));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: transparent;
-  transition: 100ms;
-  border: none;
-  box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5);
-  cursor: default;
-}
 
-.section-hero__button-acept:after{
-  content: 'Aceptar';
-  width: calc(100% - 1rem);
-  height: calc(100% - 1rem);
-  background: rgba(255, 255, 0, 0.59);
-  position: absolute;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #111111;
-  color: white;
-}
 
-.section-hero__button-acept:hover{
-  transform: rotateZ(-5deg);
-}
+
+
+
+
+
+
+
+
 
 
 @media (min-width: 720px) {
@@ -98,14 +73,11 @@
     min-width: 600px;
   }
 
-  .section-hero__button-acept{
-    padding: 2.5rem 16rem;
-  }
 
-  .section-hero__button-acept:after{
-    content: '!Aceptar los retos¡';
-    font-size: 3.5rem;
-  }
+
+
+
+
 
 }
 
