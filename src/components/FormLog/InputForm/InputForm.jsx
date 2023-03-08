@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import './InputForm.css'
 
 /////////////////////////////////////////////
-export const InputForm = ({ label, type, name, validator = null }) => {
+export const InputForm = ({ label, type, name, validator = null , minLength, setResults, }) => {
 
   const [test, setTest] = useState({ result: true, message: '' })
 
@@ -12,16 +12,25 @@ export const InputForm = ({ label, type, name, validator = null }) => {
     //solo si tiene un validador asignado
     if (validator !== null) {
       const results = validator(e.target.value)
+      // console.log(results)
 
       setTest(results)
+
+      //extra, para elegir entre poder o no poder enviar formulario
+      setResults((currentState) => {
+
+        return {...currentState, [name]: results.result}
+      }) 
     }
 
   }
 
+
+
   /////////////////////////////////////////////
   return (
     <label>{label}
-      <input type={type} name={name} onChange={getTest} autoComplete='off' required/>
+      <input className='formlog__input' type={type} name={name} onChange={getTest} autoComplete='off' required minLength={minLength}/>
       {
         test.message && (
           <span className={`input-form__message ${!test.result && 'input-form__message--red'}`}>

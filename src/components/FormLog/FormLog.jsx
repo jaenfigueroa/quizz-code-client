@@ -3,15 +3,15 @@ import { sendForm } from '../../helpers/sendForm'
 import './FormLog.css'
 
 ////////////////////////////////////
-export const FormLog = ({ title, inputs, sendText, other, route }) => {
+export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }) => {
 
   const [formData, setFormData] = useState({})
 
   //OBTENER VALORES DEL INPUT DINAMICAMENTE
   const getValues = (e) => {
-    const {name, value} = e.target
+    const { name, value } = e.target
 
-    setFormData({...formData, [name]: value})
+    setFormData({ ...formData, [name]: value })
     // console.log(formData)
   }
 
@@ -23,7 +23,7 @@ export const FormLog = ({ title, inputs, sendText, other, route }) => {
     // console.log('se envio el formulario')
   }
 
-  
+
 
   ////////////////////////////////////
   return (
@@ -42,11 +42,12 @@ export const FormLog = ({ title, inputs, sendText, other, route }) => {
           {/* FORMULARIO */}
           <form className='formlog__form' onSubmit={getForm} onChange={getValues}>
             {inputs} {/* INPUTS DEL FORMULARIO */}
-            {other} {/* TEXTO PARA NAVEGAR A LA OTRA SECCION */}
 
             {/* BOTON ENVIAR */}
-            <input type="submit" value={sendText}/>
+            <input type="submit" value={sendText} className={`formlog__button-submit ${!submitEnabled && 'formlog__button-submit--disabled'}`} />
           </form>
+          
+          {other} {/* TEXTO PARA NAVEGAR A LA OTRA SECCION */}
         </div>
 
       </div>
