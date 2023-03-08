@@ -1,0 +1,58 @@
+.glow-button{
+  padding: 2rem 4rem;
+  padding: 2rem 6rem;
+  border-radius: 1rem;
+  font-size: var(--size-3);
+  font-weight: bold;
+  position: relative;
+  background: linear-gradient(130deg, var(--blue), var(--green));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  transition: 100ms;
+  border: none;
+  cursor: default;
+  /* box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5); */
+  animation: shadow-animation 5s ease-in-out infinite alternate-reverse;
+}
+
+.glow-button:hover{
+  transform: rotateZ(-5deg);
+}
+
+.glow-button:after{
+  content: 'Aceptar';
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  position: absolute;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111111;
+  color: white;
+}
+
+@media (min-width: 720px) {
+  .glow-button{
+    padding: 2.5rem 16rem;
+  }
+
+  .glow-button:after{
+    content: '!Aceptar los retos¡';
+    font-size: 3.5rem;
+  }
+
+}
+
+
+@keyframes shadow-animation {
+  0% {
+    box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5);
+  }
+  100% {
+    box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.35), 20px 20px 80px rgba(67, 211, 151, 0.35);
+  }
+
+}
