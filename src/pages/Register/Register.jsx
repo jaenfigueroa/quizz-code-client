@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { InputForm } from '../../components/FormLog/InputForm/InputForm'
 import { testName } from '../../helpers/test/testName'
 import { testEmail } from '../../helpers/test/testEmail'
+import { testPassword } from '../../helpers/test/testPassword'
 
 /////////////////////////////////////////
 export const Register = () => {
@@ -18,7 +19,7 @@ export const Register = () => {
         <>
           <InputForm label='Nombre y Apellido' type='text' name='name' validator={testName}/>
           <InputForm label='Correo Electronico' type='email' name='email' validator={testEmail}/>
-          <InputForm label='Contraseña' type='password' name='password'/>
+          <InputForm label='Contraseña' type='password' name='password' validator={testPassword}/>
         </>
       }
 

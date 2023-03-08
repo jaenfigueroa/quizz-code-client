@@ -1,7 +1,14 @@
 .input-form__message{
   color: var(--green);
+  width: 250px;
 }
 
 .input-form__message--red{
   color: var(--red-2);
+}
+
+@media (min-width: 1024px) {
+  .input-form__message{
+    width: 300px;
+  }
 }
