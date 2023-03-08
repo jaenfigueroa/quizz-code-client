@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { sendForm } from '../../helpers/sendForm'
 import './FormLog.css'
+import { TargetState } from './TargetState/TargetState'
 
 ////////////////////////////////////
 export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }) => {
 
   const [formData, setFormData] = useState({})
+
+  const [targetState, setTargetState] = useState({targetVisible: false})
 
   //OBTENER VALORES DEL INPUT DINAMICAMENTE
   const getValues = (e) => {
@@ -21,7 +24,9 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
 
     //solo se podra si el boton de enviar esta habilitado
     if (submitEnabled) {
-      sendForm(formData, route)
+      const result = sendForm(formData, route)
+
+      setTargetState({...result, targetVisible: true})
       // console.log('se envio el formulario')
     }
   }
@@ -30,10 +35,9 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
 
   ////////////////////////////////////
   return (
-
     <section className='seccion-log'>
 
-      <div className='formlog'>
+      <article className='formlog'>
 
         {/* BLOQUE 1 (VACIO) */}
         <div className='formlog__mask' />
@@ -53,7 +57,11 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
           {other} {/* TEXTO PARA NAVEGAR A LA OTRA SECCION */}
         </div>
 
-      </div>
+        {/* AVISO PAR MOSTRAR EL ESTADO DE LA PETICION */}
+        <TargetState targetState={targetState} setTargetState={setTargetState}/>
+        
+
+      </article>
 
     </section>
   )

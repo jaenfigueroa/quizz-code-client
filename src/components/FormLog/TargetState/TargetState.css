@@ -1,0 +1,71 @@
+.target-state{
+  width: 280px;
+  min-height: 280px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  background: var(--blue);
+  padding: 3.5rem 1rem 3rem;
+  justify-content: space-around;
+
+  position: absolute;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
+
+  /* right: 1.5rem; */
+}
+
+/* .target-state--red{
+  background: red;
+}
+
+.target-state--green{
+  background: green;
+} */
+
+.target-state__icon{
+  font-size: 6rem;
+}
+
+.target-state__icon--animate{
+  animation: girar 1s infinite;
+}
+
+.target-state__text{
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 90%;
+  text-align: center;
+}
+
+.target-state__button{
+  padding: 1.2rem 2rem;
+  border: none;
+  border-radius: .5rem;
+  transition: 300ms;
+}
+
+.target-state__button:hover{
+  transform: scale(1.1);
+}
+
+
+@media (min-width: 720px) {
+  .target-state{
+    right: 50rem;
+    right: 40rem;
+  }
+}
+
+
+
+@keyframes girar {
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}

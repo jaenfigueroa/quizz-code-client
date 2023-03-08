@@ -29,6 +29,7 @@
   align-items: center;
 
   /* border: 1px dashed yellow; */
+  position: relative;
 }
 
 .formlog__mask{
@@ -103,6 +104,8 @@
   width: max-content;
   background-color: var(--blue);
   margin-top: 1rem;
+  
+  outline: none;
 }
 
 .formlog__button-submit:hover{
@@ -124,6 +127,13 @@
 .form-log__ask a:hover{
   text-decoration: underline;
 }
+
+
+
+
+
+
+
 
 
 @media (min-width: 720px) {
