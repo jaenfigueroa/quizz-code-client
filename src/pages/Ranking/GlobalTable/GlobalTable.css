@@ -1,0 +1,109 @@
+/* TABLA DE USUARIOS */
+.global-table{
+  /* background: blue; */
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: .5rem;
+  overflow: hidden;
+  /* box-shadow: 0 0 20px 10px #00000029; */
+  /* box-shadow: 0 0 20px 10px #00000081; */
+  /* box-shadow: 10px 10px 20px 0px #0000003d; */
+  box-shadow: 10px 10px 20px 0px #00000047;
+}
+
+.global-table header{
+  background: #000000;
+  color: white;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  font-weight: 700;
+}
+
+.global-table header span{
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem; /* PROV */
+}
+
+.global-table header span:first-child{
+  justify-content: start;
+  padding-left: 2rem;
+}
+
+.global-table main{
+  /* background: darkorchid; */
+}
+
+.global-table article{
+  background: #27272a;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  align-items: center;
+  color: white;
+}
+
+.global-table article:nth-child(2n - 1){
+  background: #18181b;
+}
+
+.global-table article span{
+  /* width: 40px;
+  height: 40px; */
+  display: flex;
+  gap: 1rem;
+  /* gap: 2rem; */
+  align-items: center;
+  padding: .5rem; 
+  /* padding: 1rem;  */
+}
+
+.global-table article span img{
+  width: 40px;
+  height: 40px;
+  /* background: darkred; */
+  border-radius: 50%;
+}
+
+.global-table p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ranking-table-numbers{
+  color:var(--green);
+}
+
+
+
+@media (min-width: 720px) {
+
+
+  .global-table header span{
+    padding: 2rem 1rem; /* PROV */
+  }
+
+  .global-table article span{
+    gap: 2rem;
+    padding: 1rem 1rem 1rem 2rem; 
+  }
+
+
+
+  /* ///////////////////////////77 */
+  .ranking-table-name{
+    font-weight: 700;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  .global-table{
+    max-width: 650px;
+  }
+}

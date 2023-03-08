@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ContainerTags, Tag } from '../ContainerTags/ContainerTags';
+import { ContainerTags, Tag } from '../../../components/ContainerTags/ContainerTags';
 import './ChallengeCard.css'
 
 ////////////////////////////////////////////////////

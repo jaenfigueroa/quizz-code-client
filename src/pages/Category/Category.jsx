@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import ChallengeList from '../../components/ChallengeList'
+import { useParams } from 'react-router-dom'
+// import Challenges from '../../pages/Challenges/Challenges'
+import ChallengeCard from './ChallengeCard/ChallengeCard'
 import './Category.css'
 
 ///////////////////////////////////////
-const challenges = [
+const challengesList = [
   {
     id: "1",
     name: "Challenge 1",
@@ -54,20 +55,30 @@ const challenges = [
     name: "Challenge 12",
   },
 ]
+
+/////////////////////////////////////
 export const Category = () => {
 
-  const {category} = useParams()
+  const { category } = useParams()
 
 
-  useEffect(()=> {
+  useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   /////////////////////////////////////
   return (
-    <section className='section-category'>
+    <section className='category'>
+
       <h2 className='component-title'>Categoria: {category}</h2>
-      <ChallengeList challenges={challenges} category={category}/>
+
+      {/* CONTENEDOR DE CHALLENEGES DISPONIBLES */}
+      <div className='category__container'>
+        {challengesList.map((challenge) => (
+          <ChallengeCard challenge={challenge} category={category} key={`${challenge.name}-${challenge.id}`} />
+        ))}
+      </div>
+
     </section>
   )
 }

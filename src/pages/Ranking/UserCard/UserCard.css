@@ -1,0 +1,131 @@
+.user-card{
+  background: linear-gradient(45deg, var(--blue), white);
+  padding: 1rem 2rem 2rem;
+  width: 300px;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  min-width: 300px;
+  max-width: 350px;
+  width: 100%;
+
+  border: 2px solid white;
+  box-shadow: 0 0 20px 10px #00000057;
+  /* box-shadow: 0 0 20px 10px #0000009d; */
+  /* box-shadow: 0 0 20px 10px #000000; */
+  transition: 300ms;
+  color: var(--black-4);
+}
+
+
+.user-card__title{
+  /* background: blue; */
+  font-size: var(--size-1-5);
+  text-transform: uppercase;
+}
+
+.user-card__main{
+  /* background: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+
+  justify-content: space-evenly;
+  width: 100%;
+}
+.user-card__main p{
+  text-align: center;
+}
+.user-card__main p:first-child{
+  text-align: center;
+  font-size: var(--size-2-5);
+  font-weight: bold;
+}
+.user-card__main p:last-child{
+  text-transform: uppercase;
+  font-size: var(--size-1-5);
+}
+
+.user-card__main-mask{
+  background: gray;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-card__main-mask img{
+  width: 100%;
+}
+
+
+
+@media (min-width: 720px) {
+  .user-card{
+    padding: 2rem 2rem 2.5rem;
+    max-width: 420px;
+    gap: 1rem;
+  }
+
+  .user-card:hover{
+    transform: scale(1.15);
+    box-shadow: 0 0 20px 10px #ffffff18;
+  }
+  
+  .user-card__title{
+    font-size: var(--size-2);
+  }
+  
+  .user-card__main{
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
+  .user-card__main p{
+    text-align: center;
+  }
+  .user-card__main p:first-child{
+    font-size: var(--size-3-5);
+  }
+  .user-card__main p:last-child{
+    font-size: var(--size-2);
+  }
+  
+  .user-card__main-mask{
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .user-card{
+    max-width: 550px;
+    border: 3px solid white;
+  }
+  
+  .user-card__title{
+    font-size: var(--size-2);
+  }
+  
+  .user-card__main{
+    gap: 4rem;
+  }
+  .user-card__main p{
+    text-align: center;
+  }
+  .user-card__main p:first-child{
+    font-size: var(--size-5);
+  }
+  .user-card__main p:last-child{
+    font-size: var(--size-2);
+  }
+  
+  .user-card__main-mask{
+    width: 110px;
+    height: 110px;
+  }
+}
