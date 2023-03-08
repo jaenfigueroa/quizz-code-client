@@ -19,8 +19,11 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
   const getForm = (e) => {
     e.preventDefault()
 
-    sendForm(formData, route)
-    // console.log('se envio el formulario')
+    //solo se podra si el boton de enviar esta habilitado
+    if (submitEnabled) {
+      sendForm(formData, route)
+      // console.log('se envio el formulario')
+    }
   }
 
 
@@ -46,7 +49,7 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
             {/* BOTON ENVIAR */}
             <input type="submit" value={sendText} className={`formlog__button-submit ${!submitEnabled && 'formlog__button-submit--disabled'}`} />
           </form>
-          
+
           {other} {/* TEXTO PARA NAVEGAR A LA OTRA SECCION */}
         </div>
 
