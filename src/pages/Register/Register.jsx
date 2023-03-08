@@ -2,6 +2,8 @@ import React from 'react'
 import { FormLog } from '../../components/FormLog/FormLog'
 import { Link } from 'react-router-dom'
 import { InputForm } from '../../components/FormLog/InputForm/InputForm'
+import { testName } from '../../helpers/test/testName'
+import { testEmail } from '../../helpers/test/testEmail'
 
 /////////////////////////////////////////
 export const Register = () => {
@@ -14,9 +16,9 @@ export const Register = () => {
 
       inputs={
         <>
-          <InputForm label='Nombre y Apellido' type='text' name='name'/>
-          <InputForm label='Correo Electronico' type='email' name='email'/>
-          <InputForm label='Contraseña' type='password' name='passwword'/>
+          <InputForm label='Nombre y Apellido' type='text' name='name' validator={testName}/>
+          <InputForm label='Correo Electronico' type='email' name='email' validator={testEmail}/>
+          <InputForm label='Contraseña' type='password' name='password'/>
         </>
       }
 

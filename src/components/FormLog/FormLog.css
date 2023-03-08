@@ -27,7 +27,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 7rem 0; */
 
   /* border: 1px dashed yellow; */
 }
@@ -52,6 +51,7 @@
   /* border: 1px dashed red; */
 }
 
+/* FORMULARIO */
 .formlog__form{
   display: flex;
   flex-direction: column;
@@ -63,6 +63,7 @@
   /* border: 1px dashed blue; */
 }
 
+/* INPUTSS */
 .formlog__form label{
   display: flex;
   flex-direction: column;
@@ -83,6 +84,23 @@
   border: 2px solid var(--blue-3);
 }
 
+.form-log__ask{
+  padding: 1rem;
+  text-align: center;
+  color: #dadce0;
+  margin: 1.5rem;
+}
+
+/* PREGUNTA OPCIONAL */
+.form-log__ask a{
+  color: var(--blue-3);
+}
+.form-log__ask a:hover{
+  text-decoration: underline;
+}
+
+/* BOTON ENVIAR FORMULARIO */
+
 .formlog__form input[type=submit]{
   border: none;
   padding: 1rem 3rem;
@@ -97,22 +115,7 @@
   transform: scale(1.2);
 }
 
-.form-log__ask{
-  padding: 1rem;
-  text-align: center;
-  color: #dadce0;
-  margin: 1.5rem;
 
-  /* border: 1px dashed violet; */
-}
-
-.form-log__ask a{
-  color: var(--blue-3);
-  transition: 300ms;
-}
-.form-log__ask a:hover{
-  color: var(--blue);
-}
 
 @media (min-width: 720px) {
   .formlog{
@@ -153,7 +156,9 @@
 
   .formlog__title{
     font-size: 5rem;
-    padding: 2rem 0 5rem 0;
+    /* padding: 2rem 0 5rem 0; */
+    /* padding: 2rem 0 4rem 0; */
+    padding: 2rem 0 3rem 0;
   }
 
   .formlog__form input{

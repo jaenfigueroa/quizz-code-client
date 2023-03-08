@@ -23,6 +23,7 @@ export const FormLog = ({ title, inputs, sendText, other, route }) => {
     // console.log('se envio el formulario')
   }
 
+  
 
   ////////////////////////////////////
   return (
@@ -44,7 +45,7 @@ export const FormLog = ({ title, inputs, sendText, other, route }) => {
             {other} {/* TEXTO PARA NAVEGAR A LA OTRA SECCION */}
 
             {/* BOTON ENVIAR */}
-            <input type="submit" value={sendText} />
+            <input type="submit" value={sendText}/>
           </form>
         </div>
 
