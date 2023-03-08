@@ -55,8 +55,10 @@
   color: transparent;
   transition: 100ms;
   border: none;
-  box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5);
   cursor: default;
+  
+  /* box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5); */
+  animation: shadow-animation 2s linear infinite;
 }
 
 .section-hero__button-acept:after{
@@ -75,6 +77,19 @@
 
 .section-hero__button-acept:hover{
   transform: rotateZ(-5deg);
+}
+
+
+@keyframes shadow-animation {
+  0% {
+    box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5);
+  }
+  50% {
+    box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.35), 20px 20px 80px rgba(67, 211, 151, 0.35);
+  }
+  100% {
+    box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5);
+  }
 }
 
 
