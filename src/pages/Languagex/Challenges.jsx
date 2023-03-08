@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-// import Challenges from '../../pages/Challenges/Challenges'
 import ChallengeCard from './ChallengeCard/ChallengeCard'
 import './Challenges.css'
 
@@ -68,12 +67,12 @@ export const Challenges = () => {
 
   /////////////////////////////////////
   return (
-    <section className='category'>
+    <section className='challenges'>
 
       <h2 className='component-title'>Categoria: {category}</h2>
 
       {/* CONTENEDOR DE CHALLENEGES DISPONIBLES */}
-      <div className='category__container'>
+      <div className='challenges__container'>
         {challengesList.map((challenge) => (
           <ChallengeCard challenge={challenge} category={category} key={`${challenge.name}-${challenge.id}`} />
         ))}

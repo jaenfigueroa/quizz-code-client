@@ -1,4 +1,4 @@
-.category{
+.challenges{
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
 }
 
 /* CONTENEDOR DE CARDS */
-.category__container {
+.challenges__container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
@@ -16,11 +16,11 @@
 }
 
 @media (min-width: 720px) {
-  .category{
+  .challenges{
     padding: 4rem 0rem 8rem;
   }
 
-  .category__container {
+  .challenges__container {
     grid-template-columns: 1fr 1fr;
   }
 }
