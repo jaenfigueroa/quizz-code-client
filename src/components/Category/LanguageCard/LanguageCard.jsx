@@ -27,7 +27,7 @@ const LanguageCard = ({ category }) => {
       {/* BOTON ENTRAR */}
       <div className='languageCard__button-container'>
         <Link className='languageCard__button' to={`/practice/${name}`}>Repaso</Link>
-        <Link className='languageCard__button' to={`/category/${name}`}>Retos</Link>
+        <Link className='languageCard__button' to={`/language/${name}`}>Retos</Link>
       </div>
 
     </article>

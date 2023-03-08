@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 // import Challenges from '../../pages/Challenges/Challenges'
 import ChallengeCard from './ChallengeCard/ChallengeCard'
-import './Category.css'
+import './Languagex.css'
 
 ///////////////////////////////////////
 const challengesList = [
@@ -57,7 +57,7 @@ const challengesList = [
 ]
 
 /////////////////////////////////////
-export const Category = () => {
+export const Languagex = () => {
 
   const { category } = useParams()
 
