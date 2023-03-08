@@ -1,58 +1,55 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { sendForm } from '../../helpers/sendForm'
 import './FormLog.css'
 
 ////////////////////////////////////
-export const FormLog = ({ title, otherUrl, img, action }) => {
+export const FormLog = ({ title, inputs, sendText, other, route }) => {
 
+  const [formData, setFormData] = useState({})
+
+  //OBTENER VALORES DEL INPUT DINAMICAMENTE
+  const getValues = (e) => {
+    const {name, value} = e.target
+
+    setFormData({...formData, [name]: value})
+    // console.log(formData)
+  }
+
+  //ENVIAR EL FORMULARIO Y REALIZAR LA PETICION A LA RUTA CORRESPONDIENTE
   const getForm = (e) => {
     e.preventDefault()
 
-    let userEmail = e.target.userEmail.value
-    let userPassword = e.target.userPassword.value
-
-    if (userEmail && userPassword) {
-      let result = action(userEmail, userPassword)
-      console.log(result)
-    }
-
+    sendForm(formData, route)
+    // console.log('se envio el formulario')
   }
 
 
   ////////////////////////////////////
   return (
-    <div className='formlog'>
 
-      <div className='formlog__mask'>
-        {/* <img src={img} alt="" /> */}
+    <section className='seccion-log'>
+
+      <div className='formlog'>
+
+        {/* BLOQUE 1 (VACIO) */}
+        <div className='formlog__mask' />
+
+        {/* BLOQUE 2 */}
+        <div className='formlog__block'>
+          <h3 className='formlog__title'>{title}</h3>{/* TITULO */}
+
+          {/* FORMULARIO */}
+          <form className='formlog__form' onSubmit={getForm} onChange={getValues}>
+            {inputs} {/* INPUTS DEL FORMULARIO */}
+            {other} {/* TEXTO PARA NAVEGAR A LA OTRA SECCION */}
+
+            {/* BOTON ENVIAR */}
+            <input type="submit" value={sendText} />
+          </form>
+        </div>
+
       </div>
 
-      <div className='formlog__block'>
-        <h3 className='formlog__title'>{title}</h3>
-        {/* <h3 className='component-title'>{title}</h3> */}
-
-        <form className='formlog__form' onSubmit={getForm}>
-          {/* <label>Nombre Usuario
-            <input type='text' name='userName' />
-          </label> */}
-          <label>Correo Electronico
-            <input type='email' name='userEmail' />
-          </label>
-          <label>Contraseña
-            <input type='password' name='userPassword' />
-          </label>
-
-          <p className='form-log__ask'>
-            {otherUrl.text1} <Link to={otherUrl.url}>{otherUrl.text2}</Link>
-          </p>
-
-          <div>
-            <input type="submit" value={'Listo'} />
-          </div>
-
-        </form>
-      </div>
-
-    </div>
+    </section>
   )
 }

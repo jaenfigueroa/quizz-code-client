@@ -1,11 +1,35 @@
+.seccion-log{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradient);
+  min-height: calc(100vh - 5rem);
+}
+
+@media (min-width: 720px) {
+  .seccion-log{
+    min-height: calc(100vh - 8rem);
+    background: linear-gradient(-70deg, #111 40%, #111111cd, transparent), url(../../assets/patron.png);
+    background-size: cover;
+  }
+}
+
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+
+
 .formlog{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 7rem 0;
-  /* height: calc(100vh - 8rem); */
+  /* padding: 7rem 0; */
 
+  /* border: 1px dashed yellow; */
 }
 
 .formlog__mask{
@@ -24,16 +48,19 @@
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
+
+  /* border: 1px dashed red; */
 }
 
 .formlog__form{
-  /* background: violet; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* gap: 2.5rem; */
   gap: 2rem;
+
+  /* border: 1px dashed blue; */
 }
 
 .formlog__form label{
@@ -75,6 +102,8 @@
   text-align: center;
   color: #dadce0;
   margin: 1.5rem;
+
+  /* border: 1px dashed violet; */
 }
 
 .form-log__ask a{

@@ -1,22 +1,34 @@
 import React from 'react'
 import { FormLog } from '../../components/FormLog/FormLog'
-import './Register.css'
-import imgRegister from '../../assets/register.svg'
-import { getRegister } from '../../helpers/getRegister'
+import { Link } from 'react-router-dom'
+import { InputForm } from '../../components/FormLog/InputForm/InputForm'
 
 /////////////////////////////////////////
 export const Register = () => {
 
 
-
   /////////////////////////////////////////
   return (
-    <div className='register'>
-      <FormLog
-        title={'Registrate'}
-        otherUrl={{text1: '¿Ya tienes una cuenta?',text2: 'Iniciar Sesion', url: '/login'}}
-        img={imgRegister}
-        action={getRegister}/>
-    </div>
+    <FormLog
+      title='Registrarme'
+
+      inputs={
+        <>
+          <InputForm label='Nombre y Apellido' type='text' name='name'/>
+          <InputForm label='Correo Electronico' type='email' name='email'/>
+          <InputForm label='Contraseña' type='password' name='passwword'/>
+        </>
+      }
+
+      other={
+        <p className='form-log__ask'>
+          ¿Ya tienes una cuenta? <Link to='/login'>Iniciar Sesion</Link>
+        </p>
+      }
+
+      sendText='Registrarme'
+
+      route='/register' />
   )
+
 }

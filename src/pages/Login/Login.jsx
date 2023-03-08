@@ -1,8 +1,7 @@
 import React from 'react'
 import { FormLog } from '../../components/FormLog/FormLog'
-import './Login.css'
-import imgLogin from '../../assets/login.svg'
-import { getLogin } from '../../helpers/getLogin'
+import { Link } from 'react-router-dom'
+import { InputForm } from '../../components/FormLog/InputForm/InputForm'
 
 //////////////////////////////////////////
 export const Login = () => {
@@ -10,12 +9,26 @@ export const Login = () => {
 
   //////////////////////////////////////////
   return (
-    <div className='login'>
-      <FormLog
-        title='Iniciar Sesion'
-        otherUrl={{text1: '¿Aun no tienes una cuenta?', text2: 'Registrate', url: '/register'}}
-        img={imgLogin}
-        action={getLogin}/>
-    </div>
+    <FormLog
+      title='Iniciar Sesion'
+
+      inputs={
+        <>
+          <InputForm label='Correo Electronico' type='email' name='email'/>
+          <InputForm label='Contraseña' type='password' name='password'/>
+        </>
+      }
+
+      other={
+        <p className='form-log__ask'>
+          ¿Aun no tienes una cuenta? <Link to='/register'>Registrate</Link>
+        </p>
+      }
+
+      sendText='Ingresar'
+
+      route='/login' />
   )
 }
+
+///////////////////////////////////////////////////
