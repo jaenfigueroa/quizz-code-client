@@ -35,7 +35,7 @@ export const Quizz = () => {
 						
 						{/* CIRCLE */}
 						<div className="section-quizz__option-result">
-							<i class="fa-solid fa-check"></i>
+							<i className="fa-solid fa-check"></i>
 							{/* <i class="fa-regular fa-check"></i> */}
 							{/* <i class="fa-sharp fa-regular fa-check"></i> */}
 						</div>
