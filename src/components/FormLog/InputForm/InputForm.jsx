@@ -30,7 +30,15 @@ export const InputForm = ({ label, type, name, validator = null , minLength, set
   /////////////////////////////////////////////
   return (
     <label>{label}
-      <input className='formlog__input' type={type} name={name} onChange={getTest} autoComplete='off' required minLength={minLength}/>
+      <input
+        className='formlog__input'
+        type={type}
+        name={name}
+        onChange={getTest}
+        autoComplete='off'
+        required
+        minLength={minLength}
+        placeholder={label}/>
       {
         test.message && (
           <span className={`input-form__message ${!test.result && 'input-form__message--red'}`}>
