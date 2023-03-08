@@ -1,5 +1,5 @@
 import React from 'react'
-import { GlowButton } from './glowButton/glowButton'
+import { GlowButton } from './GlowButton/GlowButton'
 import './Hero.css'
 
 //////////////////////////////////
