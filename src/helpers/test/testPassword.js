@@ -1,10 +1,10 @@
 var regex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
 
 ///////////////////////////////////////////////////
-export function testPassword(contrasena) {
+export function testPassword(password) {
 
   // Verificar que la contraseña tenga al menos 8 caracteres
-  if (contrasena.length < 8) {
+  if (password.length < 8) {
     return {
       result: false,
       message: 'Debe tener minimo 8 caracteres.'
@@ -12,7 +12,7 @@ export function testPassword(contrasena) {
   }
 
   // Verificar que la contraseña tenga al menos una letra, un número y un carácter especial
-  if (regex.test(contrasena)) {
+  if (regex.test(password)) {
     return {
       result: true,
       message: 'Contraseña valida.'

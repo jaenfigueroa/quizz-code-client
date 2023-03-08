@@ -1,7 +1,7 @@
 const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 ///////////////////////////////////////////////////////
-export const testEmail = (email = 'juan.perez@example.com') => {
+export const testEmail = (email) => {
 
   //debe tener minimo 5 caracteres, incluir un arroba, un punto y un caracterer despues del punto
 
