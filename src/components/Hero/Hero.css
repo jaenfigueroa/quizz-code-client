@@ -41,18 +41,6 @@
   font-weight: 800;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 720px) {
   .section-hero {
     flex-direction: row;
@@ -72,13 +60,6 @@
     font-size: 4.5rem;
     min-width: 600px;
   }
-
-
-
-
-
-
-
 }
 
 @media (min-width: 1024px) {
