@@ -1,5 +1,4 @@
 .glow-button{
-  padding: 2rem 4rem;
   padding: 2rem 6rem;
   border-radius: 1rem;
   font-size: var(--size-3);
@@ -14,7 +13,7 @@
   border: none;
   cursor: default;
   /* box-shadow: -20px -20px 80px rgba(127, 89, 240, 0.5), 20px 20px 80px rgba(67, 211, 151, 0.5); */
-  animation: shadow-animation 5s ease-in-out infinite alternate-reverse;
+  animation: shadow-animation 1.5s ease-in-out infinite alternate-reverse;
 }
 
 .glow-button:hover{
