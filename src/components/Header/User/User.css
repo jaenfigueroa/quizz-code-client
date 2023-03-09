@@ -21,7 +21,7 @@
   top: 50px;
   border-radius: .5rem;
   width: max-content;
-  max-width: 210px;
+  max-width: 250px;
   word-wrap: break-word;
   background: #1430bd;
   background: var(--blue);
@@ -32,12 +32,16 @@
 .user__name{
   font-weight: bold;
   font-size: var(--size-2);
+  /* text-transform: capitalize; */
 }
 
 .user__description{
   word-wrap: break-word;
   margin-bottom: 1rem;
   color: var(--white);
+
+  margin-top: -1rem;
+  margin-top: -1.3rem;
 }
 
 .user__button-edit{

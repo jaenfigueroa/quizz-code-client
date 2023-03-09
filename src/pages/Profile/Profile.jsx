@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AppContext } from "../../context/AppContext";
 import "./Profile.css";
 
 ////////////////////////////////////////
 export const Profile = () => {
 
+  const {user} = useContext(AppContext)
+
   const [options, setOptions] = useState([
     {
       _id: 1,
       type: 'Nombres y Apellidos',
-      defaultValue: 'Jaen Figueroa',
-      value: 'Jaen Figueroa',
+      defaultValue: user.name,
+      value: user.name,
       active: false,
       placeholder: 'Nombre y Apellido',
       textConfirm: 'Contraseña'
@@ -17,8 +20,8 @@ export const Profile = () => {
     {
       _id: 2,
       type: 'Correo Electronico',
-      defaultValue: 'jaenfigueroa@hotmail.com',
-      value: 'jaenfigueroa@hotmail.com',
+      defaultValue: user.email,
+      value: user.email,
       active: false,
       placeholder: 'Correo Electronico',
       textConfirm: 'Contraseña'

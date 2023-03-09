@@ -1,10 +1,10 @@
 import { global } from "./global"
 
 export const sendForm = async (body, route) => {
-  console.log({
-    body: body,
-    url: `${global.urlServer}${route}`
-  })
+  // console.log({
+  //   body: body,
+  //   url: `${global.urlServer}${route}`
+  // })
 
   //////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////
@@ -19,14 +19,13 @@ export const sendForm = async (body, route) => {
     })
     
     const data = await request.json()
-
-    console.log(data)
+    // console.log(data)
     
     return data
 
   } catch (error) {
 
-    console.log('no se puedo realizar la peticion')
+    // console.log('no se puedo realizar la peticion')
 
     return {
       status: 'error',
