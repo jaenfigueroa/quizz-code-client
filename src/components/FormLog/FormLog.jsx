@@ -8,7 +8,7 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
 
   const [formData, setFormData] = useState({})
 
-  const [targetState, setTargetState] = useState({targetVisible: false})
+  const [targetState, setTargetState] = useState({status: 'loading', targetVisible: false})
 
   //OBTENER VALORES DEL INPUT DINAMICAMENTE
   const getValues = (e) => {
@@ -19,14 +19,21 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
   }
 
   //ENVIAR EL FORMULARIO Y REALIZAR LA PETICION A LA RUTA CORRESPONDIENTE
-  const getForm = (e) => {
+  const getForm = async(e) => {
     e.preventDefault()
+
+    //para que se muestre la tarjeta cargando
+    setTargetState((currentState) => {
+      return {...currentState, targetVisible: true}
+    })
 
     //solo se podra si el boton de enviar esta habilitado
     if (submitEnabled) {
-      const result = sendForm(formData, route)
+      const result = await sendForm(formData, route)
+      // console.log(result)
 
       setTargetState({...result, targetVisible: true})
+
       // console.log('se envio el formulario')
     }
   }
@@ -59,7 +66,6 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
 
         {/* AVISO PAR MOSTRAR EL ESTADO DE LA PETICION */}
         <TargetState targetState={targetState} setTargetState={setTargetState}/>
-        
 
       </article>
 

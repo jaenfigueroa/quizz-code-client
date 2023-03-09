@@ -19,8 +19,7 @@ export const sendForm = async (body, route) => {
     })
     
     const data = await request.json()
-
-    console.log(data)
+    // console.log(data)
     
     return data
 
