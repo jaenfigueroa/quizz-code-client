@@ -4,7 +4,7 @@ import './TargetState.css'
 //////////////////////////////////////////
 export const TargetState = ({ targetState, setTargetState  }) => {
 
-  const {status ='loading', message ='Espera unos segundos', targetVisible=false} =  targetState
+  const {status ='loading', message ='Estamos procesando su solicitud, espere unos momentos.', targetVisible=false} =  targetState
 
 
   const closeTarget = () => {

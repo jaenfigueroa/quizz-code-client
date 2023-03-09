@@ -8,7 +8,7 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
 
   const [formData, setFormData] = useState({})
 
-  const [targetState, setTargetState] = useState({status: 'loading', targetVisible: false})
+  const [targetState, setTargetState] = useState({ status: 'loading', targetVisible: false })
 
   //OBTENER VALORES DEL INPUT DINAMICAMENTE
   const getValues = (e) => {
@@ -19,22 +19,24 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
   }
 
   //ENVIAR EL FORMULARIO Y REALIZAR LA PETICION A LA RUTA CORRESPONDIENTE
-  const getForm = async(e) => {
+  const getForm = async (e) => {
     e.preventDefault()
-
-    //para que se muestre la tarjeta cargando
-    setTargetState((currentState) => {
-      return {...currentState, targetVisible: true}
-    })
 
     //solo se podra si el boton de enviar esta habilitado
     if (submitEnabled) {
+
+      //para que se muestre la tarjeta cargando
+      setTargetState(() => {
+        return { status: 'loading', message: 'Estamos procesando su solicitud, espere unos momentos.', targetVisible: true }
+      })
+
+      //enviar el formulario y realizar la peticion al back
       const result = await sendForm(formData, route)
       // console.log(result)
-
-      setTargetState({...result, targetVisible: true})
-
       // console.log('se envio el formulario')
+
+      //mostrar los resultados del back en la tarjeta
+      setTargetState({ ...result, targetVisible: true })
     }
   }
 
@@ -65,7 +67,7 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
         </div>
 
         {/* AVISO PAR MOSTRAR EL ESTADO DE LA PETICION */}
-        <TargetState targetState={targetState} setTargetState={setTargetState}/>
+        <TargetState targetState={targetState} setTargetState={setTargetState} />
 
       </article>
 
