@@ -6,7 +6,7 @@ import "./User.css"
 
 //////////////////////////////////////
 export const User = () => {
-	const { setIsAuthenticated } = useContext(AppContext)
+	const { setIsAuthenticated, user } = useContext(AppContext)
 	const [componentActive, setComponentActive] = useState(false)
 
 	const alternProfile = () => {
@@ -16,12 +16,13 @@ export const User = () => {
 	//////////////////////////////////////
 	return (
 		<div className='user__container' onClick={alternProfile}>
-			<img className='user__img' src="https://avatars.githubusercontent.com/u/69079292?v=4" alt="foto de perfil del usuario"/>
+			<img className='user__img' src="https://twirpz.files.wordpress.com/2015/06/twitter-avi-gender-balanced-figure.png" alt="foto de perfil del usuario"/>
 			{
 				componentActive && (
 				<ul className='user__information'>
-					<li className='user__name'>Jaen Figueroa</li>
-					<li className='user__description'>Aqui va una descripcion del usuario</li>
+					<li className='user__name'>{user.name}</li>
+					{/* <li className='user__description'>Aqui va una descripcion del usuario</li> */}
+					<li className='user__description'>{user.email}</li>
 					<Link className='user__button-edit' to='/profile'>Editar Perfil</Link>
 					<Link className='user__button-edit' to='/' onClick={() => {
 						deleteUser() //eliminar datos del uusario del local storage
