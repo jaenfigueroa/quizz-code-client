@@ -15,10 +15,13 @@ export const sendForm = async (body, route) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body
+      body: JSON.stringify(body)
     })
     
     const data = await request.json()
+
+    console.log(data)
+    
     return data
 
   } catch (error) {
