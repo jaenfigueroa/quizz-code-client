@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { updateUser } from '../../helpers/log/updateUser'
 import { sendForm } from '../../helpers/sendForm'
 import './FormLog.css'
 import { TargetState } from './TargetState/TargetState'
@@ -32,11 +33,16 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
 
       //enviar el formulario y realizar la peticion al back
       const result = await sendForm(formData, route)
+
+      if (result.status === 'sucess') {
+        updateUser(result.user) // actualizar usuario el local storage
+      }
+
       // console.log(result)
       // console.log('se envio el formulario')
 
       //mostrar los resultados del back en la tarjeta
-      setTargetState({ ...result, targetVisible: true })
+      setTargetState({ ...result, targetVisible: true})
     }
   }
 

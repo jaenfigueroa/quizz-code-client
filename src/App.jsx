@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import {  useEffect, useState } from 'react'
 import './App.css'
 import { AppContext } from './context/AppContext'
+import { getUser } from './helpers/log/getUser'
 import { AppRoutes } from './routes/AppRoutes'
 
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  let { user, setUser } = useState({})
+  let [user, setUser] = useState(null)
 
   let listState = {
     isAuthenticated,
@@ -14,6 +15,14 @@ function App() {
     user,
     setUser
   }
+
+  //todas las primeras veces que se carge la pagina
+  useEffect(() => {
+    let user = getUser()
+    setUser(user)
+
+    user && setIsAuthenticated(true)
+  }, [])
 
   /////////////////////////////////////////////////
   return (
