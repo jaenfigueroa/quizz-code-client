@@ -5,7 +5,7 @@ import './SettingOption.css'
 //////////////////////////////////////////////
 export const SettingOption = ({ label, value = '', type, name }) => {
 
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
   const [formData, setFormData] = useState({})
 
   //OBTENER VALORES DEL INPUT DINAMICAMENTE
