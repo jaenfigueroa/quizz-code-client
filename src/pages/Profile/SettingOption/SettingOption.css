@@ -1,0 +1,102 @@
+/* CARD OPTION////////////////////////////////////// */
+.setting-card{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: .5rem;
+  gap: .2rem;
+  background: linear-gradient(90deg, var(--black-4) 50%, var(--black-3));
+}
+
+.setting-card__title{
+  color: var(--white);
+}
+
+/* VALOR ACTUAL ESTATICO */
+.setting-card__value{
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--blue-3);
+}
+
+
+/* INPUTS///////////////////////////// */
+.setting-card__input{
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--blue-3);
+  background: transparent;
+  padding: 1rem;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  outline: none;
+  border: 2px solid var(--gray-6);
+  width: 100%;
+}
+.setting-card__input:focus{
+  border: 2px solid var(--blue-3);
+}
+
+.setting-card__input::placeholder{
+  font-weight: normal;
+  color: var(--gray-6);
+}
+
+
+/* CONTENEDOR DE BOTONES */
+.setting-card__container{
+  display: flex;
+  gap: 1rem;
+}
+
+.setting-card__container button:nth-child(1):hover{
+  background: var(--green-2);
+}
+.setting-card__container button:nth-child(2):hover{
+  background: var(--red);
+}
+
+/* BOTONES */
+.setting-card__button{
+  margin-top: 1rem;
+  padding: 1rem;
+  width: max-content;
+  border-radius: .5rem;
+  color: white;
+  background: #444;
+  transition: 300ms;
+  border: none;
+  background: var(--gray-4);
+}
+
+.setting-card__button:hover{
+  background: var(--blue);
+}
+
+/* /////////////////////////////////////////7 */
+/* /////////////////////////////////////////7 */
+@media (min-width: 720px) {
+  /* CARD//////////////////////7 */
+  .setting-card{
+    padding: 1.5rem 2rem;
+  }
+
+  .setting-card__title{
+    font-size: 2rem;
+    margin-bottom: .3rem;
+  }
+
+  .setting-card__value{
+    font-size: 2.1rem;
+  }
+
+  .setting-card__input{
+    font-size: 2rem;
+  }
+
+  .setting-card__button{
+    margin-top: 1.5rem;
+    padding: 1.3rem 2rem;
+    font-size: 1.7rem;
+  }
+}

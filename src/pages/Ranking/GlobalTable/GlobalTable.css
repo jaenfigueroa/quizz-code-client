@@ -1,6 +1,5 @@
 /* TABLA DE USUARIOS */
 .global-table{
-  /* background: blue; */
   display: flex;
   flex-direction: column;
   min-width: 300px;
@@ -50,14 +49,11 @@
 }
 
 .global-table article span{
-  /* width: 40px;
-  height: 40px; */
   display: flex;
   gap: 1rem;
-  /* gap: 2rem; */
   align-items: center;
   padding: .5rem; 
-  /* padding: 1rem;  */
+  text-transform: capitalize;
 }
 
 .global-table article span img{
