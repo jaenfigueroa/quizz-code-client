@@ -19,7 +19,7 @@ export const Profile = () => {
         <h5 className="section-profile__title">Configuración general de la cuenta</h5>
 
         <section className="section-profile__table">
-          <SettingAvatar value={user.avatar}/>
+          <SettingAvatar value={user.avatar} idUser={user["_id"]}/>
           <SettingOption
             label='Descripcion'
             type='description'
