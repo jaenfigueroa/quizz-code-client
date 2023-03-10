@@ -18,7 +18,9 @@ export const User = () => {
 	//////////////////////////////////////
 	return (
 		<div className='user__container' onClick={alternProfile}>
-			<img className='user__img' src={user.avatar} alt="foto de perfil del usuario"/>
+			<div className="user__mask">
+				<img className='user__img' src={user.avatar} alt="foto de perfil del usuario"/>
+			</div>
 			{
 				componentActive && (
 				<ul className='user__information'>

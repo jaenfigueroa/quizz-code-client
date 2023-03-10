@@ -1,5 +1,6 @@
 import { global } from "./global"
 import { getUser } from "./log/getUser"
+import { updateUser } from "./log/updateUser"
 
 export const uploadImage = async (body, route) => {
 
@@ -12,8 +13,11 @@ export const uploadImage = async (body, route) => {
     })
 
     const data = await response.json()
-    console.log(data)
-    // return data
+
+    updateUser(data.user)
+    // console.log(data)
+
+    return data.user
 
   } catch (error) {
     console.log(error)

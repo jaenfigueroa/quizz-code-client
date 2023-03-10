@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../../../context/AppContext'
 import { uploadImage } from '../../../helpers/uploadImage'
 import './SettingAvatar.css'
 
 //////////////////////////////////////////////
 export const SettingAvatar = ({ value }) => {
 
-  const uploadAvatar = (e) => {
+  const {setUser} = useContext(AppContext)
+
+  const uploadAvatar = async (e) => {
     const newAvatar = e.target.files[0]
 
     const formData = new FormData();
     formData.append('newAvatar', newAvatar);
 
-    uploadImage(formData, `/users/update/avatar`)
+    const data =  await uploadImage(formData, `/users/update/avatar`)
+    // updateState()
+    setUser(data.user)
   }
 
   //////////////////////////////////////////////
@@ -23,7 +28,7 @@ export const SettingAvatar = ({ value }) => {
           className='setting-avatar__input-img'
           type="file"
           accept=".jpg, .png, .gif"
-          name="image" id="imageAvatar" onChange={uploadAvatar}/>
+          name="image" id="imageAvatar" onChange={uploadAvatar} title=''/>
       </div>
     </div>
 

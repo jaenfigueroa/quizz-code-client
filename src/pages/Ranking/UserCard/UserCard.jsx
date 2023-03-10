@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../../../context/AppContext'
+import React from 'react'
+import { getUser } from '../../../helpers/log/getUser'
 import './UserCard.css'
 
 ///////////////////////////////////////////
 export const UserCard = () => {
 
-  const {user} =  useContext(AppContext)
+  const user = getUser()
 
   ///////////////////////////////////////////
   return (
