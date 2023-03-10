@@ -1,16 +1,19 @@
-export const uploadImage = async (event) => {
-  event.preventDefault()
+import { global } from "./global"
+import { getUser } from "./log/getUser"
 
-  const formData = new FormData()
-  formData.append('image', event.target.files[0])
+export const uploadImage = async (body, route) => {
+
+  const user = getUser()
 
   try {
-    const response = await fetch('/upload', {
-      method: 'POST',
-      body: formData
+    const response = await fetch(`${global.urlServer}${route}/${user['_id']}`, {
+      method: 'PUT',
+      body: body
     })
+
     const data = await response.json()
     console.log(data)
+    // return data
 
   } catch (error) {
     console.log(error)

@@ -50,6 +50,7 @@
   display: flex;
 }
 
+
 @media (min-width: 720px) {
   .setting-avatar__mask{
     width: 155px;
