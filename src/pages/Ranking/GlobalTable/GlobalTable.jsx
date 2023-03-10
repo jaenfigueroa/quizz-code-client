@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './GlobalTable.css'
-import { sortList } from '../../../helpers/SortList'
-import { listUser } from '../ListUser'
+import { getRanking } from '../../../helpers/getRanking'
 
 //////////////////////////////////////
 export const GlobalTable = () => {
@@ -10,8 +9,12 @@ export const GlobalTable = () => {
 
 
   useEffect(() => {
-    let sortedList = sortList(listUser)
-    setUserlist(sortedList)
+    const getUsers = async () => {
+      const topFiftyUsers = await getRanking()
+      setUserlist(topFiftyUsers)
+    }
+
+    getUsers()
   }, [])
 
   //////////////////////////////////////
@@ -29,7 +32,7 @@ export const GlobalTable = () => {
           usersList && usersList.map((user, index) => (
             <article key={index}>
               <span>
-                <img src={`https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 99) + 1}.jpg`} alt="" />
+                <img src={user.avatar} alt={`foto de ${user.name}`} />
                 <p className='ranking-table-name'>{user.name}</p>
               </span>
               <p className='ranking-table-numbers'>{user.points}</p>
