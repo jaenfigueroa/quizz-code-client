@@ -25,6 +25,12 @@ export const Profile = () => {
             value={user.name}
             editable={true}/>
           <SettingOption
+            label='Descripcion'
+            type='description'
+            name='description'
+            value={user.description}
+            editable={true}/>
+          <SettingOption
             label='Correo Electronico'
             type='email'
             name='email'
