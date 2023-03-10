@@ -63,7 +63,10 @@
 
   .setting-avatar__mask:hover{
     border: 5px dashed var(--blue-3);
-    box-shadow: 10px 10px 40px #a88dff37;
     box-shadow: 10px 10px 50px #a88dff53;
+  }
+
+  .setting-avatar__input-img:before{
+    font-size: 1.9rem;
   }
 }
