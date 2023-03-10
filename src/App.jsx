@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { AppContext } from './context/AppContext'
 import { getUser } from './helpers/log/getUser'
-import { login } from './helpers/log/login'
+import { autologin } from './helpers/log/autologin'
 import { updateUser } from './helpers/log/updateUser'
 import { AppRoutes } from './routes/AppRoutes'
 
@@ -12,7 +12,7 @@ function App() {
   let [user, setUser] = useState({})
 
   const updateState = async () => {
-    const data = await login()
+    const data = await autologin()
     setUser(data)
   }
 
@@ -31,7 +31,7 @@ function App() {
 
     const init = async () => {
 
-      const data = await login()
+      const data = await autologin()
 
       if (data.status === 'sucess') {
         updateUser(data.user)

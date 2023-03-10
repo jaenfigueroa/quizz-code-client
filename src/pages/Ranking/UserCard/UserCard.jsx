@@ -13,7 +13,7 @@ export const UserCard = () => {
       <h4 className='user-card__title'>Tus resultados</h4>
       <main className='user-card__main'>
         <div className='user-card__main-mask'>
-          <img src="https://twirpz.files.wordpress.com/2015/06/twitter-avi-gender-balanced-figure.png" alt="" />
+          <img src={user.avatar} alt="" />
         </div>
         <div>
           <p>{user.points || 0}</p>
