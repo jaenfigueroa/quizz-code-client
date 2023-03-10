@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from "react";
-import { AppContext } from "../../context/AppContext";
+import React, { useEffect } from "react";
+import { getUser } from "../../helpers/log/getUser";
 import "./Profile.css";
 import { SettingOption } from "./SettingOption/SettingOption";
 
 ////////////////////////////////////////
 export const Profile = () => {
-  const { user } = useContext(AppContext)
+  const user = getUser()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -20,20 +20,20 @@ export const Profile = () => {
         <section className="section-profile__table">
           <SettingOption
             label='Nombre y Apellido'
+            type='name'
             name='name'
             value={user.name}
-            type='name'
             editable={true}/>
           <SettingOption
             label='Correo Electronico'
+            type='email'
             name='email'
             value={user.email}
-            type='email'
             editable={false}/>
           <SettingOption
             label='Contraseña'
-            name='newPassword'
             type='password'
+            name='newPassword'
             editable={true}/>
         </section>
       </div>

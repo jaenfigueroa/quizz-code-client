@@ -11,12 +11,20 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   let [user, setUser] = useState({})
 
+  const updateState = async () => {
+    const data = await login()
+    setUser(data)
+  }
+
   let listState = {
     isAuthenticated,
     setIsAuthenticated,
     user,
-    setUser
+    setUser,
+    updateState
   }
+
+  ///////////////////////////////////
 
   //todas las primeras veces que se carge la pagina
   useEffect(() => {
