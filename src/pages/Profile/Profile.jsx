@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { getUser } from "../../helpers/log/getUser";
 import "./Profile.css";
+import { SettingAvatar } from "./SettingAvatar/SettingAvatar";
 import { SettingOption } from "./SettingOption/SettingOption";
 
 ////////////////////////////////////////
@@ -18,17 +19,18 @@ export const Profile = () => {
         <h5 className="section-profile__title">Configuración general de la cuenta</h5>
 
         <section className="section-profile__table">
-          <SettingOption
-            label='Nombre y Apellido'
-            type='name'
-            name='name'
-            value={user.name}
-            editable={true}/>
+          <SettingAvatar value={user.avatar}/>
           <SettingOption
             label='Descripcion'
             type='description'
             name='description'
             value={user.description}
+            editable={true}/>
+          <SettingOption
+            label='Nombre y Apellido'
+            type='name'
+            name='name'
+            value={user.name}
             editable={true}/>
           <SettingOption
             label='Correo Electronico'
