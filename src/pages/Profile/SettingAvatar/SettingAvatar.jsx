@@ -16,7 +16,12 @@ export const SettingAvatar = ({ value }) => {
 
     const data =  await uploadImage(formData, `/users/update/avatar`)
     // updateState()
-    setUser(data.user)
+    // console.log(data)
+
+    if (data.status === 'success') {
+      // console.log('dentro')
+      setUser(data.user)
+    }
   }
 
   //////////////////////////////////////////////
