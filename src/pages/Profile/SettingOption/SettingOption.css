@@ -73,6 +73,15 @@
   background: var(--blue);
 }
 
+/* ALERTA QUE MUESTRA RESULTADO */
+.setting-card__alert{
+  color: var(--green);
+  padding: 1.5rem 0 0;
+}
+.setting-card__alert--red{
+  color: var(--red-2);
+}
+
 /* /////////////////////////////////////////7 */
 /* /////////////////////////////////////////7 */
 @media (min-width: 720px) {

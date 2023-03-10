@@ -22,16 +22,19 @@ export const Profile = () => {
             label='Nombre y Apellido'
             name='name'
             value={user.name}
-            type='name'/>
+            type='name'
+            editable={true}/>
           <SettingOption
             label='Correo Electronico'
             name='email'
             value={user.email}
-            type='email'/>
+            type='email'
+            editable={false}/>
           <SettingOption
             label='Contraseña'
             name='newPassword'
-            type='password'/>
+            type='password'
+            editable={true}/>
         </section>
       </div>
 

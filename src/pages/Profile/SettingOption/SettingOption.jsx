@@ -3,9 +3,11 @@ import { updateProfile } from '../../../helpers/updateProfile'
 import './SettingOption.css'
 
 //////////////////////////////////////////////
-export const SettingOption = ({ label, value = '', type, name }) => {
+export const SettingOption = ({ label, value = '', type, name, editable }) => {
 
   const [active, setActive] = useState(false)
+  const [alertVisible, setAlertVisible] = useState({visible: false, status: 'loading', text: 'Espera unos segundos...'})
+
   const [formData, setFormData] = useState({})
 
   //OBTENER VALORES DEL INPUT DINAMICAMENTE
@@ -20,22 +22,35 @@ export const SettingOption = ({ label, value = '', type, name }) => {
   const getSubmit = async (e) => {
     e.preventDefault()
 
+    setAlertVisible({visible:true, text:'Espera unos segundos...', status: 'loading'})
+
     const data = await updateProfile(type, formData[name] || value, formData['password'])
 
-    console.log(data)
+    setAlertVisible({visible:true, text: data.message , status: data.status})
+
+    //cerrar el formulario y cultar el aviso 4 segundos despues
+    if (data.status === 'success') {
+      setActive(false)
+      setTimeout(()=> {
+        setAlertVisible({visible:false, status: 'loading', text: 'Espera unos segundos...'})
+      }, 4000)
+    }
   }
 
   //////////////////////////////////////////////
   return (
     <section className="setting-card">
       {/* TITULO */}
-      <span className="setting-card__title">{label}</span>
+      <p className="setting-card__title">{label}</p>
 
       {
         !active ? (
           <>
             <p className='setting-card__value'>{value}</p>
-            <button type="button" className="setting-card__button" onClick={() => setActive(true)}>Editar</button>
+            {
+              editable && <button type="button" className="setting-card__button" onClick={() => setActive(true)}>Editar</button>
+            }
+
           </>
         ) : (
           <form onSubmit={getSubmit}>
@@ -67,6 +82,11 @@ export const SettingOption = ({ label, value = '', type, name }) => {
           </form>
         )
       }
+
+      {
+        alertVisible.visible && <span className={`setting-card__alert ${alertVisible.status === 'error' ? 'setting-card__alert--red':''}`}>{alertVisible.text}</span>
+      }
+
     </section>
   )
 }
