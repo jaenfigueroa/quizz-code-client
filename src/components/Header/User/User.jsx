@@ -2,11 +2,13 @@ import React, { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import { AppContext } from "../../../context/AppContext"
 import { deleteUser } from "../../../helpers/log/deleteUser"
+import { getUser } from "../../../helpers/log/getUser"
 import "./User.css"
 
 //////////////////////////////////////
 export const User = () => {
-	const { setIsAuthenticated, user } = useContext(AppContext)
+	const { setIsAuthenticated } = useContext(AppContext)
+	const user = getUser()
 	const [componentActive, setComponentActive] = useState(false)
 
 	const alternProfile = () => {

@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useLayoutEffect, useState } from 'react'
+import { AppContext } from '../../../context/AppContext'
+import { updateUser } from '../../../helpers/log/updateUser'
 import { updateProfile } from '../../../helpers/updateProfile'
 import './SettingOption.css'
 
 //////////////////////////////////////////////
-export const SettingOption = ({ label, value = '', type, name, editable }) => {
+export const SettingOption = ({ label,  name, value, type, editable }) => {
+
+  const { updateState } = useContext(AppContext)
 
   const [active, setActive] = useState(false)
-  const [alertVisible, setAlertVisible] = useState({visible: false, status: 'loading', text: 'Espera unos segundos...'})
+  const [alertVisible, setAlertVisible] = useState({ visible: false, status: 'loading', text: 'Espera unos segundos...' })
 
   const [formData, setFormData] = useState({})
 
@@ -22,17 +26,23 @@ export const SettingOption = ({ label, value = '', type, name, editable }) => {
   const getSubmit = async (e) => {
     e.preventDefault()
 
-    setAlertVisible({visible:true, text:'Espera unos segundos...', status: 'loading'})
+    setAlertVisible({ visible: true, text: 'Espera unos segundos...', status: 'loading' })
 
     const data = await updateProfile(type, formData[name] || value, formData['password'])
 
-    setAlertVisible({visible:true, text: data.message , status: data.status})
+    setAlertVisible({ visible: true, text: data.message, status: data.status })
 
-    //cerrar el formulario y cultar el aviso 4 segundos despues
+    //cerrar el formulario
+    //actualizar el local storageusuario
+    //actualizar el stado
+    //ocultar el aviso 4 segundos despues
     if (data.status === 'success') {
       setActive(false)
-      setTimeout(()=> {
-        setAlertVisible({visible:false, status: 'loading', text: 'Espera unos segundos...'})
+      updateUser(data.user)
+      updateState()
+
+      setTimeout(() => {
+        setAlertVisible({ visible: false, status: 'loading', text: 'Espera unos segundos...' })
       }, 4000)
     }
   }
@@ -84,7 +94,7 @@ export const SettingOption = ({ label, value = '', type, name, editable }) => {
       }
 
       {
-        alertVisible.visible && <span className={`setting-card__alert ${alertVisible.status === 'error' ? 'setting-card__alert--red':''}`}>{alertVisible.text}</span>
+        alertVisible.visible && <span className={`setting-card__alert ${alertVisible.status === 'error' ? 'setting-card__alert--red' : ''}`}>{alertVisible.text}</span>
       }
 
     </section>
