@@ -6,11 +6,15 @@ export const updateProfile = async (typeValue, newValue, password) => {
   console.log(typeValue, newValue, password)
 
   const {_id} = getUser()
+  console.log(_id)
 
-  const response = await fetch(`${global.urlServer}/users/${_id}`, {
+  const url = `${global.urlServer}/users/update/${_id}`
+  console.log(url)
+
+  const response = await fetch( url, {
     method: 'PUT',
     headers: {
-      'Content-Type': 'aplication/json'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       typeValue,

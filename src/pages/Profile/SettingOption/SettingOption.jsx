@@ -20,8 +20,7 @@ export const SettingOption = ({ label, value = '', type, name }) => {
   const getSubmit = async (e) => {
     e.preventDefault()
 
-    const response = await updateProfile(type, formData[name] || value, formData['password'])
-    const data = await response.json()
+    const data = await updateProfile(type, formData[name] || value, formData['password'])
 
     console.log(data)
   }
