@@ -14,8 +14,8 @@ Challenge platform with a ranking system.
 ## 📷 Screenshots
 
 <div>
-  <img src="https://github.com/jaenfigueroa/screenshots/blob/main/quizzcode/quizzcode7.png" style="width: 50%"  />
-  <img src="https://github.com/jaenfigueroa/screenshots/blob/main/quizzcode/quizzcode6.png" style="width: 50%"  />
+  <img src="https://github.com/jaenfigueroa/screenshots/blob/main/quizzcode/quizzcode7.png" style="width: 49%"  />
+  <img src="https://github.com/jaenfigueroa/screenshots/blob/main/quizzcode/quizzcode6.png" style="width: 49%"  />
   <img src="https://github.com/jaenfigueroa/screenshots/blob/main/quizzcode/quizzcode2.png" style="width: 49%"  />
   <img src="https://github.com/jaenfigueroa/screenshots/blob/main/quizzcode/quizzcode3.png" style="width: 49%"  />
   <img src="https://github.com/jaenfigueroa/screenshots/blob/main/quizzcode/quizzcode8.png" style="width: 49%"  />
