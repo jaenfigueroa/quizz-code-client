@@ -11,7 +11,7 @@ Challenge platform with a ranking system.
   <img src="https://api.netlify.com/api/v1/badges/376e2e64-b4ae-4372-93e0-7fce533da040/deploy-status">
 </div>
 
-## 📷 Screenshots
+## Screenshots
 
 <div>
   <img src="https://github.com/jaenfigueroa/screenshots/blob/main/quizzcode/quizzcode7.png" style="width: 49%"  />
@@ -22,7 +22,7 @@ Challenge platform with a ranking system.
   <img src="https://github.com/jaenfigueroa/screenshots/blob/main/quizzcode/quizzcode8.png" style="width: 49%"  />
 </div>
 
-## 🚀 Developed with the following technologies
+## Developed with the following technologies
 
 <div align="left" >
 
@@ -35,7 +35,7 @@ Challenge platform with a ranking system.
 
 </div>
 
-## 🌍 Deployment and website of the application
+## Deployment and website of the application
 
 You can try the application [here](https://quizz-code.netlify.app/).
 
