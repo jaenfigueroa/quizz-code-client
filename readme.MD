@@ -39,6 +39,6 @@ Challenge platform with a ranking system.
 
 ## Website
 
-You can try the application [here](https://quizz-code.netlify.app/).
+https://quizz-code.netlify.app/
 
 <img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
