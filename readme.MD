@@ -35,6 +35,7 @@ Challenge platform with a ranking system.
 <img src="https://cdn.worldvectorlogo.com/logos/cloudinary-2.svg" height="60px" style="width: 73px"/>  
 
 <br>
+<br>
 
 - React
 - CSS
