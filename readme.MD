@@ -37,7 +37,6 @@ Challenge platform with a ranking system.
 - React
 - CSS
 - Node.js
-- Node.js
 - MongoDB
 - Cloudinary
 
