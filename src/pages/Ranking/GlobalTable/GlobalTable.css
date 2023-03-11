@@ -13,11 +13,13 @@
   box-shadow: 10px 10px 20px 0px #00000047;
 }
 
+
+
 .global-table header{
   background: #000000;
   color: white;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 4fr 1fr 1fr;
   font-weight: 700;
 }
 
@@ -39,7 +41,7 @@
 .global-table article{
   background: #27272a;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 4fr 1fr 1fr;
   align-items: center;
   color: white;
 }
@@ -70,8 +72,18 @@
 }
 
 
-.ranking-table-numbers{
-  color:var(--green);
+.ranking-table__numbers{
+  color:var(--green-3);
+}
+.ranking-table__numbers--2{
+  color: hotpink;
+  color:var(--blue-3);
+}
+
+
+.ranking-table__username{
+  display: none !important;
+  /* opacity: 0; */
 }
 
 
@@ -91,8 +103,18 @@
 
 
   /* ///////////////////////////77 */
-  .ranking-table-name{
+  .ranking-table__name{
     font-weight: 700;
+  }
+  .ranking-table__username{
+    font-weight: 700;
+    color: var(--gray-5);
+    margin-left: .5rem;
+    color: rgb(140, 148, 202);
+    /* display: initial !important; */
+    color:var(--blue-3);
+    font-size: 1.6rem;
+    font-size: 1.57rem;
   }
 }
 
@@ -100,6 +122,9 @@
 @media (min-width: 1024px) {
 
   .global-table{
-    max-width: 650px;
+    /* max-width: 650px; */
+    max-width: 630px;
+    /* max-width: 650px; */
+    /* max-width: 700px; */
   }
 }
