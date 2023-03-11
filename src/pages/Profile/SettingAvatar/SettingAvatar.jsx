@@ -26,14 +26,12 @@ export const SettingAvatar = ({ value }) => {
       // console.log('dentro')
       setUser(data.user)
     }
-
-    setLoading(false)
   }
 
   //////////////////////////////////////////////
   return (
     <div className='setting-avatar__mask'>
-        <img className='setting-avatar__img' src={value} alt="" />
+        <img className='setting-avatar__img' src={value} alt="" onLoad={()=>setLoading(false)}/>
         <div>
           <input
             className='setting-avatar__input-img'

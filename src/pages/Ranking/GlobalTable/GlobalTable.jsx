@@ -30,7 +30,6 @@ export const GlobalTable = ({setLoading}) => {
       </header>
 
       <main>
-
         {
           usersList && usersList.map((user, index) => (
             <article key={index}>
