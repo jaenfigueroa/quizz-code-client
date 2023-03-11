@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AppContext } from '../../../context/AppContext'
-import { updateUser } from '../../../helpers/log/updateUser'
+// import { updateUser } from '../../../helpers/log/updateUser'
 import './TargetState.css'
 
 //////////////////////////////////////////
@@ -12,9 +12,9 @@ export const TargetState = ({ targetState, setTargetState }) => {
 
   const {
     status = 'loading',
-    message = 'Estamos procesando su solicitud, espere unos momentos.',
+    message = 'Estamos procesando tu solicitud, espere un momento.',
     targetVisible = false,
-    data=null 
+    data=null
   } = targetState
 
 
