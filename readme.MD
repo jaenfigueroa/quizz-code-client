@@ -23,6 +23,13 @@ Challenge platform with a ranking system.
   
 </div>
 
+
+## Website
+
+https://quizz-code.netlify.app/
+
+<img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
+
 ## Technologies
 
 <div align="left" >
@@ -51,8 +58,3 @@ Challenge platform with a ranking system.
 - Frontend: https://github.com/jaenfigueroa/Quizz-Code
 - Backend: https://github.com/ragomez7/quizcode-backend
 
-## Website
-
-https://quizz-code.netlify.app/
-
-<img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
