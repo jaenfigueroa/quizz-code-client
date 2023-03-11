@@ -49,17 +49,21 @@ export const Header = () => {
           )
         }
 
-        {/*  */}
-        <div className='header-nav__settings'>
-          <Link className='header-nav__settings-button' to='/profile'>Editar Perfil</Link>
-          <button className='header-nav__settings-button' onClick={() => {
-						deleteUser() //eliminar datos del uusario del local storage
-						setIsAuthenticated(false)
-            navigate('/home')
-					}}>Cerrar sesion</button>
-        </div>
+        {/* BOTONES DE ABAJO EN MOBILE */}
+        {
+          isAuthenticated && (
+            <div className='header-nav__settings'>
+              <Link className='header-nav__settings-button' to='/profile' onClick={closeNav}>Editar Perfil</Link>
+              <button className='header-nav__settings-button' onClick={() => {
+                deleteUser() //eliminar datos del uusario del local storage
+                setIsAuthenticated(false)
+                navigate('/home')
+                closeNav()
+              }}>Cerrar sesion</button>
+            </div>
+          )
+        }
       </nav>
-
 
     </header>
   )
