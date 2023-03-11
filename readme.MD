@@ -23,7 +23,7 @@ Challenge platform with a ranking system.
   
 </div>
 
-## Developed with the following technologies
+## Technologies
 
 <div align="left" >
 
@@ -37,7 +37,7 @@ Challenge platform with a ranking system.
 
 </div>
 
-## Deployment and website of the application
+## Website
 
 You can try the application [here](https://quizz-code.netlify.app/).
 
