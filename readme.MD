@@ -23,11 +23,6 @@ Challenge platform with a ranking system.
   
 </div>
 
-## Repositories
-
-- Frontend: https://github.com/jaenfigueroa/Quizz-Code
-- Backend: https://github.com/ragomez7/quizcode-backend
-
 
 
 ## Technologies
@@ -52,6 +47,12 @@ Challenge platform with a ranking system.
 - Cloudinary
 
 </div>
+
+## Repositories
+
+- Frontend: https://github.com/jaenfigueroa/Quizz-Code
+- Backend: https://github.com/ragomez7/quizcode-backend
+
 
 ## Website
 
