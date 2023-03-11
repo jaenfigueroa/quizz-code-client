@@ -3,15 +3,17 @@ import './GlobalTable.css'
 import { getRanking } from '../../../helpers/getRanking'
 
 //////////////////////////////////////
-export const GlobalTable = () => {
+export const GlobalTable = ({setLoading}) => {
 
-  const [usersList, setUserlist] = useState([])
+  const [usersList, setUserlist] = useState()
 
 
   useEffect(() => {
     const getUsers = async () => {
       const topFiftyUsers = await getRanking()
       setUserlist(topFiftyUsers)
+
+      setLoading(false)
     }
 
     getUsers()
@@ -28,12 +30,13 @@ export const GlobalTable = () => {
       </header>
 
       <main>
+
         {
           usersList && usersList.map((user, index) => (
             <article key={index}>
               <span>
                 <img src={user.avatar} alt={`foto de ${user.name}`} />
-                <p className='ranking-table__name'>{user.name}<p className='ranking-table__username'>@{user.email.split('@')[0]}</p></p>
+                <p className='ranking-table__name'>{user.name}</p>
               </span>
               <p className='ranking-table__numbers'>{user.points}</p>
               <p className='ranking-table__numbers ranking-table__numbers--2'>{user.challenges}</p>

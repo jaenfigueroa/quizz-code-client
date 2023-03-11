@@ -11,6 +11,30 @@
 }
 
 
+/* ///////////////////////////////// */
+.section-ranking__loading{
+  background: transparent ;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  height: 50px;
+}
+.section-ranking__loading i{
+  font-size: 5rem;
+  animation: girar 700ms ease-in-out infinite;
+}
+
+@keyframes girar {
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
+
+
 @media (min-width: 720px) {
   .section-ranking{
     padding: 4rem 1rem;
