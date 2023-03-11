@@ -28,7 +28,7 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
 
       //para que se muestre la tarjeta cargando
       setTargetState(() => {
-        return { status: 'loading', message: 'Estamos procesando su solicitud, espere unos momentos.', targetVisible: true }
+        return { status: 'loading', message: 'Estamos procesando tu solicitud, espere unos segundos.', targetVisible: true }
       })
 
       //enviar el formulario y realizar la peticion al back
