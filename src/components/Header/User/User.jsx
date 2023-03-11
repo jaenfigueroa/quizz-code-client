@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom"
 import { AppContext } from "../../../context/AppContext"
 import { deleteUser } from "../../../helpers/log/deleteUser"
 import { getUser } from "../../../helpers/log/getUser"
@@ -10,6 +10,7 @@ export const User = () => {
 	const { setIsAuthenticated } = useContext(AppContext)
 	const user = getUser()
 	const [componentActive, setComponentActive] = useState(false)
+	const navigate = useNavigate()
 
 	const alternProfile = () => {
 		setComponentActive(!componentActive)
@@ -31,6 +32,7 @@ export const User = () => {
 					<Link className='user__button-edit' to='/' onClick={() => {
 						deleteUser() //eliminar datos del uusario del local storage
 						setIsAuthenticated(false)
+            navigate('/')
 					}}>Cerrar sesion</Link>
 				</ul>
 			)}

@@ -1,7 +1,7 @@
 .user__container{
   position: relative;
   z-index: 3;
-  /* border: 1px solid violet; */
+  /* border: 1px solid blue; */
 }
 
 .user__mask{
@@ -9,6 +9,10 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
+
+  /* NEW3 */
+  width: 100px;
+  height: 100px;
 }
 
 .user__img{
@@ -33,6 +37,9 @@
   background: var(--blue);
   padding: 2rem;
   gap: 1.5rem;
+
+  /* NEW4 */
+  display: none;
 }
 
 .user__name{
@@ -63,6 +70,16 @@
 
 .user__button-edit:hover{
   background: rgb(225, 225, 225);
+}
+@media (min-width: 480px) {
+  .user__mask{
+    width: 35px;
+    height: 35px;
+  }
+  .user__information{
+    /* NEW4 */
+    display: flex;
+  }
 }
 
 @media (min-width: 720px) {
