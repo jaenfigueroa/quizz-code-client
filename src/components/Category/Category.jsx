@@ -27,7 +27,7 @@ const Category = () => {
     <section className='section-category' id='section-categories'>
 
       <h5 className='component-title'>Categorias</h5>
-      
+
       <div className='section-category__container'>
         {categories.map((category, index) => (
           <LanguageCard category={category} key={`${category.name}-${index}`} />

@@ -24,7 +24,7 @@ const LanguageCard = ({ category }) => {
 
       {/* BARRA DE EJERCICIOS COMPLETADOS */}
       <Numberbar percentage={25}/>
-      
+
       {/* BOTON ENTRAR */}
       <div className='languageCard__button-container'>
         <Link className='languageCard__button' to={`/practice/${name}`}>Repaso</Link>
