@@ -51,11 +51,12 @@
 }
 
 .user-card__main-mask{
-  background: gray;
+  /* background: gray; */
   width: 60px;
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
+  background: transparent;
 }
 
 .user-card__main-mask img{

@@ -3,7 +3,7 @@ import { getUser } from '../../../helpers/log/getUser'
 import './UserCard.css'
 
 ///////////////////////////////////////////
-export const UserCard = () => {
+export const UserCard = ({ positionUser , PointsUser}) => {
 
   const user = getUser()
 
@@ -16,11 +16,11 @@ export const UserCard = () => {
           <img src={user.avatar} alt="" />
         </div>
         <div>
-          <p>{user.points || 0}</p>
+          <p>{PointsUser || 0}</p>
           <p>Puntos</p>
         </div>
         <div>
-          <p>{user.position || 200}</p>
+          <p>{positionUser || 0}</p>
           <p>Posicion</p>
         </div>
       </main>
