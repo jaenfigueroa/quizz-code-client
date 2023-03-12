@@ -1,23 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './GlobalTable.css'
-import { getRanking } from '../../../helpers/getRanking'
 
 //////////////////////////////////////
-export const GlobalTable = ({setLoading}) => {
+export const GlobalTable = ({ listTable }) => {
 
-  const [usersList, setUserlist] = useState()
-
-
-  useEffect(() => {
-    const getUsers = async () => {
-      const topFiftyUsers = await getRanking()
-      setUserlist(topFiftyUsers)
-
-      setLoading(false)
-    }
-
-    getUsers()
-  }, [])
 
   //////////////////////////////////////
   return (
@@ -31,7 +17,7 @@ export const GlobalTable = ({setLoading}) => {
 
       <main>
         {
-          usersList && usersList.map((user, index) => (
+          listTable && listTable.map((user, index) => (
             <article key={index}>
               <span>
                 <img src={user.avatar} alt={`foto de ${user.name}`} />
