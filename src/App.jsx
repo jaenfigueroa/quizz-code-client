@@ -9,6 +9,8 @@ import { AppRoutes } from './routes/AppRoutes'
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(true) /* PROV */
+
   let [user, setUser] = useState({})
 
   const updateState = async () => {
@@ -19,6 +21,8 @@ function App() {
   let listState = {
     isAuthenticated,
     setIsAuthenticated,
+    isAdmin, /* PROV */
+    setIsAdmin, /* PROV */
     user,
     setUser,
     updateState
