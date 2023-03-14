@@ -12,7 +12,7 @@ export const Admin = () => {
       <form className='section-admin__form'>
 
         <div className='section-admin__block'><span className='section-admin__title'>Pregunta</span>
-          <textarea className='section-admin__textarea' type="text" placeholder='pregunta general' />
+          <textarea className='section-admin__textarea' type="text" placeholder='pregunta general' required/>
         </div>
 
         <div className='section-admin__block' ><span className='section-admin__title'>Codigo</span>
@@ -29,7 +29,7 @@ export const Admin = () => {
         </div>
 
         <div className='section-admin__block'><span className='section-admin__title'>Opcion Correcta</span>
-          <input className='section-admin__textarea' type="number" min={1} max={5} placeholder='numero de la opcion correcta' />
+          <input className='section-admin__textarea' type="number" min={1} max={5} placeholder='numero de la opcion correcta' required/>
         </div>
 
         <input className='section-admin__submit' type="submit" value="Guardar" />

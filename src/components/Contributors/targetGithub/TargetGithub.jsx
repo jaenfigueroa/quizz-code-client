@@ -6,7 +6,7 @@ import './TargetGithub.css'
 ///////////////////////////////
 export const TargetGithub = ({userName}) => {
 
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState(null)
 
   useEffect(()=> {
 
@@ -15,8 +15,7 @@ export const TargetGithub = ({userName}) => {
       try {
         const request = await fetch(`https://api.github.com/users/${userName}`)
         const data = await request.json()
-  
-        setUser(data)
+          setUser(data)
       } catch (error) {
         // setUser(null)
       }
@@ -26,7 +25,7 @@ export const TargetGithub = ({userName}) => {
   }, [])
 
   ///////////////////////////////
-  // if (user !== null) {
+  if (user !== null) {
     return (
       <div className='card-github'>
   
@@ -68,5 +67,5 @@ export const TargetGithub = ({userName}) => {
   
       </div>
     )
-  // }
+  }
 }

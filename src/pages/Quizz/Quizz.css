@@ -5,139 +5,15 @@
   width: 100%;
   background: var(--gradient);
   flex-grow: 1;
-  gap: 1rem;
-  padding: 3rem 1rem;
 }
 
+/* TEMPORIZADOR */
 .section-quizz__timer {
   background-color: var(--red);
   border-radius: 5px;
   font-size: 2rem;
   font-weight: bold;
   padding: 0.8rem 2.5rem;
+  background: green;
 }
 
-.section-quizz__ask {
-  /* background: blue; */
-  text-align: center;
-  margin: 3rem 1rem;
-}
-
-.section-quizz__options-container {
-  /* border: 1px dashed yellow; */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.section-quizz__option {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  border: none;
-  background: var(--black-7);
-  color: white;
-  transition: 300ms;
-  line-height: 25px;
-  max-width: 500px;
-
-  position: relative;
-}
-
-.section-quizz__option--green {
-  background: var(--green);
-}
-
-.section-quizz__option--red {
-  background: var(--red);
-}
-
-.section-quizz__option:hover {
-  background: var(--blue);
-}
-
-/* CURCLE */
-.section-quizz__option-result{
-  width: 40px;
-  height: 40px;
-  background: radial-gradient(transparent 55%, var(--blue) 60%);
-  border-radius: 50%;
-  float: right;
-  margin: -1.8rem -1.8rem 1rem .5rem;
-  transition: 300ms;
-
-  display: none;
-
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  /* background: red; */
-}
-
-.section-quizz__option:hover .section-quizz__option-result{
-  background: radial-gradient(transparent 55%, var(--white) 60%);
-}
-
-.section-quizz__option-result i{
-  font-size: 1.8rem;
-}
-
-
-/* BUTTON SUMIT */
-.section-quizz__submit{
-  padding: 1rem 2rem;
-  background: var(--blue);
-  margin: 2rem 1rem;
-  color: var(--white);
-  border-radius: .5rem;
-  background: var(--gray-2);
-  border: none;
-  transition: 300ms;
-}
-.section-quizz__submit:hover{
-  background: var(--green-2);
-}
-
-@media (min-width: 720px) {
-  .section-quizz {
-    /* background: blue; */
-    gap: 3rem;
-    padding: 3rem 1rem 8rem;
-  }
-
-  .section-quizz__ask {
-    font-size: var(--size-2-5);
-  }
-  .section-quizz__option {
-    /* font-size: var(--size-2); */
-    font-size: 1.8rem;
-    max-width: 500px;
-    padding: 2rem;
-  }
-
-  .section-quizz__submit{
-    padding: 1.5rem 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section-quizz__timer {
-    font-size: 2rem;
-    padding: 1.5rem 3rem;
-  }
-
-  .section-quizz__options-container {
-    /* border: 1px dashed yellow; */
-    flex-direction: row;
-    gap: 4rem;
-    width: 95%;
-  }
-
-  .section-quizz__option {
-    padding: 3rem;
-  }
-
-  .section-quizz__option-result{
-    display: flex;
-  }
-}

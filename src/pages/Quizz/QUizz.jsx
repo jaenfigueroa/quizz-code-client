@@ -1,54 +1,48 @@
-import { useEffect } from "react";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { randomQuestion } from "../../helpers/randomQuestion";
+import { Pomodoro } from "./Pomodoro/Pomodoro";
+import { Question } from "./Question/Question";
 import "./Quizz.css";
-import questions from "./data/questions";
 
 ////////////////////////////////////////////////
 export const Quizz = () => {
 
-	let time = 20;
+	const {category} = useParams()
+	const [processStatus, setProcessStatus] = useState('start')
+	const [question, setquestion] = useState({})
 
+	//1. traer una "question" al azar
+	const startQuestion = async () => {
+		const data = await randomQuestion(category)
 
-	useEffect(()=> {
-    window.scrollTo(0, 0)
-  }, [])
+		if (data.status === 'success') {
+			setquestion(data.question)
+			setProcessStatus('progress')
+		}
+	}
 
 	////////////////////////////////////////////////
 	return (
 		<section className="section-quizz">
+			<h4 className="component-title">Categoria: {category}</h4>
 
-			<h4 className="component-title">Categoria: CSS</h4>
+			{processStatus === 'start' && <button onClick={startQuestion}>Empezar</button>}
 
-			{/* TEMPORIZADOR */}
-			<div className="section-quizz__timer">
-				{time}s
-			</div>
+			{processStatus === 'progress' && (
+				<>
+					<Pomodoro setInProcess={setProcessStatus} />
+					<Question data={question} />
+				</>
+			)}
 
-			{/* PREGUNTA */}
-			<h2 className="section-quizz__ask">{questions[1].title}</h2>
-
-			{/* CONTENEDOR DE OPCIONES */}
-			<div className="section-quizz__options-container">
-				{questions[0].options.map((option, index) => (
-					<button
-						key={`${index}-${option.answertext}`}
-						className='section-quizz__option'>
-						
-						{/* CIRCLE */}
-						<div className="section-quizz__option-result">
-							<i className="fa-solid fa-check"></i>
-							{/* <i class="fa-regular fa-check"></i> */}
-							{/* <i class="fa-sharp fa-regular fa-check"></i> */}
-						</div>
-
-						{/* {option.answertext} */}
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquam asperiores totam laborum earum similique aut sunt sit veritatis illum.
-					</button>
-				))}
-			</div>
-
-			{/* BOTON CONFIRMA RESPUESTA */}
-			<button className="section-quizz__submit">Comprobar</button>
-
+			{processStatus === 'finish' && (
+				<>
+					<p>Resultados: Correcto</p>
+					<button onClick={() => setProcessStatus('progress')}>Siguiente</button>
+				</>
+			)}
 		</section>
-	);
-};
+	)
+
+}

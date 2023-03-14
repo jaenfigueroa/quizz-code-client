@@ -23,7 +23,7 @@ export const InputOption = ({number}) => {
         </select>
 
       </div>
-      <textarea className='section-admin__textarea' type="text" placeholder={`opcion ${number}`} />
+      <textarea className='section-admin__textarea' type="text" placeholder={`opcion ${number}`} required />
     </div>
   )
 }
