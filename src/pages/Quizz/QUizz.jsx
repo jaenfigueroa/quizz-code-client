@@ -1,46 +1,70 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { checkQuestion } from "../../helpers/checkQuestion";
 import { randomQuestion } from "../../helpers/randomQuestion";
-import { Pomodoro } from "./Pomodoro/Pomodoro";
 import { Question } from "./Question/Question";
 import "./Quizz.css";
+import { Results } from "./Results/Results";
 
 ////////////////////////////////////////////////
 export const Quizz = () => {
 
-	const {category} = useParams()
-	const [processStatus, setProcessStatus] = useState('start')
+	const { category } = useParams()
+
+	const [processStatus, setProcessStatus] = useState('start') //start, progress, validation, finish
 	const [question, setquestion] = useState({})
+	const [optionUser, setOptionUser] = useState(0)
+	const [results, setResults] = useState({})
 
 	//1. traer una "question" al azar
-	const startQuestion = async () => {
+	const getQuestion = async () => {
 		const data = await randomQuestion(category)
 
 		if (data.status === 'success') {
-			setquestion(data.question)
 			setProcessStatus('progress')
+			setquestion(data.question)
 		}
 	}
+
+	//2. enviar opcion elegida y traer resultados
+	useEffect(() => {
+		const getResults = async () => {
+			const data = await checkQuestion(question["_id"], optionUser)
+			// console.log(data)
+			setResults(data)
+			setProcessStatus('finish')
+		}
+
+		if (processStatus === 'validation') {
+			// console.log('se termino')
+			getResults()
+		}
+	}, [processStatus])
+
+
 
 	////////////////////////////////////////////////
 	return (
 		<section className="section-quizz">
 			<h4 className="component-title">Categoria: {category}</h4>
 
-			{processStatus === 'start' && <button onClick={startQuestion}>Empezar</button>}
+			{processStatus === 'start' && <button onClick={getQuestion}>Empezar preguntas</button>}
 
 			{processStatus === 'progress' && (
-				<>
-					<Pomodoro setInProcess={setProcessStatus} />
-					<Question data={question} />
-				</>
+				<Question
+					question={question}
+					processStatus={processStatus}
+					setProcessStatus={setProcessStatus}
+					setResults={setResults}
+					setOptionUser={setOptionUser}
+				/>
 			)}
 
 			{processStatus === 'finish' && (
-				<>
-					<p>Resultados: Correcto</p>
-					<button onClick={() => setProcessStatus('progress')}>Siguiente</button>
-				</>
+				<Results
+					getQuestion={getQuestion}
+					results={results}
+				/>
 			)}
 		</section>
 	)
