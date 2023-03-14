@@ -2,17 +2,34 @@
   padding: 1rem;
   border-radius: 0.5rem;
   border: none;
-  background: var(--black-7);
   color: white;
   transition: 300ms;
   position: relative;
-  background: violet;
-}
-
-.section-quizz__option-code:hover{
-  transform: scale(1.05);
+  width: 100%;
+  max-width: 400px;
+  background: #292c32;
+  transition: 300ms;
+  border: 1px solid transparent;
+  margin: 0 !important;
 }
 
 .section-quizz__option-code--selected{
-  background: black;
+  border: 1px solid var(--blue);
+}
+
+@media (min-width: 480px) {
+  .section-quizz__option-code{
+    padding: 1rem 2rem;
+    border: 2px solid transparent;
+  }
+  .section-quizz__option-code--selected{
+    border: 2px solid var(--blue);
+  }
+}
+
+@media (min-width: 720px) {
+  .section-quizz__option-code{
+    padding: 1.5rem 2rem;
+    font-size: 1.7rem;
+  }
 }

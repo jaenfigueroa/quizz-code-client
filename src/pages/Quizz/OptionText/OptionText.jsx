@@ -19,7 +19,8 @@ export const OptionText = ({text, optionUser, setOptionUser, numberOption}) => {
     <button
       className={`section-quizz__option-text ${ active && 'section-quizz__option-text--selected'}`}
       onClick={() => setOptionUser(numberOption)}>
-      {text}
+      {/* {text} */}
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eveniet maiores. Impedit sapiente eos sed tempora inventore fugit, temporibus adipisci?
     </button>
   )
 }

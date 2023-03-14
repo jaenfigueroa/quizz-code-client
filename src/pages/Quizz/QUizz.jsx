@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { checkQuestion } from "../../helpers/checkQuestion";
 import { randomQuestion } from "../../helpers/randomQuestion";
+import { Pomodoro } from "./Pomodoro/Pomodoro";
 import { Question } from "./Question/Question";
 import "./Quizz.css";
 import { Results } from "./Results/Results";
+import { Start } from "./Start/Start";
 
 ////////////////////////////////////////////////
 export const Quizz = () => {
@@ -22,6 +24,7 @@ export const Quizz = () => {
 
 		if (data.status === 'success') {
 			setProcessStatus('progress')
+			setOptionUser(0)
 			setquestion(data.question)
 		}
 	}
@@ -48,17 +51,19 @@ export const Quizz = () => {
 		<section className="section-quizz">
 			<h4 className="component-title">Categoria: {category}</h4>
 
-			{processStatus === 'start' && <button onClick={getQuestion}>Empezar preguntas</button>}
+			{processStatus === 'start' && <Start getQuestion={getQuestion}/>}
 
 			{processStatus === 'progress' && (
-				<Question
-					question={question}
-					processStatus={processStatus}
-					setProcessStatus={setProcessStatus}
-					setResults={setResults}
-					optionUser={optionUser}
-					setOptionUser={setOptionUser}
-				/>
+				<>
+					<Pomodoro setProcessStatus={setProcessStatus}/>
+					<Question
+						question={question}
+						setProcessStatus={setProcessStatus}
+						optionUser={optionUser}
+						setOptionUser={setOptionUser}
+						category={category}
+					/>
+				</>
 			)}
 
 			{processStatus === 'finish' && (

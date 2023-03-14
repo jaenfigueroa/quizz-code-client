@@ -3,7 +3,7 @@ import './Pomodoro.css'
 
 /////////////////////////////////////////
 export function Pomodoro({ setProcessStatus}) {
-  const [seconds, setSeconds] = useState(5);
+  const [seconds, setSeconds] = useState(60);
 
   useEffect(() => {
     if (seconds > 0) {
@@ -16,6 +16,6 @@ export function Pomodoro({ setProcessStatus}) {
 
   /////////////////////////////////////////
   return (
-    <h1 className="contador">{seconds}</h1>
+    <h1 className="section-question__contador">{seconds} seg.</h1>
   );
 }
