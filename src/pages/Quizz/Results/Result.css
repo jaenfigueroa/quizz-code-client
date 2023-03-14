@@ -1,0 +1,53 @@
+.section-question__results{
+  /* border: 1px dashed violet; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-grow: 1;
+}
+
+/* MENSAJE */
+.section-question__results-result{
+  font-size: 1.8rem;
+  text-align: center;
+  background: rgb(0, 128, 77);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+.section-question__results-result--incorrect{
+  background: crimson;
+}
+
+/* CARD PUNTOS GANADOS */
+.section-question__results-card{
+  background: var(--blue);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: .5rem;
+  /* gap: 1rem; */
+}
+.section-question__results-card p{
+  font-size: 1.8rem;
+}
+.section-question__results-card span{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* BOTON SIGUIENTE */
+.section-question__results-button{
+  padding: 1.5rem;
+  border-radius: .5rem;
+  background: var(--black-7);
+  color: white;
+  border: none;
+  transition: 300ms;
+}
+.section-question__results-button:hover{
+  background: rgb(74, 69, 69);
+}

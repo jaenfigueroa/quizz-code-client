@@ -10,13 +10,14 @@ import { Page404 } from '../pages/Page404/Page404'
 import { Profile } from '../pages/Profile/Profile'
 import { Ranking } from '../pages/Ranking/Ranking'
 import { Register } from '../pages/Register/Register'
-import { Quizz } from '../pages/Quizz/QUizz'
+import { Quizz } from '../pages/Quizz/Quizz'
 import { Challenges } from '../pages/Languagex/Challenges'
+import { Admin } from '../pages/Admin/Admin'
 
 /////////////////////////////////////////////
 export const AppRoutes = () => {
 
-  const {isAuthenticated} = useContext(AppContext)
+  const {isAuthenticated, isAdmin} = useContext(AppContext)
 
 
   /////////////////////////////////////////////
@@ -42,17 +43,21 @@ export const AppRoutes = () => {
           ): (
             <>
               {/* EDITAR PERFIL */}
-              <Route path='/profile' element={<Profile/>}/> 
+              <Route path='/profile' element={<Profile/>}/>
 
               {/* QUIZZ CON OPCIONES*/}
-              <Route path='/practice/:category' element={<Quizz/>}/> 
+              <Route path='/practice/:category' element={<Quizz/>}/>
 
               {/* VER LOS EJERCICIOS CON EDITOR */}
               <Route path='/challenges/:category' element={<Challenges/>}/>
               {/* EJERCICIO UNICO CONE EDITOR*/}
-              <Route path='/challenge/:category/:number' element={<Challenge/>}/> 
+              <Route path='/challenge/:category/:number' element={<Challenge/>}/>
             </>
           )
+        }
+
+        {
+          isAdmin && <Route path='/admin/' element={<Admin/>}/>
         }
 
         <Route path='*' element={<Page404/>}/>

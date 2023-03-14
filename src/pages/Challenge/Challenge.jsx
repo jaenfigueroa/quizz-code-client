@@ -22,7 +22,7 @@ export const Challenge = () => {
     <section className='section-exercise'>
       {/* HEADER */}
       <Header/>
-    
+
       {/* MAIN */}
       <main className='exercise'>
 

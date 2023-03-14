@@ -1,0 +1,12 @@
+.section-question__contador{
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  background: var(--blue);
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 720px) {
+  .section-question__contador{
+    font-size: 2rem;
+  }
+}

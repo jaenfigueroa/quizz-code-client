@@ -1,54 +1,78 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { checkQuestion } from "../../helpers/checkQuestion";
+import { randomQuestion } from "../../helpers/randomQuestion";
+import { Pomodoro } from "./Pomodoro/Pomodoro";
+import { Question } from "./Question/Question";
 import "./Quizz.css";
-import questions from "./data/questions";
+import { Results } from "./Results/Results";
+import { Start } from "./Start/Start";
 
 ////////////////////////////////////////////////
 export const Quizz = () => {
 
-	let time = 20;
+	const { category } = useParams()
+
+	const [processStatus, setProcessStatus] = useState('start') //start, progress, validation, finish
+	const [question, setquestion] = useState({})
+	const [optionUser, setOptionUser] = useState(0)
+	const [results, setResults] = useState({})
+
+	//1. traer una "question" al azar
+	const getQuestion = async () => {
+		const data = await randomQuestion(category)
+
+		if (data.status === 'success') {
+			setProcessStatus('progress')
+			setOptionUser(0)
+			setquestion(data.question)
+		}
+	}
+
+	//2. enviar opcion elegida y traer resultados
+	useEffect(() => {
+		const getResults = async () => {
+			const data = await checkQuestion(question["_id"], optionUser)
+			// console.log(data)
+			setResults(data)
+			setProcessStatus('finish')
+		}
+
+		if (processStatus === 'validation') {
+			// console.log('se termino')
+			getResults()
+		}
+	}, [processStatus])
 
 
-	useEffect(()=> {
-    window.scrollTo(0, 0)
-  }, [])
 
 	////////////////////////////////////////////////
 	return (
 		<section className="section-quizz">
+			<h4 className="component-title">Categoria: {category}</h4>
 
-			<h4 className="component-title">Categoria: CSS</h4>
+			{processStatus === 'start' && <Start getQuestion={getQuestion}/>}
 
-			{/* TEMPORIZADOR */}
-			<div className="section-quizz__timer">
-				{time}s
-			</div>
+			{processStatus === 'progress' && (
+				<>
+					<Pomodoro setProcessStatus={setProcessStatus}/>
+					<Question
+						question={question}
+						setProcessStatus={setProcessStatus}
+						optionUser={optionUser}
+						setOptionUser={setOptionUser}
+						category={category}
+					/>
+				</>
+			)}
 
-			{/* PREGUNTA */}
-			<h2 className="section-quizz__ask">{questions[1].title}</h2>
-
-			{/* CONTENEDOR DE OPCIONES */}
-			<div className="section-quizz__options-container">
-				{questions[0].options.map((option, index) => (
-					<button
-						key={`${index}-${option.answertext}`}
-						className='section-quizz__option'>
-						
-						{/* CIRCLE */}
-						<div className="section-quizz__option-result">
-							<i className="fa-solid fa-check"></i>
-							{/* <i class="fa-regular fa-check"></i> */}
-							{/* <i class="fa-sharp fa-regular fa-check"></i> */}
-						</div>
-
-						{/* {option.answertext} */}
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquam asperiores totam laborum earum similique aut sunt sit veritatis illum.
-					</button>
-				))}
-			</div>
-
-			{/* BOTON CONFIRMA RESPUESTA */}
-			<button className="section-quizz__submit">Comprobar</button>
-
+			{processStatus === 'finish' && (
+				<Results
+					getQuestion={getQuestion}
+					results={results}
+				/>
+			)}
 		</section>
-	);
-};
+	)
+
+}
