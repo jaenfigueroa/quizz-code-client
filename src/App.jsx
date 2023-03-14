@@ -9,7 +9,7 @@ import { AppRoutes } from './routes/AppRoutes'
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(true)
-  const [isAdmin, setIsAdmin] = useState(false) /* PROV */
+  const [isAdmin, setIsAdmin] = useState(true)
 
   let [user, setUser] = useState({})
 

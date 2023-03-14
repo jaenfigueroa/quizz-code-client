@@ -57,7 +57,7 @@ export const AppRoutes = () => {
         }
 
         {
-          isAdmin && <Route path='/admin/' element={<Admin/>}/>
+          isAdmin && <Route path='/admin' element={<Admin/>}/>
         }
 
         <Route path='*' element={<Page404/>}/>
