@@ -5,7 +5,7 @@ import { Pomodoro } from '../Pomodoro/Pomodoro'
 import './Question.css'
 
 ///////////////////////////////////////////
-export const Question = ({ question, processStatus, setProcessStatus, setResults, setOptionUser }) => {
+export const Question = ({ question, setProcessStatus, optionUser, setOptionUser }) => {
 
 
 
@@ -26,12 +26,14 @@ export const Question = ({ question, processStatus, setProcessStatus, setResults
                   numberOption={index + 1}
                   text={option.content}
                   key={index}
+                  optionUser={optionUser}
                   setOptionUser={setOptionUser}/>
               ) : (
                 <OptionCode
                   numberOption={index + 1}
                   code={option.content}
                   key={index}
+                  optionUser={optionUser}
                   setOptionUser={setOptionUser}/>
               )
             ))

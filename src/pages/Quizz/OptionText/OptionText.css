@@ -10,5 +10,9 @@
 }
 
 .section-quizz__option-text:hover {
-  background: rgb(34, 34, 139);
+  transform: scale(1.05);
+}
+
+.section-quizz__option-text--selected{
+  background: black;
 }

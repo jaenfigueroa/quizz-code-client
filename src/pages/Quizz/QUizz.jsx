@@ -56,6 +56,7 @@ export const Quizz = () => {
 					processStatus={processStatus}
 					setProcessStatus={setProcessStatus}
 					setResults={setResults}
+					optionUser={optionUser}
 					setOptionUser={setOptionUser}
 				/>
 			)}
