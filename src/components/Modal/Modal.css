@@ -1,0 +1,89 @@
+.App__modal{
+  background: rgba(255, 0, 0, 0.589);
+  background: #0000007c;
+  background: #00000083;
+  background: #000000bd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App__modal-card{
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background: var(--black-6);
+  min-width: 250px;
+  width: 95%;
+  max-width: 450px;
+  max-width: 400px;
+  padding: 6rem 2rem 5rem;
+
+  min-height: 300px;
+}
+
+.App__modal-card i{
+  font-size: 5rem;
+}
+
+.App__modal-card .fa-spinner{
+  animation: girar 1s infinite;
+}
+.App__modal-card-text{
+  font-size: 2rem;
+  text-align: center;
+  line-height: 30px;
+}
+
+.App__modal-card-text span{
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--blue-3);
+}
+
+.App__modal-close{
+  padding: 1.5rem 2rem;
+  background: var(--gray-6);
+  border: none;
+  color: white;
+  border-radius: .5rem;
+  transition: 300ms;
+}
+.App__modal-close:hover{
+  background: var(--blue);
+}
+
+@media (min-width: 480px) {
+  .App__modal-card{
+    gap: 4.5rem;
+    padding: 5rem 2rem 4rem;
+  }
+  .App__modal-card i{
+    font-size: 6rem;
+  }
+
+  .App__modal-card-text{
+    font-size: 2.1rem;
+  }
+
+  .App__modal-card-text span{
+    /* font-size: 2.2rem; */
+    font-size: 2.3rem;
+  }
+}
+
+@keyframes girar {
+  0%{transform: rotateZ(0deg);}
+  100%{transform: rotateZ(360deg);}
+}

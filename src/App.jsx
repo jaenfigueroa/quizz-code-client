@@ -5,11 +5,14 @@ import { getUser } from './helpers/log/getUser'
 import { autologin } from './helpers/log/autologin'
 import { updateUser } from './helpers/log/updateUser'
 import { AppRoutes } from './routes/AppRoutes'
+import { Modal } from './components/Modal/Modal'
 
 function App() {
 
-  const [isAuthenticated, setIsAuthenticated] = useState(true)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [isAdmin, setIsAdmin] = useState(true)
+
+  const [modal, setModal] = useState({visible: true, status: 'unregistered'})
 
   let [user, setUser] = useState({})
 
@@ -25,7 +28,7 @@ function App() {
     setIsAdmin, /* PROV */
     user,
     setUser,
-    updateState
+    updateState,
   }
 
   ///////////////////////////////////
@@ -40,6 +43,10 @@ function App() {
       if (data.status === 'sucess') {
         updateUser(data.user)
         setIsAuthenticated(true)
+
+        //ocultar modal, al iniciar sesion
+        // setModalActive(false)
+        setModal({...modal, status: 'registered'})
       }
     }
 
@@ -60,6 +67,10 @@ function App() {
     <AppContext.Provider value={listState} >
       <div className="App">
         <AppRoutes />
+
+        {/* MODAL PARA MOSTRAR AVISOS */}{
+          modal.visible && <Modal modal={modal} setModal={setModal}/>
+        }
       </div>
     </AppContext.Provider>
   )

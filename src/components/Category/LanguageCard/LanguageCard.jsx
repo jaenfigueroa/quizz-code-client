@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Numberbar } from '../../NumberBar/Numberbar';
+// import { Numberbar } from '../../NumberBar/Numberbar';
 import './LanguageCard.css'
 
 //////////////////////////////////////
@@ -20,15 +20,15 @@ const LanguageCard = ({ category }) => {
       <span className="languageCard__title">{name}</span>
 
       {/* NUMERO DE EJERCICIOS */}
-      <p className='languageCard__number'>5/20 Retos completados</p>
+      {/* <p className='languageCard__number'>5/20 Retos completados</p> */}
 
       {/* BARRA DE EJERCICIOS COMPLETADOS */}
-      <Numberbar percentage={25}/>
+      {/* <Numberbar percentage={25}/> */}
 
       {/* BOTON ENTRAR */}
       <div className='languageCard__button-container'>
         <Link className='languageCard__button' to={`/practice/${name}`}>Repaso</Link>
-        <Link className='languageCard__button' to={`/challenges/${name}`}>Retos</Link>
+        {/* <Link className='languageCard__button' to={`/challenges/${name}`}>Retos</Link> */}
       </div>
 
     </article>
