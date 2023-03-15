@@ -1,9 +1,9 @@
 import {sendForm} from '../sendForm'
-import {getUser} from './getUser'
+// import {getUser} from './getUser'
 
-export const autologin = async () => {
+export const autologin = async (user) => {
   //traer email y token del local storage
-  const user = getUser()
+  // const user = getUser()
 
   if (user) {
     // console.log(user)

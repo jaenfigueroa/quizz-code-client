@@ -37,16 +37,20 @@ function App() {
   useEffect(() => {
 
     const init = async () => {
+      const user = getUser()
 
-      const data = await autologin()
+      if (user) {
+        setModal({...modal, visible: true})
+        const data = await autologin(user)
 
-      if (data.status === 'sucess') {
-        updateUser(data.user)
-        setIsAuthenticated(true)
+        if (data.status === 'sucess') {
+          updateUser(data.user)
+          setIsAuthenticated(true)
 
-        //ocultar modal, al iniciar sesion
-        // setModalActive(false)
-        setModal({...modal, status: 'registered'})
+          //ocultar modal, al iniciar sesion
+          // setModalActive(false)
+          setModal({...modal, status: 'registered'})
+        }
       }
     }
 
