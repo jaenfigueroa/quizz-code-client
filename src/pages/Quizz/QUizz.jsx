@@ -7,7 +7,6 @@ import { Question } from "./Question/Question";
 import "./Quizz.css";
 import { Results } from "./Results/Results";
 import { Start } from "./Start/Start";
-
 ////////////////////////////////////////////////
 export const Quizz = () => {
 
