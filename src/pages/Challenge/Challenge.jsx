@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import { useParams } from 'react-router-dom'
 import './Challenge.css'
 import { Header } from './Header/Header';
-import pointerImg from '../../assets/pointer.png'
+// import pointerImg from '../../assets/pointer.png'
 import { Code } from '../../components/Code/Code';
 import { EditorTR } from '../../components/EditorTR/EditorTR';
 
@@ -32,7 +32,7 @@ export const Challenge = () => {
 
           <div className='exercise__container-button'>
             <button className='exercise__container-code-button'>Enviar Solucion</button>
-            <img src={pointerImg} alt="cursor blanco" className='pointerImg'/>
+            {/* <img src={pointerImg} alt="cursor blanco" className='pointerImg'/> */}
           </div>
         </section>
 
