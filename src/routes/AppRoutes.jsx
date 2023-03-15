@@ -10,14 +10,13 @@ import { Page404 } from '../pages/Page404/Page404'
 import { Profile } from '../pages/Profile/Profile'
 import { Ranking } from '../pages/Ranking/Ranking'
 import { Register } from '../pages/Register/Register'
-import { Quizz } from '../pages/Quizz/Quizz'
 import { Challenges } from '../pages/Languagex/Challenges'
-import { Admin } from '../pages/Admin/Admin'
+import { Questionnaire } from '../pages/Questionnaire/Questionnaire'
 
 /////////////////////////////////////////////
 export const AppRoutes = () => {
 
-  const {isAuthenticated, isAdmin} = useContext(AppContext)
+  const {isAuthenticated} = useContext(AppContext)
 
 
   /////////////////////////////////////////////
@@ -46,7 +45,7 @@ export const AppRoutes = () => {
               <Route path='/profile' element={<Profile/>}/>
 
               {/* QUIZZ CON OPCIONES*/}
-              <Route path='/practice/:category' element={<Quizz/>}/>
+              <Route path='/practice/:category' element={<Questionnaire/>}/>
 
               {/* VER LOS EJERCICIOS CON EDITOR */}
               <Route path='/challenges/:category' element={<Challenges/>}/>
@@ -54,10 +53,6 @@ export const AppRoutes = () => {
               <Route path='/challenge/:category/:number' element={<Challenge/>}/>
             </>
           )
-        }
-
-        {
-          isAdmin && <Route path='/admin' element={<Admin/>}/>
         }
 
         <Route path='*' element={<Page404/>}/>

@@ -4,11 +4,11 @@ import { checkQuestion } from "../../helpers/checkQuestion";
 import { randomQuestion } from "../../helpers/randomQuestion";
 import { Pomodoro } from "./Pomodoro/Pomodoro";
 import { Question } from "./Question/Question";
-import "./Quizz.css";
+import "./Questionnaire.css";
 import { Results } from "./Results/Results";
 import { Start } from "./Start/Start";
 ////////////////////////////////////////////////
-export const Quizz = () => {
+export const Questionnaire = () => {
 
 	const { category } = useParams()
 
