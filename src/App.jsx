@@ -12,7 +12,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [isAdmin, setIsAdmin] = useState(true)
 
-  const [modal, setModal] = useState({visible: true, status: 'unregistered'})
+  const [modal, setModal] = useState({visible: true, status: 'unregistered', name: ''})
 
   let [user, setUser] = useState({})
 
@@ -40,7 +40,7 @@ function App() {
       const user = getUser()
 
       if (user) {
-        setModal({...modal, visible: true})
+        setModal({...modal, visible: true, name: user.name})
         const data = await autologin(user)
 
         if (data.status === 'sucess') {
@@ -49,8 +49,10 @@ function App() {
 
           //ocultar modal, al iniciar sesion
           // setModalActive(false)
-          setModal({...modal, status: 'registered'})
+          setModal({...modal, status: 'registered',name: user.name})
         }
+      } else{
+        setModal({...modal, visible: false})
       }
     }
 

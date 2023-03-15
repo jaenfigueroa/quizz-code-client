@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import './Contributors.css'
 import { TargetGithub } from './targetGithub/TargetGithub'
 
 //////////////////////////////////////////////
-export const Contributors = () => {
+export const Contributors = memo(() => {
 
   let list = ['jaenfigueroa', 'ragomez7', 'LuDevvv', 'SamVilorioA']
 
@@ -24,4 +24,4 @@ export const Contributors = () => {
       </div>
     </section>
   )
-}
+})
