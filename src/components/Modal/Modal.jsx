@@ -18,7 +18,10 @@ export const Modal = ({ modal, setModal }) => {
           modal.status === 'registered' ? (
             <>
               <i className="fa-solid fa-circle-check"></i>
-              <p className='App__modal-card-text'>Haz Iniciado correctamente como: <span>{name}</span></p>
+              <div>
+                <p className='App__modal-card-title'>¡Bienvenido nuevamente!</p>
+                <p className='App__modal-card-text'>Haz Iniciado correctamente como: <span>{name}</span></p>
+              </div>
               <button className='App__modal-close' onClick={() => {setModal({...modal, visible: false})}}>Genial</button>
             </>
           ) : (
