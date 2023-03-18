@@ -1,9 +1,11 @@
 import React from 'react'
+import { getUser } from '../../../helpers/log/getUser'
 import './GlobalTable.css'
 
 //////////////////////////////////////
 export const GlobalTable = ({ listTable }) => {
 
+  const userSaved = getUser()
 
   //////////////////////////////////////
   return (
@@ -18,7 +20,7 @@ export const GlobalTable = ({ listTable }) => {
       <main>
         {
           listTable && listTable.map((user, index) => (
-            <article key={index}>
+            <article key={index} className={user.name === userSaved.name ? 'user':''}>
               <span>
                 <img src={user.avatar} alt={`foto de ${user.name}`} />
                 <p className='ranking-table__name'>{user.name}</p>

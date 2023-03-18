@@ -50,6 +50,13 @@
   background: #18181b;
 }
 
+.global-table article.user{
+  /* background: red; */
+  border-radius: .5rem;
+  border: 1px solid var(--blue-3);
+  /* border: 1px solid var(--blue); */
+}
+
 .global-table article span{
   display: flex;
   gap: 1rem;
