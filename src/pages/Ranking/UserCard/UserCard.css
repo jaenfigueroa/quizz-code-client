@@ -14,8 +14,6 @@
 
   border: 2px solid white;
   box-shadow: 0 0 20px 10px #00000057;
-  /* box-shadow: 0 0 20px 10px #0000009d; */
-  /* box-shadow: 0 0 20px 10px #000000; */
   transition: 300ms;
   color: var(--black-4);
 }
@@ -77,6 +75,7 @@
   .user-card:hover{
     transform: scale(1.15);
     box-shadow: 0 0 20px 10px #ffffff18;
+    box-shadow: 0 0 60px 0px #8969f28b;
   }
 
   .user-card__title{
