@@ -3,10 +3,15 @@ import { getUser } from "./log/getUser"
 
 export const getRanking = async() => {
 
-  const {_id} = getUser()
+  const user = getUser()
 
   try {
-    const response = await fetch(`${global.urlServer}/users/ranking/${_id}`)
+    let response
+    if (user) {
+      response = await fetch(`${global.urlServer}/users/ranking/${user._id}`)
+    } else{
+      response = await fetch(`${global.urlServer}/users/ranking`)
+    }
     const data = await response.json()
 
     // console.log(data)

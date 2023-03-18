@@ -10,7 +10,7 @@ import { Modal } from './components/Modal/Modal'
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [isAdmin, setIsAdmin] = useState(true)
+  const [isAdmin, setIsAdmin] = useState(false)
 
   const [modal, setModal] = useState({visible: true, status: 'unregistered', name: ''})
 

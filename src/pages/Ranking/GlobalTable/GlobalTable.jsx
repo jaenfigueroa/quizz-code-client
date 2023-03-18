@@ -35,7 +35,7 @@ export const GlobalTable = ({ listTable }) => {
       <main>
         {
           listTable && listTable.map((user, index) => (
-            <article key={index} className={user.name === userSaved.name ? 'user':''}>
+            <article key={index} className={userSaved && user.name === userSaved.name ? 'user':''}>
               <span>
                 <img src={user.avatar} alt={`foto de ${user.name}`} />
                 <p className='ranking-table__name'>{user.name}</p>
