@@ -12,6 +12,8 @@ export const Profile = () => {
     window.scrollTo(0, 0)
   }, [])
 
+
+  const inputImagen = document.getElementById('imageAvatar');
   ////////////////////////////////////////
   return (
     <section className="section-profile">
@@ -20,6 +22,7 @@ export const Profile = () => {
 
         <section className="section-profile__table">
           <SettingAvatar value={user.avatar} idUser={user["_id"]}/>
+          <button className="button-edit-avatar" onClick={() =>inputImagen.click() }>Editar foto de perfil</button>
           <SettingOption
             label='Descripcion'
             type='description'

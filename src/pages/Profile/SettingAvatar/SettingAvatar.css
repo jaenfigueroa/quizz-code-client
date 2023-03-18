@@ -9,6 +9,27 @@
   overflow: hidden;
 }
 
+/* .setting-avatar__mask:after{
+  content: 'Editar';
+  background: red;
+  position: absolute;
+  left: -5px;
+  bottom: 10px;
+  padding: 1rem;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  background: #19191c;
+  background: var(--gray-3);
+  background: var(--gray-6);
+  background: var(--gray-8);
+
+  left: calc(47px);
+  font-size: 1.8rem;
+  bottom: -5rem;
+  padding: 1.2rem 2rem;
+  width: max-content;
+} */
+
 .setting-avatar__mask:hover{
   border: 3px dashed var(--blue-3);
   transform: scale(1.1);
@@ -38,6 +59,7 @@
   opacity: 1;
   border-radius: 50%;
   object-fit: cover;
+  background: #3c414c;
 }
 
 /* INPUT DE FILE - IMAGEN */
@@ -64,12 +86,34 @@
   align-items: center;
   background: #000000a7;
   display: none;
+  border-radius: 50%;
 }
 
 .setting-avatar__input-img:hover:before{
   display: flex;
 }
 
+
+
+
+
+.button-edit-avatar{
+  background: red;
+  width: max-content;
+  margin: 0 auto;
+  border: none;
+  padding: 1rem;
+  border-radius: .5rem;
+  background: var(--gray-3);
+  color: white;
+  transition: 300ms;
+  margin-bottom: 1rem;
+  background: #3f4550;
+  background: #3c414c;
+}
+.button-edit-avatar:hover{
+  background: var(--blue);
+}
 
 @media (min-width: 720px) {
   .setting-avatar__mask{
@@ -86,5 +130,9 @@
 
   .setting-avatar__input-img:before{
     font-size: 1.9rem;
+  }
+
+  .button-edit-avatar{
+    padding: 1.5rem 2rem;
   }
 }

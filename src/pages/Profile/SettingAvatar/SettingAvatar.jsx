@@ -28,6 +28,8 @@ export const SettingAvatar = ({ value }) => {
     }
   }
 
+
+
   //////////////////////////////////////////////
   return (
     <div className='setting-avatar__mask'>
