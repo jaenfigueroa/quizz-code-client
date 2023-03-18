@@ -1,4 +1,4 @@
-var regex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+var regex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]+$/;
 
 ///////////////////////////////////////////////////
 export function testPassword(password) {
@@ -20,7 +20,7 @@ export function testPassword(password) {
   } else{
     return {
       result: false,
-      message: 'Debe contener almenos una letra, un número y un carácter especial (@$!%*?&).'
+      message: 'Debe contener almenos una letra, un número y un carácter especial (@$!%*?&#).'
     }
   }
 }
