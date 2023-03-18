@@ -12,9 +12,18 @@ export const GlobalTable = ({ listTable }) => {
     <section className='global-table'>
 
       <div className='global-table__top-container'>
-        <i className="fa-solid fa-shield"></i>
-        <i className="fa-solid fa-shield"></i>
-        <i className="fa-solid fa-shield"></i>
+        <div>
+          <i className="fa-solid fa-1"></i>
+          <i className="fa-solid fa-shield"></i>
+        </div>
+        <div>
+          <i className="fa-solid fa-2"></i>
+          <i className="fa-solid fa-shield"></i>
+        </div>
+        <div>
+          <i className="fa-solid fa-3"></i>
+          <i className="fa-solid fa-shield"></i>
+        </div>
       </div>
 
       <header>
