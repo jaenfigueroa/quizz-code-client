@@ -5,7 +5,7 @@ import { TargetGithub } from './targetGithub/TargetGithub'
 //////////////////////////////////////////////
 export const Contributors = memo(() => {
 
-  let list = ['jaenfigueroa', 'ragomez7', 'LuDevvv', 'SamVilorioA']
+  let list = ['jaenfigueroa', 'ragomez7', 'LuisAAngel', 'SamVilorioA']
 
   //////////////////////////////////////////////
   return (
