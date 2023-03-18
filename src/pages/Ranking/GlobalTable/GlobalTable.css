@@ -6,11 +6,47 @@
   max-width: 600px;
   width: 100%;
   border-radius: .5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* box-shadow: 0 0 20px 10px #00000029; */
   /* box-shadow: 0 0 20px 10px #00000081; */
   /* box-shadow: 10px 10px 20px 0px #0000003d; */
   box-shadow: 10px 10px 20px 0px #00000047;
+  position: relative;
+}
+
+/* ESCUDOS */
+.global-table__top-container{
+  position: absolute;
+  left: -45px;
+  top: 60px;
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.global-table__top-container i{
+  font-size: 2.5rem;
+  padding: 1.8rem 0;
+}
+.global-table__top-container i:nth-child(1){
+  background: linear-gradient(40deg, #ffdb6e, #fff1c6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.global-table__top-container i:nth-child(2){
+  color: #b8b8b8;
+  background: linear-gradient(40deg, #b8b8b8, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.global-table__top-container i:nth-child(3){
+  background: linear-gradient(40deg, #cb753c, #ffd5b9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 
@@ -44,7 +80,14 @@
   grid-template-columns: 4fr 1fr 1fr;
   align-items: center;
   color: white;
+  position: relative;
 }
+
+/* .global-table article:after{
+  content: 'ss';
+  position: absolute;
+  left: -20px;
+} */
 
 .global-table article:nth-child(2n - 1){
   background: #18181b;
@@ -97,6 +140,9 @@
 
 @media (min-width: 720px) {
 
+  .global-table__top-container{
+    display: flex;
+  }
 
   .global-table header span{
     padding: 2rem 1rem; /* PROV */

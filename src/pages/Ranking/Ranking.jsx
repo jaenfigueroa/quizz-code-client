@@ -8,7 +8,6 @@ import { getRanking } from '../../helpers/getRanking'
 
 ///////////////////////////////////////////
 export const Ranking = () => {
-
   const { isAuthenticated } = useContext(AppContext)
   const [loading, setLoading] = useState(true)
 
@@ -31,28 +30,20 @@ export const Ranking = () => {
     getData()
   }, [])
 
-
   ///////////////////////////////////////////
   return (
     <section className='section-ranking'>
-
       {/* TABLA DE INFORMACION DEL USUARIO */}
-      {
-        isAuthenticated && <UserCard positionUser={positionUser} PointsUser={PointsUser}/>
-      }
+      {isAuthenticated && <UserCard positionUser={positionUser} PointsUser={PointsUser} />}
 
       {/* TABLA DE TODOS LOS USUARIOS DEL RANKING */}
-      <GlobalTable setLoading={setLoading} listTable={listTable}/>
-
-      {
-        loading && (
-          <p className='section-ranking__loading'>
-            <i className="fa-solid fa-spinner"></i>
-          </p>
-        )
-      }
-
-
+      {!loading ? (
+        <GlobalTable setLoading={setLoading} listTable={listTable} />
+      ) : (
+        <p className='section-ranking__loading'>
+          <i className='fa-solid fa-spinner'></i>
+        </p>
+      )}
     </section>
   )
 }

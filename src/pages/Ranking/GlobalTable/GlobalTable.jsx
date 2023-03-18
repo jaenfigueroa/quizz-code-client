@@ -11,6 +11,12 @@ export const GlobalTable = ({ listTable }) => {
   return (
     <section className='global-table'>
 
+      <div className='global-table__top-container'>
+        <i className="fa-solid fa-shield"></i>
+        <i className="fa-solid fa-shield"></i>
+        <i className="fa-solid fa-shield"></i>
+      </div>
+
       <header>
         <span>Usuario</span>
         <span>Puntos</span>
