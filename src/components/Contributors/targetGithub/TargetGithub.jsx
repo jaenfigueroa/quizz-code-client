@@ -38,7 +38,7 @@ export const TargetGithub = ({userName}) => {
           
           {/* informacion */}
           <div className='card-github__block1--container'>
-            <p className='card-github__name'>{user.name}</p>
+            <p className='card-github__name'>{user.name || user.login}</p>
             <p className='card-github__user'>@{user.login}</p>
             <p className='card-github__create'>{formatDate(user.created_at)}</p>
           </div>
