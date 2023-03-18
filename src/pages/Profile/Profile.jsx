@@ -23,7 +23,7 @@ export const Profile = () => {
           <SettingAvatar value={user.avatar} idUser={user["_id"]}/>
           <button className="button-edit-avatar" onClick={() =>document.querySelector('#imageAvatar').click() }>Editar foto de perfil</button>
           <SettingOption
-            label='Descripcion'
+            label='Descripción'
             type='description'
             name='description'
             value={user.description}

@@ -58,7 +58,7 @@ export const SettingOption = ({ label,  name, value, type, editable }) => {
           <>
             <p className='setting-card__value'>{value}</p>
             {
-              editable && <button type="button" className="setting-card__button" onClick={() => setActive(true)}>Editar</button>
+              editable && <button type="button" className="setting-card__button" onClick={() => setActive(true)}>Editar {label.toLowerCase()}</button>
             }
 
           </>
