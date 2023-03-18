@@ -51,7 +51,7 @@
   color: transparent;
 }
 .global-table__top-container div:nth-child(3) i{
-  background: linear-gradient(45deg, #cb753c, #ffd5b9);
+  background: linear-gradient(45deg, #ff9a57, #ffd5b9);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

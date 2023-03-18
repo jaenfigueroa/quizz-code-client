@@ -14,15 +14,15 @@ export const GlobalTable = ({ listTable }) => {
       <div className='global-table__top-container'>
         <div>
           <i className="fa-solid fa-1"></i>
-          <i className="fa-solid fa-shield"></i>
+          <i className="fa-solid fa-crown"></i>
         </div>
         <div>
           <i className="fa-solid fa-2"></i>
-          <i className="fa-solid fa-shield"></i>
+          <i className="fa-solid fa-trophy"></i>
         </div>
         <div>
           <i className="fa-solid fa-3"></i>
-          <i className="fa-solid fa-shield"></i>
+          <i className="fa-solid fa-medal"></i>
         </div>
       </div>
 
