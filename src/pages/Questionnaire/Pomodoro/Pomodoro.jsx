@@ -9,26 +9,24 @@ export function Pomodoro({ setProcessStatus }) {
   useEffect(() => {
     seconds <= 10 && setColor('red')
 
-    if (seconds >= 0) {
+    if (seconds > 0) {
       setTimeout(() => setSeconds(seconds - 1), 1000)
     } else {
       setProcessStatus('validation')
       // console.log("¡El temporizador ha finalizado!");
     }
-
   }, [seconds])
 
   /////////////////////////////////////////
   return (
     <div
-      className={`section-question__contador ${seconds<= 10 ? 'palpitar': ''}`}
+      className={`section-question__contador ${
+        seconds <= 10 ? 'palpitar' : ''
+      }`}
       style={{
-        background: `conic-gradient(var(--${color}) calc( ${seconds}/30 * 100%), var(--gray-4) calc(${seconds}/30 * 100%))`
+        background: `conic-gradient(var(--${color}) calc( ${seconds}/30 * 100%), var(--gray-4) calc(${seconds}/30 * 100%))`,
       }}
       data-number={seconds}
-      >
-      {/* <p>{seconds}</p> */}
-      {/* <span>s.</span> */}
-    </div>
+    />
   )
 }

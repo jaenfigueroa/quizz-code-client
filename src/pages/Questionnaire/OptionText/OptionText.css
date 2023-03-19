@@ -10,6 +10,7 @@
   background: #282c34;
   border: 1px solid transparent;
   transition: 300ms;
+  line-height: 25px;
 }
 
 .section-quizz__option-text--selected{

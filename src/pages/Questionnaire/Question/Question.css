@@ -107,6 +107,7 @@
   .section-quizz__main-options-container {
     gap: 2.5rem;
     width: 90%;
+    padding: 6rem 4rem;
   }
 
   /* BOTON ENVIAR RESPUESTA */

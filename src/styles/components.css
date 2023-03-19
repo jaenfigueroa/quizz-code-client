@@ -11,6 +11,10 @@
   width: max-content;
 }
 
+.red:hover{
+  background: var(--red) !important;
+}
+
 @media (min-width: 720px) {
   .component-title {
     font-size: var(--size-3);

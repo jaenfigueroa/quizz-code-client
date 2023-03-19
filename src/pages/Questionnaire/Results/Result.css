@@ -1,4 +1,4 @@
-.section-question__results{
+.section-question__results {
   /* border: 1px dashed violet; */
   width: 100%;
   display: flex;
@@ -6,48 +6,79 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  gap: 5rem;
   flex-grow: 1;
 }
 
 /* MENSAJE */
-.section-question__results-result{
+.section-question__results-result {
   font-size: 1.8rem;
   text-align: center;
-  background: rgb(0, 128, 77);
+  /* background: rgb(0, 128, 77); */
   padding: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+
+  color: rgb(73, 255, 182);
+  font-size: 2.5rem;
 }
-.section-question__results-result--incorrect{
-  background: crimson;
+.section-question__results-result--incorrect {
+  color: var(--red-2);
 }
 
 /* CARD PUNTOS GANADOS */
-.section-question__results-card{
+.section-question__results-card {
   background: var(--blue);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-radius: .5rem;
-  /* gap: 1rem; */
+  border-radius: 0.5rem;
 }
-.section-question__results-card p{
+.section-question__results-card p {
   font-size: 1.8rem;
 }
-.section-question__results-card span{
+.section-question__results-card span {
   font-size: 2rem;
   font-weight: bold;
 }
 
 /* BOTON SIGUIENTE */
-.section-question__results-button{
+
+.section-quizz__container-button{
+  display: flex;
+  gap: 2rem;
+}
+.section-question__results-button {
   padding: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background: var(--black-7);
   color: white;
   border: none;
   transition: 300ms;
 }
-.section-question__results-button:hover{
+.section-question__results-button:hover {
   background: rgb(74, 69, 69);
+}
+
+@media (min-width: 780px) {
+  /* CARD PUNTOS GANADOS */
+  .section-question__results-card {
+    gap: .5rem;
+    padding: 2.5rem;
+  }
+  .section-question__results-card p {
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+  }
+  .section-question__results-card span {
+    font-size: 3rem;
+    color: white;
+  }
+
+  .section-question__results {
+    padding: 8rem;
+  }
 }

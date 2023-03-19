@@ -17,7 +17,7 @@
 
 }
 .palpitar{
-  animation:palpitar 100ms infinite alternate;
+  animation: palpitar 150ms infinite alternate;
 }
 
 @keyframes palpitar {

@@ -6,16 +6,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
 }
 
-.section-question__start-button{
-  padding: 1.5rem 2rem;
-  border-radius: .5rem;
-  background-color: var(--blue);
-  color: white;
-  transition: 300ms;
+.section-question__start i{
+  font-size: 5rem;
+  animation: girar 800ms infinite;
+}
+.section-question__start p{
+  font-size: 2rem;
 }
 
-.section-question__start-button:hover{
-  transform: scale(1.1);
+@keyframes girar {
+  0%{transform: rotateZ(0deg);}
+  100%{transform: rotateZ(360deg);}
 }

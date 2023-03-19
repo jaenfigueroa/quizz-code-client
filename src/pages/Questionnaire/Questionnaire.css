@@ -5,6 +5,7 @@
   width: 100%;
   background: var(--gradient);
   flex-grow: 1;
+  padding: 1rem 0;
 }
 
 /* TEMPORIZADOR */
@@ -17,3 +18,8 @@
   background: green;
 }
 
+@media (min-width: 780px) {
+  .section-quizz{
+    padding: 2.5rem 0;
+  }
+}
