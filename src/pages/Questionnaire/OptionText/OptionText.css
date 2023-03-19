@@ -7,8 +7,7 @@
   position: relative;
   width: 100%;
   max-width: 400px;
-  background: #292c32;
-  background: #263238;
+  background: #282c34;
   border: 1px solid transparent;
   transition: 300ms;
 }

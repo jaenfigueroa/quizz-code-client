@@ -1,21 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 import './Pomodoro.css'
 
 /////////////////////////////////////////
-export function Pomodoro({ setProcessStatus}) {
-  const [seconds, setSeconds] = useState(60);
+export function Pomodoro({ setProcessStatus }) {
+  const [seconds, setSeconds] = useState(30)
+  const [color, setColor] = useState('blue')
 
   useEffect(() => {
-    if (seconds > 0) {
-      setTimeout(() => setSeconds(seconds - 1), 1000);
+    seconds <= 8 && setColor('red')
+
+    if (seconds >= 0) {
+      setTimeout(() => setSeconds(seconds - 1), 1000)
     } else {
       setProcessStatus('validation')
       // console.log("¡El temporizador ha finalizado!");
     }
-  }, [seconds]);
+
+  }, [seconds])
 
   /////////////////////////////////////////
   return (
-    <h1 className="section-question__contador">{seconds} seg.</h1>
-  );
+    <div
+      className='section-question__contador'
+      style={{
+        background: `conic-gradient(var(--${color}) calc( ${seconds}/30 * 100%), var(--gray-4) calc(${seconds}/30 * 100%))`
+      }}
+      data-number={seconds}
+      >
+      {/* <p>{seconds}</p> */}
+      {/* <span>s.</span> */}
+    </div>
+  )
 }

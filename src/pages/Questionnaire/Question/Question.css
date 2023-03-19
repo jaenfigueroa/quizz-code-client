@@ -12,9 +12,13 @@
 /* PREGUNTA*/
 .section-quizz__main-ask {
   text-align: center;
-  /* background: brown; */
+  background: brown;
   font-weight: bold;
   margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  /* background: var(--gray-4); */
+  background: var(--gray-7);
 }
 
 /* CONTENEDOR DE OPCIONES */
@@ -23,7 +27,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  /* border: 1px dashed red; */
+  /* border: 1px dashed blue; */
+  width: 100%;
 }
 
 /* BOTON ENVIAR RESPUESTA */
@@ -36,9 +41,18 @@
   transition: 300ms;
   width: max-content;
   margin-bottom: 5rem;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 .section-quizz__main-button-submit:hover {
   background: var(--green-2);
+  background: rgb(0, 128, 79);
+  background: rgb(17, 115, 94);
+  transform: scale(1.1);
 }
 
 @media (min-width: 480px) {
@@ -49,17 +63,61 @@
   /* CONTENEDOR DE OPCIONES */
   .section-quizz__main-options-container {
     gap: 1.5rem;
+    padding: 1rem;
+    padding: 1.5rem;
+    padding: 2rem;
+    padding: 4rem 1rem;
+    border-radius: 0.5rem;
+    /* background: red; */
+    /* background: linear-gradient(45deg, #18181b, #18181b); */
+    border: 1px solid var(--gray-3);
+    /* width: max-content; */
   }
 }
 
 @media (min-width: 720px) {
+  .section-question__main {
+    gap: 4rem;
+  }
+
   /* PREGUNTA*/
   .section-quizz__main-ask {
-    font-size: 2rem;
+    font-size: 1.9rem;
+    max-width: 90%;
+    font-weight: normal;
+    padding: 3rem 2.5rem;
   }
 
   /* BOTON ENVIAR RESPUESTA */
   .section-quizz__main-button-submit {
     font-size: 1.8rem;
+  }
+
+  /* CONTENEDOR DE OPCIONES */
+  .section-quizz__main-options-container {
+    gap: 2rem;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-question__main {
+    gap: 6rem;
+  }
+  /* CONTENEDOR DE OPCIONES */
+  .section-quizz__main-options-container {
+    gap: 2.5rem;
+    width: 90%;
+  }
+
+  /* BOTON ENVIAR RESPUESTA */
+  .section-quizz__main-button-submit {
+    padding: 2rem 4rem 2rem 4rem;
+
+
+  }
+
+  .section-quizz__main-button-submit i{
+    font-size: 2.4rem;
   }
 }

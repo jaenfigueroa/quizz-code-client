@@ -38,7 +38,10 @@ export const Question = ({ question, setProcessStatus, optionUser, setOptionUser
       </div>
 
       {/* BOTON CONFIRMA RESPUESTA */}
-      <button className="section-quizz__main-button-submit" onClick={() => setProcessStatus('validation')}>Comprobar</button>
+      <button className="section-quizz__main-button-submit" onClick={() => setProcessStatus('validation')}>
+        <i className="fa-solid fa-paper-plane"></i>
+        Enviar Respuesta
+      </button>
     </div>
   )
 }
