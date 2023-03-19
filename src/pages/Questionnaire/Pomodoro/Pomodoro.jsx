@@ -7,7 +7,7 @@ export function Pomodoro({ setProcessStatus }) {
   const [color, setColor] = useState('blue')
 
   useEffect(() => {
-    seconds <= 8 && setColor('red')
+    seconds <= 10 && setColor('red')
 
     if (seconds >= 0) {
       setTimeout(() => setSeconds(seconds - 1), 1000)
@@ -21,7 +21,7 @@ export function Pomodoro({ setProcessStatus }) {
   /////////////////////////////////////////
   return (
     <div
-      className='section-question__contador'
+      className={`section-question__contador ${seconds<= 10 ? 'palpitar': ''}`}
       style={{
         background: `conic-gradient(var(--${color}) calc( ${seconds}/30 * 100%), var(--gray-4) calc(${seconds}/30 * 100%))`
       }}

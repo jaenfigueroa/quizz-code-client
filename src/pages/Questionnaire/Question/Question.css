@@ -13,7 +13,7 @@
 .section-quizz__main-ask {
   text-align: center;
   background: brown;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin: 1rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
@@ -41,7 +41,6 @@
   transition: 300ms;
   width: max-content;
   margin-bottom: 5rem;
-
 
   display: flex;
   justify-content: center;
@@ -86,8 +85,8 @@
     max-width: 90%;
     font-weight: normal;
     padding: 3rem 2.5rem;
+    line-height: 30px;
   }
-
   /* BOTON ENVIAR RESPUESTA */
   .section-quizz__main-button-submit {
     font-size: 1.8rem;
@@ -113,11 +112,9 @@
   /* BOTON ENVIAR RESPUESTA */
   .section-quizz__main-button-submit {
     padding: 2rem 4rem 2rem 4rem;
-
-
   }
 
-  .section-quizz__main-button-submit i{
+  .section-quizz__main-button-submit i {
     font-size: 2.4rem;
   }
 }

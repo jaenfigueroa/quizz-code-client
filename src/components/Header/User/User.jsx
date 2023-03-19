@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react"
-import { Link, Navigate, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { AppContext } from "../../../context/AppContext"
 import { deleteUser } from "../../../helpers/log/deleteUser"
 import { getUser } from "../../../helpers/log/getUser"

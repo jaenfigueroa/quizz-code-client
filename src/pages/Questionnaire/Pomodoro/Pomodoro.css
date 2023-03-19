@@ -14,6 +14,15 @@
   z-index: 2;
   /* background: conic-gradient(var(--blue) calc( attr(data-porcent)/60 * 100%), var(--gray-4) calc(20/60 * 100%)); */
   /* background: var(--color); */
+
+}
+.palpitar{
+  animation:palpitar 100ms infinite alternate;
+}
+
+@keyframes palpitar {
+  0%{transform: scale(1);}
+  100%{transform: scale(1.1);}
 }
 
 .section-question__contador:after {
