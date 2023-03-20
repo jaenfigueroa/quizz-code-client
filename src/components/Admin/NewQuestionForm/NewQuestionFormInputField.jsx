@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewQuestionFormInputField = ({ title, type, placeholder }) => {
+const NewQuestionFormInputField = ({ title, name, type, placeholder }) => {
   const min = type === "number" ? 1 : null;
   const max = type === "number" ? 5 : null;
 
@@ -10,6 +10,7 @@ const NewQuestionFormInputField = ({ title, type, placeholder }) => {
       {type === "number" ? (
         <input
           className="section-admin__textarea"
+          name={name}
           type={type}
           min={min}
           max={max}
@@ -18,6 +19,7 @@ const NewQuestionFormInputField = ({ title, type, placeholder }) => {
       ) : (
         <textarea
           className="section-admin__textarea"
+          name={name}
           type={type}
           placeholder={placeholder}
           min={min}
