@@ -1,0 +1,7 @@
+[user]
+	email = satrgomez7@gmail.com
+	name = Rafael Gomez
+[credential "https://git.heroku.com"]
+	provider = generic
+[core]
+	editor = code -w

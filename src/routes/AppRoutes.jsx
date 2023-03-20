@@ -4,6 +4,7 @@ import { Footer } from '../components/Footer/Footer'
 import { Header } from '../components/Header/Header'
 import { AppContext } from '../context/AppContext'
 import { Challenge } from '../pages/Challenge/Challenge'
+
 import { Home } from '../pages/Home/Home'
 import { Login } from '../pages/Login/Login'
 import { Page404 } from '../pages/Page404/Page404'
@@ -12,11 +13,12 @@ import { Ranking } from '../pages/Ranking/Ranking'
 import { Register } from '../pages/Register/Register'
 import { Challenges } from '../pages/Languagex/Challenges'
 import { Questionnaire } from '../pages/Questionnaire/Questionnaire'
+import { Admin } from '../pages/Admin/Admin'
 
 /////////////////////////////////////////////
 export const AppRoutes = () => {
 
-  const {isAuthenticated} = useContext(AppContext)
+  const {isAuthenticated, isAdmin} = useContext(AppContext)
 
 
   /////////////////////////////////////////////
@@ -53,6 +55,9 @@ export const AppRoutes = () => {
               <Route path='/challenge/:category/:number' element={<Challenge/>}/>
             </>
           )
+        }
+        {
+          isAdmin && <Route path="/admin" element={<Admin />} />
         }
 
         <Route path='*' element={<Page404/>}/>
