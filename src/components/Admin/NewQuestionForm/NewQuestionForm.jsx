@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import NewQuestionFormInputField from "./NewQuestionFormInputField";
 import QuestionChoicesField from "./QuestionChoicesField";
 import NewQuestionFormSubmitButton from "./NewQuestionFormSubmitButton";
+import { getUser } from "../../../helpers/log/getUser";
+import { sendNewQuestionForm } from "../../../helpers/sendNewQuestionForm";
+import { NewQuestionCategorySelect } from "./NewQuestionCategorySelect";
 
 const NewQuestionForm = () => {
+  const user = getUser();
   const [formData, setFormData] = useState({
+    category: "",
     question: "",
     "optional-code": "",
     "option-1-text-type": "texto",
@@ -24,12 +29,25 @@ const NewQuestionForm = () => {
     "option-5": "",
     "correct-answer": "",
   });
+  console.log(formData)
+  const onSubmit = async () => {
+    const { status, data } = await sendNewQuestionForm(formData, user._id);
+    if (status !== "error") {
+      // redirect to success page
+      console.log("redirect to success page");
+    }
+  };
   const getValues = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
   return (
-    <form className="section-admin__form" onChange={getValues}>
+    <form
+      className="section-admin__form"
+      onChange={getValues}
+      onSubmit={onSubmit}
+    >
+      <NewQuestionCategorySelect />
       <NewQuestionFormInputField
         title="Pregunta"
         name="question"
