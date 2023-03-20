@@ -12,27 +12,30 @@ const NewQuestionForm = () => {
     category: "",
     question: "",
     "optional-code": "",
-    "option-1-text-type": "texto",
-    "option-1-language": "html",
+    "option-1-content-type": "texto",
+    "option-1-content-language": "html",
     "option-1": "",
-    "option-2-text-type": "texto",
-    "option-2-language": "html",
+    "option-2-content-type": "texto",
+    "option-2-content-language": "html",
     "option-2": "",
-    "option-3-text-type": "texto",
-    "option-3-language": "html",
+    "option-3-content-type": "texto",
+    "option-3-content-language": "html",
     "option-3": "",
-    "option-4-text-type": "texto",
-    "option-4-language": "html",
+    "option-4-content-type": "texto",
+    "option-4-content-language": "html",
     "option-4": "",
-    "option-5-text-type": "texto",
-    "option-5-language": "html",
+    "option-5-content-type": "texto",
+    "option-5-content-language": "html",
     "option-5": "",
     "correct-answer": "",
   });
-  console.log(formData)
-  const onSubmit = async () => {
+  const onSubmit = async (e) => {
+    e.preventDefault()
     const { status, data } = await sendNewQuestionForm(formData, user._id);
-    if (status !== "error") {
+    console.log(status)
+    if (status === "error" || status >= 400) {
+      console.log("render error")
+    } else {
       // redirect to success page
       console.log("redirect to success page");
     }
