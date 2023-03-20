@@ -1,6 +1,6 @@
 import React from 'react'
 import './Admin.css'
-import { InputOption } from './InputOption/InputOption'
+import { InputOption } from '../../components/InputOption/InputOption'
 
 //////////////////////////////////////////
 export const Admin = () => {
