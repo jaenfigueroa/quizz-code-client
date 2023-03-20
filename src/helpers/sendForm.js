@@ -10,7 +10,7 @@ export const sendForm = async (body, route) => {
   //////////////////////////////////////////////////////////////
   
   try {
-    const request = await fetch(`${global.urlServer}${route}`, {
+    const response = await fetch(`${global.urlServer}${route}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -18,7 +18,7 @@ export const sendForm = async (body, route) => {
       body: JSON.stringify(body)
     })
     
-    const data = await request.json()
+    const data = await response.json()
     // console.log(data)
     
     return data
