@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { checkQuestion } from '../../helpers/checkQuestion'
-import { randomQuestion } from '../../helpers/randomQuestion'
+import { getRandomQuestion } from '../../helpers/getRandomQuestion'
 import { Pomodoro } from './Pomodoro/Pomodoro'
 import { Question } from './Question/Question'
 import './Questionnaire.css'
@@ -19,7 +19,7 @@ export const Questionnaire = () => {
   const getQuestion = async () => {
     setProcessStatus('loading')
 
-    const data = await randomQuestion(category)
+    const data = await getRandomQuestion(category)
     // console.log(data)
     if (data.status === 'success') {
       setProcessStatus('progress')

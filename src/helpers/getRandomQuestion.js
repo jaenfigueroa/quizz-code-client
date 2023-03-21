@@ -1,7 +1,7 @@
 import {global} from './global'
 import {getUser} from './log/getUser'
 
-export const randomQuestion = async (category) => {
+export const getRandomQuestion = async (category) => {
   const {_id} = getUser()
 
   try {
