@@ -10,9 +10,9 @@ import { Start } from './Start/Start'
 ////////////////////////////////////////////////
 export const Questionnaire = () => {
   const { category } = useParams()
-
+  console.log(category)
   const [processStatus, setProcessStatus] = useState('loading') //start, progress, validation, finish
-  const [question, setquestion] = useState({})
+  const [question, setQuestion] = useState({})
   const [optionUser, setOptionUser] = useState(0)
   const [results, setResults] = useState({})
 
@@ -21,11 +21,11 @@ export const Questionnaire = () => {
     setProcessStatus('loading')
 
     const data = await randomQuestion(category)
-
+    // console.log(data)
     if (data.status === 'success') {
       setProcessStatus('progress')
       setOptionUser(0)
-      setquestion(data.question)
+      setQuestion(data.question)
     }
   }
 

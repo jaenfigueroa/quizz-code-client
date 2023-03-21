@@ -5,7 +5,7 @@ export const randomQuestion = async (category) => {
   const {_id} = getUser()
 
   try {
-    const response = await fetch(`${global.urlServer}/question/${category}/${_id}`)
+    const response = await fetch(`${global.urlServer}/questions/random?category=${category.toLowerCase()}&userId=${_id}`)
     const data = await response.json()
 
     console.log(data)
