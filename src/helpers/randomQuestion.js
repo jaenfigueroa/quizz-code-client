@@ -8,7 +8,7 @@ export const randomQuestion = async (category) => {
     const response = await fetch(`${global.urlServer}/questions/random?category=${category.toLowerCase()}&userId=${_id}`)
     const data = await response.json()
 
-    console.log(data)
+    // console.log(data)
     return data
 
   } catch (error) {

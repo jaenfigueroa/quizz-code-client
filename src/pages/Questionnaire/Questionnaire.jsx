@@ -10,7 +10,6 @@ import { Start } from './Start/Start'
 ////////////////////////////////////////////////
 export const Questionnaire = () => {
   const { category } = useParams()
-  console.log(category)
   const [processStatus, setProcessStatus] = useState('loading') //start, progress, validation, finish
   const [question, setQuestion] = useState({})
   const [optionUser, setOptionUser] = useState(0)

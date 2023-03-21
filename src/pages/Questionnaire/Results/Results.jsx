@@ -24,11 +24,11 @@ export const Results = ({ getQuestion, results }) => {
       <div className='section-quizz__container-button'>
         <button className="section-quizz__main-button-submit red" onClick={() => navigate('/')}>
           Salir
-          <i class="fa-solid fa-xmark"></i>
+          <i className="fa-solid fa-xmark"></i>
         </button>
         <button className="section-quizz__main-button-submit" onClick={() => getQuestion()}>
           Siguiente
-          <i class="fa-solid fa-arrow-right"></i>
+          <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </div>

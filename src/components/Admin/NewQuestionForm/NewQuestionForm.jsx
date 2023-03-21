@@ -32,7 +32,7 @@ const NewQuestionForm = () => {
   const onSubmit = async (e) => {
     e.preventDefault()
     const { status, data } = await sendNewQuestionForm(formData, user._id);
-    console.log(status)
+    // console.log(status)
     if (status === "error" || status >= 400) {
       console.log("render error")
     } else {
@@ -60,7 +60,7 @@ const NewQuestionForm = () => {
       <NewQuestionFormInputField
         title="Código (opcional)"
         name="optional-code"
-        type="text"
+        type="code"
         placeholder="Código que acompaña la pregunta"
       />
       <QuestionChoicesField />

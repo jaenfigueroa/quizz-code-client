@@ -9,8 +9,8 @@ export const InputOption = ({number}) => {
         <span className='section-admin__option-number'>{number}</span>
 
         <select className='section-admin__select' name={`option-${number}-content-type`}>
-          <option value="texto">Texto</option>
-          <option value="codigo">Codigo</option>
+          <option value="text">Texto</option>
+          <option value="code">Codigo</option>
         </select>
 
         <select className='section-admin__select' name={`option-${number}-content-language`}>

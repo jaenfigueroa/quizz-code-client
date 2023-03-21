@@ -19,18 +19,21 @@ export const Question = ({ question, setProcessStatus, optionUser, setOptionUser
           question.options.map((option, index) => (
             option.contentType === 'texto' ? (
               <OptionText
-                numberOption={index + 1}
-                text={option.answer}
                 key={index}
-                optionUser={optionUser}
-                setOptionUser={setOptionUser} />
-            ) : (
-              <OptionCode
                 numberOption={index + 1}
-                code={option.answer}
-                key={index}
                 optionUser={optionUser}
                 setOptionUser={setOptionUser}
+                text={option.answer}
+
+                />
+            ) : (
+              <OptionCode
+                key={index}
+                numberOption={index + 1}
+                optionUser={optionUser}
+                setOptionUser={setOptionUser}
+                code={option.answer}
+
                 category={category} />
             )
           ))
