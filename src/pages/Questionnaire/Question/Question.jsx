@@ -11,23 +11,23 @@ export const Question = ({ question, setProcessStatus, optionUser, setOptionUser
   ///////////////////////////////////////////
   return (
     <div className='section-question__main'>
-      <h2 className="section-quizz__main-ask">{question.questionText}</h2>
+      <h2 className="section-quizz__main-ask">{question.question}</h2>
 
       {/* CONTENEDOR DE OPCIONES */}
       <div className="section-quizz__main-options-container">
         {
           question.options.map((option, index) => (
-            option.typeContent === 'text' ? (
+            option.contentType === 'texto' ? (
               <OptionText
                 numberOption={index + 1}
-                text={option.content}
+                text={option.answer}
                 key={index}
                 optionUser={optionUser}
                 setOptionUser={setOptionUser} />
             ) : (
               <OptionCode
                 numberOption={index + 1}
-                code={option.content}
+                code={option.answer}
                 key={index}
                 optionUser={optionUser}
                 setOptionUser={setOptionUser}
