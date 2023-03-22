@@ -12,18 +12,24 @@ export const GlobalTable = ({ listTable }) => {
     <section className='global-table'>
 
       <div className='global-table__top-container'>
-        <div>
-          <i className="fa-solid fa-1"></i>
-          <i className="fa-solid fa-crown"></i>
-        </div>
-        <div>
-          <i className="fa-solid fa-2"></i>
-          <i className="fa-solid fa-trophy"></i>
-        </div>
-        <div>
-          <i className="fa-solid fa-3"></i>
-          <i className="fa-solid fa-medal"></i>
-        </div>
+        {listTable.length >= 1 && (
+          <div>
+            <i className="fa-solid fa-1"></i>
+            <i className="fa-solid fa-crown"></i>
+          </div>
+        )}
+        {listTable.length >= 2 && (
+          <div>
+            <i className="fa-solid fa-2"></i>
+            <i className="fa-solid fa-trophy"></i>
+          </div>
+        )}
+        {listTable.length >= 3 && (
+          <div>
+            <i className="fa-solid fa-3"></i>
+            <i className="fa-solid fa-medal"></i>
+          </div>
+        )}
       </div>
 
       <header>
@@ -35,7 +41,7 @@ export const GlobalTable = ({ listTable }) => {
       <main>
         {
           listTable && listTable.map((user, index) => (
-            <article key={index} className={userSaved && user.name === userSaved.name ? 'user':''}>
+            <article key={index} className={userSaved && user.name === userSaved.name ? 'user' : ''}>
               <span>
                 <img src={user.avatar} alt={`foto de ${user.name}`} />
                 <p className='ranking-table__name'>{user.name}</p>
