@@ -26,7 +26,6 @@ export const Login = () => {
   return (
     <FormLog
       title='Iniciar Sesion'
-
       inputs={
         <>
           <InputForm
@@ -47,15 +46,12 @@ export const Login = () => {
           />
         </>
       }
-
       other={
         <p className='form-log__ask'>
           ¿Aun no tienes una cuenta? <Link to='/register'>Registrate</Link>
         </p>
       }
-
       sendText='Ingresar'
-
       route='/users/login'
       submitEnabled={submitEnabled}
     />

@@ -12,8 +12,8 @@ export const Modal = () => {
     return (
       <div className='App__modal'>
         <article className='App__modal-card'>
-          {
-            modal.status === 'registered' ? (
+          {modal.status === 'registered'
+            ? (
               <>
                 <i className='fa-solid fa-circle-check' />
                 <div>
@@ -21,8 +21,8 @@ export const Modal = () => {
                   <p className='App__modal-card-text'>Haz Iniciado sesion correctamente como: <span>{modal.name}</span></p>
                 </div>
                 <button className='App__modal-close' onClick={() => { setModal({ ...modal, visible: false }) }}>Genial</button>
-              </>
-            ) : (
+              </>)
+            : (
               <>
                 <i className='fa-solid fa-spinner fa-spinner--animated' />
                 <div>
@@ -38,8 +38,7 @@ export const Modal = () => {
                 >Cancelar
                 </button>
               </>
-            )
-          }
+              )}
         </article>
       </div>
     )

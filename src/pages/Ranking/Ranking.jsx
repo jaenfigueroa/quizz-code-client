@@ -38,14 +38,11 @@ export const Ranking = () => {
 
       {/* TABLA DE TODOS LOS USUARIOS DEL RANKING */}
       {!loading
-        ? (
-          <GlobalTable setLoading={setLoading} listTable={listTable} />
-          )
+        ? (<GlobalTable setLoading={setLoading} listTable={listTable} />)
         : (
           <p className='section-ranking__loading'>
             <i className='fa-solid fa-spinner' />
-          </p>
-          )}
+          </p>)}
     </section>
   )
 }

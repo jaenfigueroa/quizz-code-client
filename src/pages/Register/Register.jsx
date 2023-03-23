@@ -32,7 +32,6 @@ export const Register = () => {
   return (
     <FormLog
       title='Registrarme'
-
       inputs={
         <>
           <InputForm
@@ -61,15 +60,12 @@ export const Register = () => {
           />
         </>
       }
-
       other={
         <p className='form-log__ask'>
           ¿Ya tienes una cuenta? <Link to='/login'>Iniciar Sesion</Link>
         </p>
       }
-
       sendText='Registrarme'
-
       route='/users/register'
       submitEnabled={submitEnabled}
     />

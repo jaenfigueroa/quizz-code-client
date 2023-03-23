@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useLayoutEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppContext } from '../../../context/AppContext'
 import { updateUser } from '../../../helpers/log/updateUser'
 import { updateProfile } from '../../../helpers/updateProfile'
@@ -52,54 +52,51 @@ export const SettingOption = ({ label, name, value, type, editable }) => {
       {/* TITULO */}
       <p className='setting-card__title'>{label}</p>
 
-      {
-        !active
-          ? (
-            <>
-              <p className='setting-card__value'>{value}</p>
-              {
+      {!active
+        ? (
+          <>
+            <p className='setting-card__value'>{value}</p>
+            {
               editable && <button type='button' className='setting-card__button' onClick={() => setActive(true)}>Editar {label.toLowerCase()}</button>
             }
 
-            </>
-            )
-          : (
-            <form onSubmit={getSubmit}>
-              <input
-                type={type}
-                name={name}
-                className=' setting-card__input'
-                defaultValue={value}
-                placeholder={`${label} ${type === 'password' ? 'Nueva' : ''}`}
-                onChange={getValues}
-                required
-              />
-              <input
-                type='password'
-                name='password'
-                className='setting-card__input'
-                placeholder={`contraseña ${type === 'password' ? 'Antigua' : ''}`}
-                onChange={getValues}
-                required
-              />
+          </>
+          )
+        : (
+          <form onSubmit={getSubmit}>
+            <input
+              type={type}
+              name={name}
+              className=' setting-card__input'
+              defaultValue={value}
+              placeholder={`${label} ${type === 'password' ? 'Nueva' : ''}`}
+              onChange={getValues}
+              required
+            />
+            <input
+              type='password'
+              name='password'
+              className='setting-card__input'
+              placeholder={`contraseña ${type === 'password' ? 'Antigua' : ''}`}
+              onChange={getValues}
+              required
+            />
 
-              <div className='setting-card__container'>
-                <button
-                  type='submit'
-                  className='setting-card__button'
-                >Actualizar
-                </button>
-                <button
-                  type='button'
-                  className='setting-card__button'
-                  onClick={() => setActive(false)}
-                >Cancelar
-                </button>
-              </div>
-            </form>
-            )
-      }
-
+            <div className='setting-card__container'>
+              <button
+                type='submit'
+                className='setting-card__button'
+              >Actualizar
+              </button>
+              <button
+                type='button'
+                className='setting-card__button'
+                onClick={() => setActive(false)}
+              >Cancelar
+              </button>
+            </div>
+          </form>
+          )}
       {
         alertVisible.visible && <span className={`setting-card__alert ${alertVisible.status === 'error' ? 'setting-card__alert--red' : ''}`}>{alertVisible.text}</span>
       }

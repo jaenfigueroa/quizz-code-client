@@ -10,7 +10,7 @@ export const getRanking = async () => {
       response = await fetch(`${global.urlServer}/users/ranking/${user._id}`)
     } else {
       response = await fetch(`${global.urlServer}/users/ranking`)
-      localStorage.removeItem('user')
+      window.localStorage.removeItem('user')
     }
 
     const data = await response.json()

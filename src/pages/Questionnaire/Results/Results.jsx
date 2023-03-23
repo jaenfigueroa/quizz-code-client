@@ -5,6 +5,7 @@ import './Result.css'
 /// ////////////////////////////////////////
 export const Results = ({ getQuestion, results }) => {
   const navigate = useNavigate()
+
   /// ////////////////////////////////////////
   return (
     <div className='section-question__results'>
@@ -17,8 +18,7 @@ export const Results = ({ getQuestion, results }) => {
                 <p><span>+1</span> challenge</p>
               </div>
               <p className='section-question__results-result'>{results.message}</p>
-            </>
-            )
+            </>)
           : (
             <p className='section-question__results-result section-question__results-result--incorrect'>{results.message}</p>
             )

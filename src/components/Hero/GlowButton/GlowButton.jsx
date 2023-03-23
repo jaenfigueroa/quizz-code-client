@@ -10,15 +10,9 @@ export const GlowButton = () => {
   /// ///////////////////////////////////////
   return (
     <>
-      {
-        isAuthenticated
-          ? (
-            <a href='#section-categories' className='glow-button'>Aceptar</a>
-            )
-          : (
-            <Link to='/login' className='glow-button'>Aceptar</Link>
-            )
-      }
+      {isAuthenticated
+        ? (<a href='#section-categories' className='glow-button'>Aceptar</a>)
+        : (<Link to='/login' className='glow-button'>Aceptar</Link>)}
     </>
   )
 }

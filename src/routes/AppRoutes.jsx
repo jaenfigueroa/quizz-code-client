@@ -34,21 +34,19 @@ export const AppRoutes = () => {
         <Route path='/home' element={<Home />} /> {/* SELECTOR DEL AREA DE PREGUNTAS */}
         <Route path='/confirm-registration/:confirmationToken' element={<ConfirmRegistration />} /> {/* VERIFICAR CORREO */}
 
-        {
-          !isAuthenticated ? (
+        {!isAuthenticated
+          ? (
             <>
               <Route path='/login' element={<Login />} /> {/* INICIAR SESION */}
               <Route path='/register' element={<Register />} /> {/* REGISTRARME */}
-            </>
-          ) : (
+            </>)
+          : (
             <>
               <Route path='/profile' element={<Profile />} /> {/* EDITAR PERFIL */}
               <Route path='/practice/:category' element={<Questionnaire />} />{/* QUIZZ CON OPCIONES */}
               <Route path='/challenges/:category' element={<Challenges />} />{/* VER LOS EJERCICIOS CON EDITOR */}
               <Route path='/challenge/:category/:number' element={<Challenge />} />{/* EJERCICIO UNICO CONE EDITOR */}
-            </>
-          )
-        }
+            </>)}
         {
           isAdmin && <Route path='/admin' element={<Admin />} />
         }

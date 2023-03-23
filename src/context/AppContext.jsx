@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 
 import { getUser } from '../helpers/log/getUser'
 import { autologin } from '../helpers/log/autologin'
-import { updateUser } from '../helpers/log/updateUser'
+// import { updateUser } from '../helpers/log/updateUser'
 
 /// ////////////////////////////////////////////////////////
 export const AppContext = createContext(null)

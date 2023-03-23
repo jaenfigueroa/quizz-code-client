@@ -12,8 +12,8 @@ export const TargetState = ({ targetState, setTargetState }) => {
   const {
     status = 'loading',
     message = 'Estamos procesando tu solicitud, espere un momento.',
-    targetVisible = false,
-    data = null
+    targetVisible = false
+    // data = null
   } = targetState
 
   // cerrar la tarjeta

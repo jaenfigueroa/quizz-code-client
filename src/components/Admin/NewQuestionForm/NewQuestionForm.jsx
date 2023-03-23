@@ -31,7 +31,7 @@ const NewQuestionForm = () => {
   })
   const onSubmit = async (e) => {
     e.preventDefault()
-    const { status, data } = await sendNewQuestionForm(formData, user._id)
+    const { status } = await sendNewQuestionForm(formData, user._id)
     // console.log(status)
     if (status === 'error' || status >= 400) {
       console.log('render error')

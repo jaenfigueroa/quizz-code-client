@@ -28,19 +28,17 @@ const ChallengeCard = ({ challenge, category }) => {
         <p className='challenge-card__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aliquam!</p>
       </div>
 
-      {
-        lock
-          ? (
-            <Link className='challenge-card__button' to={`/challenge/${category}/${id}`}>
-              <i className='fa-solid fa-chevron-right' />
-            </Link>
-            )
-          : (
-            <Link className='challenge-card__button challenge-card__button--gray'>
-              <i className='fa-solid fa-lock' />
-            </Link>
-            )
-      }
+      {lock
+        ? (
+          <Link className='challenge-card__button' to={`/challenge/${category}/${id}`}>
+            <i className='fa-solid fa-chevron-right' />
+          </Link>
+          )
+        : (
+          <Link className='challenge-card__button challenge-card__button--gray'>
+            <i className='fa-solid fa-lock' />
+          </Link>
+          )}
 
     </article>
   )

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getAllCategories } from '../../../helpers/getAllCategories'
 
+/// ///////////////////////////////////////////
 export const NewQuestionCategorySelect = () => {
   const [categories, setCategories] = useState([])
   useEffect(() => {
@@ -10,6 +11,7 @@ export const NewQuestionCategorySelect = () => {
     }
     fetchCategories()
   }, [])
+
   /// ///////////////////////////////////////////
   return (
     <div className='section-admin__block'>

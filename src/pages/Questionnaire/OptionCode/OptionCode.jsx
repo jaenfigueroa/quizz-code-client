@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './OptionCode.css'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
-import { tomorrow, gruvboxDark, oneDark, vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+// import { tomorrow, gruvboxDark, oneDark, vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 // import {  dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 // import {  okaidia} from 'react-syntax-highlighter/dist/esm/styles/prism';

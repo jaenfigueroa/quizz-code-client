@@ -1,7 +1,6 @@
 import React from 'react'
 import './ContainerTags.css'
 
-/// ////////////////////////////////////////
 export const ContainerTags = ({ tags }) => {
   /// ////////////////////////////////////////
   return (
