@@ -9,25 +9,20 @@ import { Hero } from '../../components/Hero/Hero';
 //////////////////////////////////////////////
 export const Home = () => {
 
-  const {isAuthenticated} = useContext(AppContext)
+  const { isAuthenticated } = useContext(AppContext)
 
-  useEffect(()=> {
+  useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   //////////////////////////////////////////////
   return (
     <main className='section-home'>
-
       {/* SECTION HERO */}
-      <Hero/>
-
       {/* SECCION DE CATEGORIAS DE LENGUAGES DISPONIBLES*/}
-      {
-        isAuthenticated && <Category/>
-      }
+      {isAuthenticated ? <Category /> : <Hero />}
 
       {/* SECCION DE CONTRIBUIDORES */}
-      <Contributors/>
+      <Contributors />
 
     </main>
   )

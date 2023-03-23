@@ -19,8 +19,8 @@
   align-items: center;
   border-radius: .5rem;
   transition: 300ms;
-  /* background: #33363e; */
-  background: linear-gradient(45deg,#2f323a, #3b3f49);
+  background: #2f323a;
+  /* background: #292c34; */
 }
 
 .section-welcome__article-title,
