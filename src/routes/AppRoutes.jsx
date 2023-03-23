@@ -14,11 +14,12 @@ import { Register } from '../pages/Register/Register'
 import { Challenges } from '../pages/Languagex/Challenges'
 import { Questionnaire } from '../pages/Questionnaire/Questionnaire'
 import { Admin } from '../pages/Admin/Admin'
+import { Welcome } from '../pages/Welcome/Welcome'
 
 /////////////////////////////////////////////
 export const AppRoutes = () => {
 
-  const {isAuthenticated, isAdmin} = useContext(AppContext)
+  const { isAuthenticated, isAdmin } = useContext(AppContext)
 
 
   /////////////////////////////////////////////
@@ -26,33 +27,28 @@ export const AppRoutes = () => {
     <BrowserRouter>
 
       {/* HEADER Y NAV */}
-      <Header/>
+      <Header />
 
       {/* CUERPO */}
       <Routes>
         {/* <Route path='/' element={<Navigate to={!isAuthenticated ? '/login' : '/home'}/>}/> */}
-        <Route path='/' element={<Navigate to={'/home'}/>}/>
-        <Route path='/ranking' element={<Ranking/>}/> {/* RANKING DE PUNTAJES */}
-        <Route path='/home' element={<Home/>}/> {/* SELECTOR DEL AREA DE PREGUNTAS */}
+        <Route path='/' element={<Navigate to={'/home'} />} />
+        <Route path='/ranking' element={<Ranking />} /> {/* RANKING DE PUNTAJES */}
+        <Route path='/home' element={<Home />} /> {/* SELECTOR DEL AREA DE PREGUNTAS */}
 
         {
           !isAuthenticated ? (
             <>
-              <Route path='/login' element={<Login/>}/> {/* INICIAR SESION */}
-              <Route path='/register' element={<Register/>}/> {/* REGISTRARME */}
+              <Route path='/login' element={<Login />} /> {/* INICIAR SESION */}
+              <Route path='/register' element={<Register />} /> {/* REGISTRARME */}
+              <Route path='/welcome' element={<Welcome />} /> {/* BIENVENIDA VERIFICAR */}
             </>
-          ): (
+          ) : (
             <>
-              {/* EDITAR PERFIL */}
-              <Route path='/profile' element={<Profile/>}/>
-
-              {/* QUIZZ CON OPCIONES*/}
-              <Route path='/practice/:category' element={<Questionnaire/>}/>
-
-              {/* VER LOS EJERCICIOS CON EDITOR */}
-              <Route path='/challenges/:category' element={<Challenges/>}/>
-              {/* EJERCICIO UNICO CONE EDITOR*/}
-              <Route path='/challenge/:category/:number' element={<Challenge/>}/>
+              <Route path='/profile' element={<Profile />} /> {/* EDITAR PERFIL */}
+              <Route path='/practice/:category' element={<Questionnaire />} />{/* QUIZZ CON OPCIONES*/}
+              <Route path='/challenges/:category' element={<Challenges />} />{/* VER LOS EJERCICIOS CON EDITOR */}
+              <Route path='/challenge/:category/:number' element={<Challenge />} />{/* EJERCICIO UNICO CONE EDITOR*/}
             </>
           )
         }
@@ -60,11 +56,11 @@ export const AppRoutes = () => {
           isAdmin && <Route path="/admin" element={<Admin />} />
         }
 
-        <Route path='*' element={<Page404/>}/>
+        <Route path='*' element={<Page404 />} />
       </Routes>
 
       {/* FOOTER */}
-        <Footer/>
+      <Footer />
     </BrowserRouter>
   )
 }
