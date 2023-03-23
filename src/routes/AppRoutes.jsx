@@ -14,7 +14,9 @@ import { Register } from '../pages/Register/Register'
 import { Challenges } from '../pages/Languagex/Challenges'
 import { Questionnaire } from '../pages/Questionnaire/Questionnaire'
 import { Admin } from '../pages/Admin/Admin'
+
 import { Welcome } from '../pages/Welcome/Welcome'
+import ConfirmRegistration from '../pages/ConfirmRegistration/ConfirmRegistration'
 
 /////////////////////////////////////////////
 export const AppRoutes = () => {
@@ -32,10 +34,15 @@ export const AppRoutes = () => {
       {/* CUERPO */}
       <Routes>
         {/* <Route path='/' element={<Navigate to={!isAuthenticated ? '/login' : '/home'}/>}/> */}
+
         <Route path='/' element={<Navigate to={'/home'} />} />
         <Route path='/ranking' element={<Ranking />} /> {/* RANKING DE PUNTAJES */}
         <Route path='/home' element={<Home />} /> {/* SELECTOR DEL AREA DE PREGUNTAS */}
 
+        <Route path='/' element={<Navigate to={'/home'}/>}/>
+        <Route path='/ranking' element={<Ranking/>}/> {/* RANKING DE PUNTAJES */}
+        <Route path='/home' element={<Home/>}/> {/* SELECTOR DEL AREA DE PREGUNTAS */}
+        <Route path="/confirm-registration/:confirmationToken" element={<ConfirmRegistration />} />
         {
           !isAuthenticated ? (
             <>
