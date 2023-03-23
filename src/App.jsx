@@ -1,7 +1,7 @@
 import './App.css'
 import { AppRoutes } from './routes/AppRoutes'
 import { ContextProvider } from './context/AppContext'
-import { Modal } from './components/Modal/Modal'
+// import { Modal } from './components/Modal/Modal'
 
 /////////////////////////////////////////////////
 function App() {
@@ -11,7 +11,9 @@ function App() {
       <div className="App">
         <AppRoutes />
       </div>
-      <Modal /> {/* AUTOLOGIN */}
+
+      {/* AUTOLOGIN */}
+      {/* <Modal /> */}
     </ContextProvider>
   )
 }
