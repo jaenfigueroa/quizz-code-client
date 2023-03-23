@@ -9,9 +9,8 @@ import { testForm } from '../../helpers/test/testForm'
 
 const totalInputs = 3
 
-/////////////////////////////////////////
+/// //////////////////////////////////////
 export const Register = () => {
-
   const [results, setResults] = useState({})
   const [submitEnabled, setSubmitEnabled] = useState(false)
 
@@ -19,21 +18,20 @@ export const Register = () => {
   //   console.log(results)
   // }, [results])
 
-  ///VERIFICAR SI EL FORMULARIO SE PUEDE O NO PUEDE ENVIAR AUN
+  /// VERIFICAR SI EL FORMULARIO SE PUEDE O NO PUEDE ENVIAR AUN
   useEffect(() => {
     setSubmitEnabled(testForm(results, totalInputs))
   }, [results])
 
-  //////////////////////////
+  /// ///////////////////////
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
-  /////////////////////////////////////////
+  /// //////////////////////////////////////
   return (
     <FormLog
       title='Registrarme'
-
       inputs={
         <>
           <InputForm
@@ -42,34 +40,34 @@ export const Register = () => {
             name='name'
             validator={testName}
             minLength={3}
-            setResults={setResults} />
+            setResults={setResults}
+          />
           <InputForm
             label='Correo Electronico'
             type='email'
             name='email'
             validator={testEmail}
             minLength={5}
-            setResults={setResults} />
+            setResults={setResults}
+          />
           <InputForm
             label='Contraseña'
             type='password'
             name='password'
             validator={testPassword}
             minLength={8}
-            setResults={setResults} />
+            setResults={setResults}
+          />
         </>
       }
-
       other={
         <p className='form-log__ask'>
           ¿Ya tienes una cuenta? <Link to='/login'>Iniciar Sesion</Link>
         </p>
       }
-
       sendText='Registrarme'
-
       route='/users/register'
-      submitEnabled={submitEnabled} />
+      submitEnabled={submitEnabled}
+    />
   )
-
 }

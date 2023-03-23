@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import Editor from "@monaco-editor/react";
-import { text } from './Text';
+import Editor from '@monaco-editor/react'
+import { text } from './Text'
 
-//////////////////////////////////////////////////
+/// ///////////////////////////////////////////////
 export const EditorTR = () => {
-
   const [textCode, setTextCode] = useState('')
 
-  useEffect(()=> {
-
+  useEffect(() => {
     console.log(textCode)
-
-  },[textCode])
-  //////////////////////////////////////////////////
+  }, [textCode])
+  /// ///////////////////////////////////////////////
   return (
     <Editor
       // className='exercise__code'
-      height="88%"
-      defaultLanguage="javascript"
+      height='88%'
+      defaultLanguage='javascript'
       defaultValue={text}
       theme='vs-dark'
       onChange={(value) => setTextCode(value)}

@@ -3,12 +3,11 @@ import { AppRoutes } from './routes/AppRoutes'
 import { ContextProvider } from './context/AppContext'
 // import { Modal } from './components/Modal/Modal'
 
-/////////////////////////////////////////////////
-function App() {
-
+/// //////////////////////////////////////////////
+function App () {
   return (
     <ContextProvider>
-      <div className="App">
+      <div className='App'>
         <AppRoutes />
       </div>
 

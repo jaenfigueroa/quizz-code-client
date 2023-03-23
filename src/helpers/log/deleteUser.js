@@ -1,4 +1,4 @@
 export const deleteUser = () => {
-  //eliminar el usuario del local storage
-  localStorage.removeItem('user')
+  // eliminar el usuario del local storage
+  window.localStorage.removeItem('user')
 }

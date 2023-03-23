@@ -1,15 +1,14 @@
-import { global } from "./global"
-import { getUser } from "./log/getUser"
-import { updateUser } from "./log/updateUser"
+import { global } from './global'
+import { getUser } from './log/getUser'
+import { updateUser } from './log/updateUser'
 
 export const uploadImage = async (body, route) => {
-
   const user = getUser()
 
   try {
-    const response = await fetch(`${global.urlServer}${route}/${user['_id']}`, {
+    const response = await fetch(`${global.urlServer}${route}/${user._id}`, {
       method: 'PUT',
-      body: body
+      body
     })
 
     const data = await response.json()
@@ -20,7 +19,6 @@ export const uploadImage = async (body, route) => {
     }
 
     return data
-
   } catch (error) {
     console.log(error)
   }

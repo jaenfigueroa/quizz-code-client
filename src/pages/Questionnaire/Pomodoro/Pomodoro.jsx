@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './Pomodoro.css'
 
-/////////////////////////////////////////
-export function Pomodoro({ setProcessStatus }) {
+/// //////////////////////////////////////
+export function Pomodoro ({ setProcessStatus }) {
   const [seconds, setSeconds] = useState(30)
   const [color, setColor] = useState('blue')
 
@@ -17,14 +17,14 @@ export function Pomodoro({ setProcessStatus }) {
     }
   }, [seconds])
 
-  /////////////////////////////////////////
+  /// //////////////////////////////////////
   return (
     <div
       className={`section-question__contador ${
         seconds <= 10 ? 'palpitar' : ''
       }`}
       style={{
-        background: `conic-gradient(var(--${color}) calc( ${seconds}/30 * 100%), var(--gray-4) calc(${seconds}/30 * 100%))`,
+        background: `conic-gradient(var(--${color}) calc( ${seconds}/30 * 100%), var(--gray-4) calc(${seconds}/30 * 100%))`
       }}
       data-number={seconds}
     />

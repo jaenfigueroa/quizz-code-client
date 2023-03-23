@@ -1,12 +1,11 @@
-import React, { useContext, useEffect, useLayoutEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppContext } from '../../../context/AppContext'
 import { updateUser } from '../../../helpers/log/updateUser'
 import { updateProfile } from '../../../helpers/updateProfile'
 import './SettingOption.css'
 
-//////////////////////////////////////////////
-export const SettingOption = ({ label,  name, value, type, editable }) => {
-
+/// ///////////////////////////////////////////
+export const SettingOption = ({ label, name, value, type, editable }) => {
   const { updateState } = useContext(AppContext)
 
   const [active, setActive] = useState(false)
@@ -14,7 +13,7 @@ export const SettingOption = ({ label,  name, value, type, editable }) => {
 
   const [formData, setFormData] = useState({})
 
-  //OBTENER VALORES DEL INPUT DINAMICAMENTE
+  // OBTENER VALORES DEL INPUT DINAMICAMENTE
   const getValues = (e) => {
     const { name, value } = e.target
 
@@ -22,20 +21,20 @@ export const SettingOption = ({ label,  name, value, type, editable }) => {
     // console.log(formData)
   }
 
-  //ENVIAR EL FORMULARIO Y LA PETICION
+  // ENVIAR EL FORMULARIO Y LA PETICION
   const getSubmit = async (e) => {
     e.preventDefault()
 
     setAlertVisible({ visible: true, text: 'Espera unos segundos...', status: 'loading' })
 
-    const data = await updateProfile(type, formData[name] || value, formData['password'])
+    const data = await updateProfile(type, formData[name] || value, formData.password)
 
     setAlertVisible({ visible: true, text: data.message, status: data.status })
 
-    //cerrar el formulario
-    //actualizar el local storageusuario
-    //actualizar el stado
-    //ocultar el aviso 4 segundos despues
+    // cerrar el formulario
+    // actualizar el local storageusuario
+    // actualizar el stado
+    // ocultar el aviso 4 segundos despues
     if (data.status === 'success') {
       setActive(false)
       updateUser(data.user)
@@ -47,22 +46,23 @@ export const SettingOption = ({ label,  name, value, type, editable }) => {
     }
   }
 
-  //////////////////////////////////////////////
+  /// ///////////////////////////////////////////
   return (
-    <section className="setting-card">
+    <section className='setting-card'>
       {/* TITULO */}
-      <p className="setting-card__title">{label}</p>
+      <p className='setting-card__title'>{label}</p>
 
-      {
-        !active ? (
+      {!active
+        ? (
           <>
             <p className='setting-card__value'>{value}</p>
             {
-              editable && <button type="button" className="setting-card__button" onClick={() => setActive(true)}>Editar {label.toLowerCase()}</button>
+              editable && <button type='button' className='setting-card__button' onClick={() => setActive(true)}>Editar {label.toLowerCase()}</button>
             }
 
           </>
-        ) : (
+          )
+        : (
           <form onSubmit={getSubmit}>
             <input
               type={type}
@@ -71,28 +71,32 @@ export const SettingOption = ({ label,  name, value, type, editable }) => {
               defaultValue={value}
               placeholder={`${label} ${type === 'password' ? 'Nueva' : ''}`}
               onChange={getValues}
-              required />
+              required
+            />
             <input
               type='password'
               name='password'
-              className={`setting-card__input`}
+              className='setting-card__input'
               placeholder={`contraseña ${type === 'password' ? 'Antigua' : ''}`}
               onChange={getValues}
-              required />
+              required
+            />
 
-            <div className="setting-card__container">
+            <div className='setting-card__container'>
               <button
-                type="submit"
-                className="setting-card__button">Actualizar</button>
+                type='submit'
+                className='setting-card__button'
+              >Actualizar
+              </button>
               <button
-                type="button"
-                className="setting-card__button"
-                onClick={() => setActive(false)}>Cancelar</button>
+                type='button'
+                className='setting-card__button'
+                onClick={() => setActive(false)}
+              >Cancelar
+              </button>
             </div>
           </form>
-        )
-      }
-
+          )}
       {
         alertVisible.visible && <span className={`setting-card__alert ${alertVisible.status === 'error' ? 'setting-card__alert--red' : ''}`}>{alertVisible.text}</span>
       }
