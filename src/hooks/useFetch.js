@@ -1,6 +1,6 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 
-/////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////
 export const useFetch = (url, options = {}) => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -16,5 +16,5 @@ export const useFetch = (url, options = {}) => {
       .finally(() => setLoading(false))
   }, [])
 
-  return {data, loading, error}
+  return { data, loading, error }
 }

@@ -1,8 +1,8 @@
-import {global} from './global'
-import {getUser} from './log/getUser'
+import { global } from './global'
+import { getUser } from './log/getUser'
 
 export const checkQuestion = async (questionId, chosenOption) => {
-  const {_id} = getUser()
+  const { _id } = getUser()
 
   // console.log(questionId, chosenOption)
 
@@ -12,7 +12,7 @@ export const checkQuestion = async (questionId, chosenOption) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({questionId, chosenOption})
+      body: JSON.stringify({ questionId, chosenOption })
     })
     const data = await response.json()
     // console.log(data)

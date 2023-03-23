@@ -5,9 +5,8 @@ import { deleteUser } from '../../helpers/log/deleteUser'
 import './Header.css'
 import { User } from './User/User'
 
-///////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////
 export const Header = () => {
-
   const { isAuthenticated, setIsAuthenticated } = useContext(AppContext)
   const [headerActive, setHeaderActive] = useState(false)
 
@@ -16,17 +15,17 @@ export const Header = () => {
     setHeaderActive(!headerActive)
   }
 
-  ///////////////////////////////////////////////////////
+  /// ////////////////////////////////////////////////////
   return (
     <header className='header'>
       {/* LOGO */}
-      <Link to={!isAuthenticated ? '/login' : '/home'} className="header__link" >
+      <Link to={!isAuthenticated ? '/login' : '/home'} className='header__link'>
         <span className='header__logo'>QuizzCode</span>
       </Link>
       {/* ICONO SANDWICH */}
       <div className='header__sandwich' onClick={closeNav}>
         {
-          !headerActive ? <i className="fa-solid fa-bars"></i> : <i className="fa-regular fa-circle-xmark"></i>
+          !headerActive ? <i className='fa-solid fa-bars' /> : <i className='fa-regular fa-circle-xmark' />
         }
       </div>
       {/* NAV */}
@@ -54,12 +53,15 @@ export const Header = () => {
           isAuthenticated && (
             <div className='header-nav__settings'>
               <Link className='header-nav__settings-button' to='/profile' onClick={closeNav}>Editar Perfil</Link>
-              <button className='header-nav__settings-button' onClick={() => {
-                deleteUser() //eliminar datos del uusario del local storage
-                setIsAuthenticated(false)
-                navigate('/home')
-                closeNav()
-              }}>Cerrar sesion</button>
+              <button
+                className='header-nav__settings-button' onClick={() => {
+                  deleteUser() // eliminar datos del uusario del local storage
+                  setIsAuthenticated(false)
+                  navigate('/home')
+                  closeNav()
+                }}
+              >Cerrar sesion
+              </button>
             </div>
           )
         }

@@ -2,32 +2,31 @@ import React from 'react'
 import { getUser } from '../../../helpers/log/getUser'
 import './GlobalTable.css'
 
-//////////////////////////////////////
+/// ///////////////////////////////////
 export const GlobalTable = ({ listTable }) => {
-
   const userSaved = getUser()
 
-  //////////////////////////////////////
+  /// ///////////////////////////////////
   return (
     <section className='global-table'>
 
       <div className='global-table__top-container'>
         {listTable.length >= 1 && (
           <div>
-            <i className="fa-solid fa-1"></i>
-            <i className="fa-solid fa-crown"></i>
+            <i className='fa-solid fa-1' />
+            <i className='fa-solid fa-crown' />
           </div>
         )}
         {listTable.length >= 2 && (
           <div>
-            <i className="fa-solid fa-2"></i>
-            <i className="fa-solid fa-trophy"></i>
+            <i className='fa-solid fa-2' />
+            <i className='fa-solid fa-trophy' />
           </div>
         )}
         {listTable.length >= 3 && (
           <div>
-            <i className="fa-solid fa-3"></i>
-            <i className="fa-solid fa-medal"></i>
+            <i className='fa-solid fa-3' />
+            <i className='fa-solid fa-medal' />
           </div>
         )}
       </div>

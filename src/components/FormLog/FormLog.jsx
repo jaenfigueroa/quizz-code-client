@@ -4,14 +4,13 @@ import { sendForm } from '../../helpers/sendForm'
 import './FormLog.css'
 import { TargetState } from './TargetState/TargetState'
 
-////////////////////////////////////
+/// /////////////////////////////////
 export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }) => {
-
   const [formData, setFormData] = useState({})
 
   const [targetState, setTargetState] = useState({ status: 'loading', targetVisible: false })
 
-  //OBTENER VALORES DEL INPUT DINAMICAMENTE
+  // OBTENER VALORES DEL INPUT DINAMICAMENTE
   const getValues = (e) => {
     const { name, value } = e.target
 
@@ -19,19 +18,18 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
     // console.log(formData)
   }
 
-  //ENVIAR EL FORMULARIO Y REALIZAR LA PETICION A LA RUTA CORRESPONDIENTE
+  // ENVIAR EL FORMULARIO Y REALIZAR LA PETICION A LA RUTA CORRESPONDIENTE
   const getForm = async (e) => {
     e.preventDefault()
 
-    //solo se podra si el boton de enviar esta habilitado
+    // solo se podra si el boton de enviar esta habilitado
     if (submitEnabled) {
-
-      //para que se muestre la tarjeta cargando
+      // para que se muestre la tarjeta cargando
       setTargetState(() => {
         return { status: 'loading', message: 'Estamos procesando tu solicitud, espere unos segundos.', targetVisible: true }
       })
 
-      //enviar el formulario y realizar la peticion al back
+      // enviar el formulario y realizar la peticion al back
       const result = await sendForm(formData, route)
 
       if (result.status === 'sucess') {
@@ -41,14 +39,12 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
       // console.log(result)
       // console.log('se envio el formulario')
 
-      //mostrar los resultados del back en la tarjeta
-      setTargetState({ ...result, targetVisible: true})
+      // mostrar los resultados del back en la tarjeta
+      setTargetState({ ...result, targetVisible: true })
     }
   }
 
-
-
-  ////////////////////////////////////
+  /// /////////////////////////////////
   return (
     <section className='seccion-log'>
 
@@ -66,7 +62,7 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
             {inputs} {/* INPUTS DEL FORMULARIO */}
 
             {/* BOTON ENVIAR */}
-            <input type="submit" value={sendText} className={`formlog__button-submit ${!submitEnabled && 'formlog__button-submit--disabled'}`} />
+            <input type='submit' value={sendText} className={`formlog__button-submit ${!submitEnabled && 'formlog__button-submit--disabled'}`} />
           </form>
 
           {other} {/* TEXTO PARA NAVEGAR A LA OTRA SECCION */}

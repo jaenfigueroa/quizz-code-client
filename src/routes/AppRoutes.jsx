@@ -16,12 +16,11 @@ import { Questionnaire } from '../pages/Questionnaire/Questionnaire'
 import { Admin } from '../pages/Admin/Admin'
 import ConfirmRegistration from '../pages/ConfirmRegistration/ConfirmRegistration'
 
-/////////////////////////////////////////////
+/// //////////////////////////////////////////
 export const AppRoutes = () => {
-
   const { isAuthenticated, isAdmin } = useContext(AppContext)
 
-  /////////////////////////////////////////////
+  /// //////////////////////////////////////////
   return (
     <BrowserRouter>
 
@@ -30,10 +29,10 @@ export const AppRoutes = () => {
 
       {/* CUERPO */}
       <Routes>
-        <Route path='/' element={<Navigate to={'/home'} />} />
+        <Route path='/' element={<Navigate to='/home' />} />
         <Route path='/ranking' element={<Ranking />} /> {/* RANKING DE PUNTAJES */}
         <Route path='/home' element={<Home />} /> {/* SELECTOR DEL AREA DE PREGUNTAS */}
-        <Route path="/confirm-registration/:confirmationToken" element={<ConfirmRegistration />} /> {/* VERIFICAR CORREO */}
+        <Route path='/confirm-registration/:confirmationToken' element={<ConfirmRegistration />} /> {/* VERIFICAR CORREO */}
 
         {
           !isAuthenticated ? (
@@ -44,14 +43,14 @@ export const AppRoutes = () => {
           ) : (
             <>
               <Route path='/profile' element={<Profile />} /> {/* EDITAR PERFIL */}
-              <Route path='/practice/:category' element={<Questionnaire />} />{/* QUIZZ CON OPCIONES*/}
+              <Route path='/practice/:category' element={<Questionnaire />} />{/* QUIZZ CON OPCIONES */}
               <Route path='/challenges/:category' element={<Challenges />} />{/* VER LOS EJERCICIOS CON EDITOR */}
-              <Route path='/challenge/:category/:number' element={<Challenge />} />{/* EJERCICIO UNICO CONE EDITOR*/}
+              <Route path='/challenge/:category/:number' element={<Challenge />} />{/* EJERCICIO UNICO CONE EDITOR */}
             </>
           )
         }
         {
-          isAdmin && <Route path="/admin" element={<Admin />} />
+          isAdmin && <Route path='/admin' element={<Admin />} />
         }
 
         <Route path='*' element={<Page404 />} />

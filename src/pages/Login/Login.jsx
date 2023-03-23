@@ -8,24 +8,21 @@ import { testPassword } from '../../helpers/test/testPassword'
 
 const totalInputs = 2
 
-//////////////////////////////////////////
+/// ///////////////////////////////////////
 export const Login = () => {
-
   const [results, setResults] = useState({})
   const [submitEnabled, setSubmitEnabled] = useState(false)
 
-  ///VERIFICAR SI EL FORMULARIO SE PUEDE O NO PUEDE ENVIAR AUN
+  /// VERIFICAR SI EL FORMULARIO SE PUEDE O NO PUEDE ENVIAR AUN
   useEffect(() => {
     setSubmitEnabled(testForm(results, totalInputs))
   }, [results])
 
-
-
-  useEffect(()=> {
+  useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
-  //////////////////////////////////////////
+  /// ///////////////////////////////////////
   return (
     <FormLog
       title='Iniciar Sesion'
@@ -38,14 +35,16 @@ export const Login = () => {
             name='email'
             validator={testEmail}
             minLength={5}
-            setResults={setResults}/>
+            setResults={setResults}
+          />
           <InputForm
             label='Contraseña'
             type='password'
             name='password'
             minLength={8}
             validator={testPassword}
-            setResults={setResults}/>
+            setResults={setResults}
+          />
         </>
       }
 
@@ -58,8 +57,9 @@ export const Login = () => {
       sendText='Ingresar'
 
       route='/users/login'
-      submitEnabled={submitEnabled} />
+      submitEnabled={submitEnabled}
+    />
   )
 }
 
-///////////////////////////////////////////////////
+/// ////////////////////////////////////////////////

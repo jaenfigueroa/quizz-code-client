@@ -3,69 +3,67 @@ import { useParams } from 'react-router-dom'
 import ChallengeCard from './ChallengeCard/ChallengeCard'
 import './Challenges.css'
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 const challengesList = [
   {
-    id: "1",
-    name: "Challenge 1",
+    id: '1',
+    name: 'Challenge 1'
   },
   {
-    id: "2",
-    name: "Challenge 2",
+    id: '2',
+    name: 'Challenge 2'
   },
   {
-    id: "3",
-    name: "Challenge 3",
+    id: '3',
+    name: 'Challenge 3'
   },
   {
-    id: "4",
-    name: "Challenge 4",
+    id: '4',
+    name: 'Challenge 4'
   },
   {
-    id: "5",
-    name: "Challenge 5",
+    id: '5',
+    name: 'Challenge 5'
   },
   {
-    id: "6",
-    name: "Challenge 6",
+    id: '6',
+    name: 'Challenge 6'
   },
   {
-    id: "7",
-    name: "Challenge 7",
+    id: '7',
+    name: 'Challenge 7'
   },
   {
-    id: "8",
-    name: "Challenge 8",
+    id: '8',
+    name: 'Challenge 8'
   },
   {
-    id: "9",
-    name: "Challenge 9",
+    id: '9',
+    name: 'Challenge 9'
   },
   {
-    id: "10",
-    name: "Challenge 10",
+    id: '10',
+    name: 'Challenge 10'
   },
   {
-    id: "11",
-    name: "Challenge 11",
+    id: '11',
+    name: 'Challenge 11'
   },
   {
-    id: "12",
-    name: "Challenge 12",
-  },
+    id: '12',
+    name: 'Challenge 12'
+  }
 ]
 
-/////////////////////////////////////
+/// //////////////////////////////////
 export const Challenges = () => {
-
   const { category } = useParams()
-
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
-  /////////////////////////////////////
+  /// //////////////////////////////////
   return (
     <section className='challenges'>
 

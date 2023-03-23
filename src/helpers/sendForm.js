@@ -1,4 +1,4 @@
-import { global } from "./global"
+import { global } from './global'
 
 export const sendForm = async (body, route) => {
   // console.log({
@@ -6,9 +6,9 @@ export const sendForm = async (body, route) => {
   //   url: `${global.urlServer}${route}`
   // })
 
-  //////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////
-  
+  /// ///////////////////////////////////////////////////////////
+  /// ///////////////////////////////////////////////////////////
+
   try {
     const request = await fetch(`${global.urlServer}${route}`, {
       method: 'POST',
@@ -17,14 +17,12 @@ export const sendForm = async (body, route) => {
       },
       body: JSON.stringify(body)
     })
-    
+
     const data = await request.json()
     // console.log(data)
-    
+
     return data
-
   } catch (error) {
-
     // console.log('no se puedo realizar la peticion')
 
     return {

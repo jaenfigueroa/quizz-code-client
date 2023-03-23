@@ -7,15 +7,15 @@ import { Question } from './Question/Question'
 import './Questionnaire.css'
 import { Results } from './Results/Results'
 import { Start } from './Start/Start'
-////////////////////////////////////////////////
+/// /////////////////////////////////////////////
 export const Questionnaire = () => {
   const { category } = useParams()
-  const [processStatus, setProcessStatus] = useState('loading') //start, progress, validation, finish
+  const [processStatus, setProcessStatus] = useState('loading') // start, progress, validation, finish
   const [question, setQuestion] = useState({})
   const [optionUser, setOptionUser] = useState(0)
   const [results, setResults] = useState({})
 
-  //1. traer una "question" al azar
+  // 1. traer una "question" al azar
   const getQuestion = async () => {
     setProcessStatus('loading')
 
@@ -28,12 +28,12 @@ export const Questionnaire = () => {
     }
   }
 
-  //2. enviar opcion elegida y traer resultados
+  // 2. enviar opcion elegida y traer resultados
   useEffect(() => {
     const getResults = async () => {
       setProcessStatus('loading')
 
-      const data = await checkQuestion(question['_id'], optionUser)
+      const data = await checkQuestion(question._id, optionUser)
       // console.log(data)
       setResults(data)
       setProcessStatus('finish')
@@ -49,7 +49,7 @@ export const Questionnaire = () => {
     getQuestion()
   }, [])
 
-  ////////////////////////////////////////////////
+  /// /////////////////////////////////////////////
   return (
     <section className='section-quizz'>
       <h4 className='component-title'>Categoria: {category}</h4>
