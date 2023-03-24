@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--gradient);
   min-height: calc(100vh - 5rem);
 }
 

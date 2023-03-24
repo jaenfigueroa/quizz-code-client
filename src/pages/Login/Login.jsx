@@ -54,6 +54,7 @@ export const Login = () => {
       sendText='Ingresar'
       route='/users/login'
       submitEnabled={submitEnabled}
+      redirect
     />
   )
 }

@@ -68,6 +68,7 @@ export const Register = () => {
       sendText='Registrarme'
       route='/users/register'
       submitEnabled={submitEnabled}
+      redirect={false}
     />
   )
 }

@@ -5,7 +5,7 @@ import './FormLog.css'
 import { TargetState } from './TargetState/TargetState'
 
 /// /////////////////////////////////
-export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }) => {
+export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled, redirect }) => {
   const [formData, setFormData] = useState({})
 
   const [targetState, setTargetState] = useState({ status: 'loading', targetVisible: false })
@@ -69,7 +69,7 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled }
         </div>
 
         {/* AVISO PAR MOSTRAR EL ESTADO DE LA PETICION */}
-        <TargetState targetState={targetState} setTargetState={setTargetState} />
+        <TargetState targetState={targetState} setTargetState={setTargetState} redirect={redirect} />
 
       </article>
 

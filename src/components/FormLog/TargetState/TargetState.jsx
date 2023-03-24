@@ -5,7 +5,7 @@ import { AppContext } from '../../../context/AppContext'
 import './TargetState.css'
 
 /// ///////////////////////////////////////
-export const TargetState = ({ targetState, setTargetState }) => {
+export const TargetState = ({ targetState, setTargetState, redirect }) => {
   const { setIsAuthenticated } = useContext(AppContext)
   const navigate = useNavigate()
 
@@ -38,8 +38,11 @@ export const TargetState = ({ targetState, setTargetState }) => {
             ? (
               <button
                 className='target-state__button' onClick={() => {
-                  setIsAuthenticated(true)
-                  navigate('/')
+                  if (redirect) {
+                    setIsAuthenticated(true)
+                    navigate('/')
+                  }
+                  closeTarget()
                 }}
               >Genial
               </button>
