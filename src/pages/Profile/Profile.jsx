@@ -42,12 +42,12 @@ export const Profile = () => {
             value={user.email}
             editable={false}
           />
-          <SettingOption
+          {/* <SettingOption
             label='Contraseña'
             type='password'
             name='newPassword'
             editable
-          />
+          /> */}
         </section>
       </div>
 

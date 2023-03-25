@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { updateUser } from '../../helpers/log/updateUser'
 import { sendForm } from '../../helpers/sendForm'
+import { ButtonGoogle } from '../ButtonGoogle/ButtonGoogle'
 import './FormLog.css'
 import { TargetState } from './TargetState/TargetState'
 
@@ -44,6 +45,27 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled, 
     }
   }
 
+  // PARA REGISTRARSE E INICAR SESION CON GOOGLE
+  const getFormGoogle = async () => {
+    console.log('se envia los datos de google al back')
+    console.log(formData)
+
+    // 1.activar el aviso
+    setTargetState(() => {
+      return { status: 'loading', message: 'Estamos procesando tu solicitud, espere unos segundos.', targetVisible: true }
+    })
+
+    // enviar el formulario y realizar la peticion al back
+    const result = await sendForm(formData, route)
+
+    if (result.status === 'sucess') {
+      updateUser(result.user) // actualizar usuario el local storage
+    }
+
+    // mostrar los resultados del back en la tarjeta
+    setTargetState({ ...result, targetVisible: true })
+  }
+
   /// /////////////////////////////////
   return (
     <section className='seccion-log'>
@@ -65,7 +87,10 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled, 
             <input type='submit' value={sendText} className={`formlog__button-submit ${!submitEnabled && 'formlog__button-submit--disabled'}`} />
           </form>
 
+          <ButtonGoogle setFormData={setFormData} getFormGoogle={getFormGoogle} />
+
           {other} {/* TEXTO PARA NAVEGAR A LA OTRA SECCION */}
+
         </div>
 
         {/* AVISO PAR MOSTRAR EL ESTADO DE LA PETICION */}

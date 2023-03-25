@@ -1,0 +1,33 @@
+.button-google-container{
+  /* background: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 4rem; */
+}
+.button-google-container span{
+  margin: 2rem 0;
+}
+.button-google{
+  background: red;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  border: 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: var(--black-1);
+  background: var(--white);
+}
+.button-google i{
+  color: rgb(0, 0, 0);
+}
+
+@media (min-width: 780px) {
+  .button-google-container span{
+    margin: 1rem 0 2.3rem;
+  }
+}
