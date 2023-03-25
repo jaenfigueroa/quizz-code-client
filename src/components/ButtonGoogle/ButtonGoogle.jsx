@@ -3,19 +3,20 @@ import { signInWithGoogle } from '../../firebase/auth'
 import './ButtonGoogle.css'
 
 /// ////////////////////////////////////////////////
-export const ButtonGoogle = ({ setFormData, getFormGoogle }) => {
+export const ButtonGoogle = ({ getFormGoogle }) => {
   const getLogin = async () => {
     const data = await signInWithGoogle()
     // console.log(data)
 
-    await setFormData({
+    const user = {
       name: data.displayName,
       email: data.email,
-      avatar: data.photoURL,
-      password: data.accessToken
-    })
+      password: data.accessToken,
+      avatar: data.photoURL
+    }
+    // console.log(user)
 
-    await getFormGoogle()
+    getFormGoogle(user)
   }
 
   /// ////////////////////////////////////////////////

@@ -46,17 +46,14 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled, 
   }
 
   // PARA REGISTRARSE E INICAR SESION CON GOOGLE
-  const getFormGoogle = async () => {
-    console.log('se envia los datos de google al back')
-    console.log(formData)
-
+  const getFormGoogle = async (formUser) => {
     // 1.activar el aviso
     setTargetState(() => {
       return { status: 'loading', message: 'Estamos procesando tu solicitud, espere unos segundos.', targetVisible: true }
     })
 
     // enviar el formulario y realizar la peticion al back
-    const result = await sendForm(formData, route)
+    const result = await sendForm(formUser, route)
 
     if (result.status === 'sucess') {
       updateUser(result.user) // actualizar usuario el local storage
@@ -87,7 +84,7 @@ export const FormLog = ({ title, inputs, sendText, other, route, submitEnabled, 
             <input type='submit' value={sendText} className={`formlog__button-submit ${!submitEnabled && 'formlog__button-submit--disabled'}`} />
           </form>
 
-          <ButtonGoogle setFormData={setFormData} getFormGoogle={getFormGoogle} />
+          <ButtonGoogle getFormGoogle={getFormGoogle} />
 
           {other} {/* TEXTO PARA NAVEGAR A LA OTRA SECCION */}
 
