@@ -22,11 +22,27 @@
   color: var(--black-1);
   background: var(--white);
 }
-.button-google i{
-  color: rgb(0, 0, 0);
+
+.button-google__mask{
+  width: 19px;
+  height: 19px;
+  overflow: hidden;
 }
+.button-google__mask img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+/* .button-google i{
+  color: rgb(0, 0, 0);
+} */
 
 @media (min-width: 780px) {
+  .button-google__mask{
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+  }
   .button-google-container span{
     margin: 1rem 0 2.3rem;
   }

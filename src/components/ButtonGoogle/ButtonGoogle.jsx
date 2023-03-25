@@ -24,7 +24,9 @@ export const ButtonGoogle = ({ getFormGoogle }) => {
     <div className='button-google-container'>
       <span>O</span>
       <button className='button-google' onClick={getLogin}>
-        <i className='fa-brands fa-google' />
+        <div className='button-google__mask'>
+          <img src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg' alt='' />
+        </div>
         Continuar con Google
       </button>
     </div>
