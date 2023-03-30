@@ -3,7 +3,7 @@ import QuestionText from "./QuestionText";
 import DeleteQuestionButton from "./DeleteQuestionButton";
 import EditQuestionButton from "./EditQuestionButton";
 
-const QuestionCard = ({ questionText }) => {
+const QuestionCard = ({ questionId, questionText }) => {
   return (
     <article
       style={{
@@ -11,7 +11,7 @@ const QuestionCard = ({ questionText }) => {
         height: "45px",
         display: "flex",
         justifyContent: "space-between",
-        backgroundColor: 'black',
+        backgroundColor: '#1a1a1d',
       }}
     >
       <QuestionText questionText={questionText} />
@@ -24,7 +24,7 @@ const QuestionCard = ({ questionText }) => {
         }}
       >
         <EditQuestionButton />
-        <DeleteQuestionButton />
+        <DeleteQuestionButton questionId={questionId} />
       </aside>
     </article>
   );

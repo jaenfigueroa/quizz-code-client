@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Tooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
 
-const QuestionButton = ({ pathDefinition, color, tooltipText  }) => {
+const QuestionButton = ({ pathDefinition, color, tooltipText, handleOnClick  }) => {
   const [width, setWidth] = useState("20px");
 
   const handleMouseEnter = () => {
@@ -16,7 +16,7 @@ const QuestionButton = ({ pathDefinition, color, tooltipText  }) => {
       <Tooltip id={`my-tooltip-${tooltipText}`} anchorSelect={`.button-icon-${tooltipText}`} place="top">
         {tooltipText}
       </Tooltip>
-      <span >
+      <span onClick={handleOnClick} >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

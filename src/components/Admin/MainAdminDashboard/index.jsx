@@ -10,7 +10,7 @@ export const MainAdminDashboard = () => {
   const [renderedQuestions, setRenderedQuestions] = useState([]);
   const [totalQuestionsCount, setTotalQuestionsCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-
+  console.log(renderedQuestions)
   const handlePageChange = (action) => {
     if (currentPage !== 1 && action === "prev") {
       setCurrentPage(currentPage - 1);
@@ -36,10 +36,12 @@ export const MainAdminDashboard = () => {
 
   useEffect(() => {
     const fetchSelectedCategoryQuestions = async () => {
+      if (!selectedCategory) {
+        return;
+      }
       try {
         const { paginatedResults, totalQuestionsCount } =
           await getAllCategoryQuestions(selectedCategory, currentPage);
-        console.log(totalQuestionsCount);
         setRenderedQuestions(paginatedResults);
         setTotalQuestionsCount(totalQuestionsCount);
       } catch (err) {
@@ -47,7 +49,7 @@ export const MainAdminDashboard = () => {
       }
     };
     fetchSelectedCategoryQuestions();
-  }, [selectedCategory, currentPage]);
+  }, [selectedCategory, currentPage, totalQuestionsCount]);
 
   const adminContext = {
     categories,
@@ -57,11 +59,16 @@ export const MainAdminDashboard = () => {
     renderedQuestions,
     setRenderedQuestions,
     totalQuestionsCount,
+    setTotalQuestionsCount,
     currentPage,
     setCurrentPage,
     pageSize,
     handlePageChange,
   };
+  if (!renderedQuestions?.length) {
+    return undefined
+  }
+
   return (
     <AdminContext.Provider value={adminContext}>
       <QuestionsGrid questions={renderedQuestions} />

@@ -1,4 +1,5 @@
 import React from "react";
+import { AddQuestionButton } from "./AddQuestionButton";
 import CategorySelect from "./CategorySelect";
 import QuestionsGridTitle from "./QuestionsGridTitle";
 
@@ -11,7 +12,13 @@ const QuestionsGridHeader = () => {
         paddingBottom: "10px",
       }}
     >
-      <QuestionsGridTitle />
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+      }}>
+        <QuestionsGridTitle />
+        <AddQuestionButton />
+      </div>
       <CategorySelect />
     </div>
   );

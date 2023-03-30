@@ -9,7 +9,7 @@ export const QuestionsGrid = ({ questions }) => {
       style={{
         display: "grid",
         gap: "10px",
-        backgroundColor: "grey",
+        backgroundColor: "rgb(83, 81, 99)",
         padding: "20px",
         width: "60vw",
         marginLeft: 'auto',
