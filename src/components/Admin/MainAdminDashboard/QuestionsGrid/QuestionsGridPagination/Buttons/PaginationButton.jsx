@@ -8,6 +8,7 @@ export const PaginationButton = ({ action, pathDefinition }) => {
       onClick={() => handlePageChange(action)}
       style={{
         padding: "5px",
+        
       }}
     >
       <svg
@@ -16,13 +17,12 @@ export const PaginationButton = ({ action, pathDefinition }) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        width="20px"
+        width="25px"
+        style={{
+          cursor: "pointer",
+        }}
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d={pathDefinition}
-        />
+        <path strokeLinecap="round" strokeLinejoin="round" d={pathDefinition} />
       </svg>
     </span>
   );

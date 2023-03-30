@@ -15,7 +15,8 @@ export const QuestionsGrid = ({ questions }) => {
         marginLeft: 'auto',
         marginRight: "auto",
         marginTop: "40px",
-        padding: "30px"
+        padding: "30px",
+        paddingBottom: "10px",
       }}
     >
       <QuestionsGridHeader />

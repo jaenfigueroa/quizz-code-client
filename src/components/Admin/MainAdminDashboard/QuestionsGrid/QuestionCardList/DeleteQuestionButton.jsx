@@ -1,6 +1,6 @@
 import React from "react";
 import "react-tooltip/dist/react-tooltip.css";
-import QuestionButton from "../QuestionButton";
+import QuestionButton from "./QuestionButton";
 
 const DeleteQuestionButton = () => {
   return (

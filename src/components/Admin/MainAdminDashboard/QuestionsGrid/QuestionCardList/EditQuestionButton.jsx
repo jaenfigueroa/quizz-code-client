@@ -1,5 +1,5 @@
 import React from "react";
-import QuestionButton from "../QuestionButton";
+import QuestionButton from "./QuestionButton";
 
 const EditQuestionButton = () => {
     return (

@@ -29,6 +29,7 @@ const QuestionButton = ({ pathDefinition, color, tooltipText  }) => {
           style={{
             width,
             color,
+            cursor: "pointer"
           }}
         >
           <path
