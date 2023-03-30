@@ -8,14 +8,21 @@ import NewQuestionForm from "../../components/Admin/NewQuestionForm/NewQuestionF
 export const Admin = () => {
   /// ///////////////////////////////////////
   const [userCurrentAction, setUserCurrentAction] = useState("viewing");
+  const [questionInEditionId, setQuestionInEditionId] = useState("");
   const adminPageContext = {
     userCurrentAction,
     setUserCurrentAction,
+    questionInEditionId,
+    setQuestionInEditionId,
   };
   return (
     <section className="section-admin">
       <AdminPageContext.Provider value={adminPageContext}>
-        {userCurrentAction === "viewing" ? <MainAdminDashboard /> : userCurrentAction === "adding" ? <NewQuestionForm /> : undefined}
+        {userCurrentAction === "viewing" ? (
+          <MainAdminDashboard />
+        ) : ["adding", "editing"].includes(userCurrentAction) ? (
+          <NewQuestionForm />
+        ) : undefined}
       </AdminPageContext.Provider>
     </section>
   );

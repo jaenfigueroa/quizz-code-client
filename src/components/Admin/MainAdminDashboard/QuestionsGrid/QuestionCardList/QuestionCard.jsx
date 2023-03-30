@@ -23,7 +23,7 @@ const QuestionCard = ({ questionId, questionText }) => {
           justifyContent: "space-between",
         }}
       >
-        <EditQuestionButton />
+        <EditQuestionButton questionId={questionId} />
         <DeleteQuestionButton questionId={questionId} />
       </aside>
     </article>

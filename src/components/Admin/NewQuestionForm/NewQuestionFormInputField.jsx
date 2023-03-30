@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewQuestionFormInputField = ({ title, name, type, placeholder }) => {
+const NewQuestionFormInputField = ({ title, name, type, placeholder, value }) => {
   const min = type === 'number' ? 1 : null
   const max = type === 'number' ? 5 : null
 
@@ -16,6 +16,7 @@ const NewQuestionFormInputField = ({ title, name, type, placeholder }) => {
             min={min}
             max={max}
             placeholder={placeholder}
+            value={value}
           />
           )
         : (
@@ -26,6 +27,7 @@ const NewQuestionFormInputField = ({ title, name, type, placeholder }) => {
             placeholder={placeholder}
             min={min}
             max={max}
+            value={value}
           />
           )}
     </div>
