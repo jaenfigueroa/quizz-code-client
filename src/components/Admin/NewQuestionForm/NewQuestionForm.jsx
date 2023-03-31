@@ -9,6 +9,7 @@ import { GoBackButton } from "./GoBackButton";
 import AdminPageContext from "../../../context/AdminPageContext";
 import { getQuestionById } from "../../../helpers/getQuestionById";
 import { parseQuestionFormResponse } from "../../../helpers/parseQuestionFormResponse";
+import { sendQuestionUpdateForm } from "../../../helpers/sendQuestionUpdateForm";
 
 const NewQuestionForm = () => {
   const user = getUser();
@@ -33,10 +34,15 @@ const NewQuestionForm = () => {
     "option-5": "",
     "correct-answer": "",
   });
-  console.log(formData)
   const onSubmit = async (e) => {
     e.preventDefault();
-    const { status } = await sendNewQuestionForm(formData, user._id);
+    let status;
+    if (userCurrentAction === "adding") {
+      status = await sendNewQuestionForm(formData, user._id).status;
+    } else if (userCurrentAction === "editing") {
+      status = await sendQuestionUpdateForm(formData, questionInEditionId).status;
+    }
+    
     // console.log(status)
     if (status === "error" || status >= 400) {
       console.log("render error");
@@ -49,7 +55,7 @@ const NewQuestionForm = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  const { questionInEditionId, setQuestionInEditionId } =
+  const { questionInEditionId, setQuestionInEditionId, userCurrentAction } =
     useContext(AdminPageContext);
   console.log(questionInEditionId);
   useEffect(() => {
@@ -68,7 +74,7 @@ const NewQuestionForm = () => {
       onChange={getValues}
       onSubmit={onSubmit}
     >
-      <GoBackButton />
+      <GoBackButton setFormData={setFormData} />
       <NewQuestionCategorySelect />
       <NewQuestionFormInputField
         title="Pregunta"
