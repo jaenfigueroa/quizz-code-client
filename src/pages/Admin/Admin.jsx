@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Admin.css";
-import { MainAdminDashboard } from "../../components/Admin/MainAdminDashboard";
+import { MainAdminDashboard } from "../../components/Admin/MainAdminDashboard/MainAdminDashboard";
 import AdminPageContext from "../../context/AdminPageContext";
 import NewQuestionForm from "../../components/Admin/NewQuestionForm/NewQuestionForm";
 

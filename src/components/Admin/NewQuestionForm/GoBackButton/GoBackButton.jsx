@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import AdminPageContext from "../../../context/AdminPageContext";
+import "./GoBackButton.css"
+import AdminPageContext from "../../../../context/AdminPageContext";
 
 export const GoBackButton = ({ setFormData }) => {
   const { setUserCurrentAction, setQuestionInEditionId } = useContext(AdminPageContext);
@@ -30,14 +31,10 @@ export const GoBackButton = ({ setFormData }) => {
   }
   return (
     <input
+      className="new-question-form-back-btn"
       type="submit"
       value="Atras"
       onClick={handleGoBackButtonClick}
-      style={{
-        height: "30px",
-        width: "100px",
-        cursor: "pointer",
-      }}
     />
   );
 };

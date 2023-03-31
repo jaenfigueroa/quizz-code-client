@@ -1,21 +1,17 @@
 import React from "react";
-import { AddQuestionButton } from "./AddQuestionButton";
-import CategorySelect from "./CategorySelect";
-import QuestionsGridTitle from "./QuestionsGridTitle";
+import "./QuestionsGridHeader.css";
+import { AddQuestionButton } from "./AddQuestionButton/AddQuestionButton";
+import CategorySelect from "./CategorySelect/CategorySelect";
+import QuestionsGridTitle from "./QuestionsGridTitle/QuestionsGridTitle";
 
 const QuestionsGridHeader = () => {
   return (
     <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        paddingBottom: "10px",
-      }}
+      className="questions-grid-header"
     >
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-      }}>
+      <div
+        className="questions-grid-header-subcontainer"
+      >
         <QuestionsGridTitle />
         <AddQuestionButton />
       </div>

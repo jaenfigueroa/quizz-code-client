@@ -1,5 +1,5 @@
 import React from "react";
-import { PaginationButton } from "./PaginationButton";
+import { PaginationButton } from "./PaginationButton/PaginationButton";
 
 export const NextButton = () => {
   return (

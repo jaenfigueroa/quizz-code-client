@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import AdminPageContext from "../../../../../context/AdminPageContext";
-import QuestionButton from "./QuestionButton";
+import AdminPageContext from "../../../../../../context/AdminPageContext";
+import QuestionButton from "./QuestionButton/QuestionButton";
 
 const EditQuestionButton = ({ questionId }) => {
   const { setQuestionInEditionId, setUserCurrentAction } = useContext(AdminPageContext);

@@ -1,14 +1,10 @@
 import React from "react";
+import "./QuestionText.css";
 
 const QuestionText = ({ questionText }) => {
   return (
     <p
-      style={{
-        width: "87%",
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-      }}
+      className="question-text"
     >
       {questionText}
     </p>

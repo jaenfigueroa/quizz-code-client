@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import AdminContext from "../../../../../context/AdminContext";
+import "./CategorySelect.css";
+import AdminContext from "../../../../../../context/AdminContext";
 
 const CategorySelect = () => {
     const { categories, setSelectedCategory, setCurrentPage } = useContext(AdminContext);
@@ -9,7 +10,7 @@ const CategorySelect = () => {
     }
     return (
         <select
-        className="section-admin__select"
+        className=""
         name="category"
         onChange={handleChangeCategory}
       >

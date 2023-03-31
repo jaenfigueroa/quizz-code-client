@@ -10,7 +10,6 @@ export const MainAdminDashboard = () => {
   const [renderedQuestions, setRenderedQuestions] = useState([]);
   const [totalQuestionsCount, setTotalQuestionsCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  console.log(renderedQuestions)
   const handlePageChange = (action) => {
     if (currentPage !== 1 && action === "prev") {
       setCurrentPage(currentPage - 1);

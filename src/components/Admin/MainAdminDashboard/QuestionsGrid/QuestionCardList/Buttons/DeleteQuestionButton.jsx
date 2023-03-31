@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 
-import QuestionButton from "./QuestionButton";
+import QuestionButton from "./QuestionButton/QuestionButton";
 
 import "react-tooltip/dist/react-tooltip.css";
-import AdminContext from "../../../../../context/AdminContext";
-import { deleteQuestionById } from "../../../../../helpers/deleteQuestionById";
+import AdminContext from "../../../../../../context/AdminContext";
+import { deleteQuestionById } from "../../../../../../helpers/deleteQuestionById";
 
 const DeleteQuestionButton = ({ questionId }) => {
   const { totalQuestionsCount, setTotalQuestionsCount } = useContext(AdminContext);
