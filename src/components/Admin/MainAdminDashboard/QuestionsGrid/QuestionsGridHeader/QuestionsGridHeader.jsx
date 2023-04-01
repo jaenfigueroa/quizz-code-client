@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import './QuestionsGridHeader.css'
 import CategorySelect from './CategorySelect'
 import AdminPageContext from '../../../../../context/AdminPageContext'
 
