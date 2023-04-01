@@ -7,6 +7,6 @@ export const CurrentPageInfo = () => {
   const pageRangeMax = totalQuestionsCount < pageSize ? totalQuestionsCount : currentPage * 10
 
   return (
-    <p className='questions-pagination-info'>{`${pageRangeMin}-${pageRangeMax} of ${totalQuestionsCount}`}</p>
+    <p className='questions-pagination-info'>{`${pageRangeMin} de ${pageRangeMax} / total: ${totalQuestionsCount}`}</p>
   )
 }

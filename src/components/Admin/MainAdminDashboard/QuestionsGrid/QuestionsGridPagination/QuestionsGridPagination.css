@@ -1,10 +1,16 @@
 .questions-grid-pagination {
   display: flex;
   align-items: center;
-  /* background: blue; */
+  justify-content: center;
+  background: blue;
   padding: 1rem;
   gap: 1rem;
   margin-top: 2rem;
+  background: #424242;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: .5rem;
+  gap: 2rem;
 }
 
 .questions-pagination-info {
@@ -12,11 +18,28 @@
 }
 
 .pagination-button-container {
-  /* background: goldenrod; */
+  background: #1d1b1b;
+  border-radius: .5rem;
+  padding: .5rem;
+}
+.pagination-button-container:hover{
+  background: var(--blue);
 }
 
-@media (min-width: 780px) {
+@media (min-width: 480px) {
+  .questions-grid-pagination {
+    /* background: blue; */
+    padding: 1rem;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
   .questions-pagination-info {
     font-size: 1.8rem;
+  }
+
+  .pagination-button-container {
+    padding: .8rem;
+    border-radius: .5rem;
   }
 }

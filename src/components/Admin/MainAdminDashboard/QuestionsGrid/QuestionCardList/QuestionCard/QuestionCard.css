@@ -23,7 +23,6 @@
 }
 
 .question-card-btn-container span{
-  background: rgb(201, 74, 215);
   position: relative;
   padding:  1rem 1.5rem;
   padding:  .5rem 1rem;
@@ -31,17 +30,27 @@
   background: #535163;
 }
 
+.question-card-btn-container span:hover{
+  background: var(--green-2);
+}
+.question-card-btn-container span:nth-child(2):hover{
+  background: var(--red);
+}
 .question-card-btn-container span:after{
   content: attr(data-text);
   background: green;
   position: absolute;
   top: -40px;
   left: -20px;
+
+  top: -40px;
+  left: -8px;
+  
   padding: 5px;
   border-radius: 5px;
   display: none;
   z-index: 2;
-  background: #3a3942;
+  background: var(--blue);
 }
 
 .question-card-btn-container span:hover:after{

@@ -7,8 +7,8 @@ import { CurrentPageInfo } from './CurrentPageInfo/CurrentPageInfo'
 export const QuestionsGridPagination = () => {
   return (
     <article className='questions-grid-pagination'>
-      <CurrentPageInfo />
       <PreviousButton />
+      <CurrentPageInfo />
       <NextButton />
     </article>
   )
