@@ -1,10 +1,14 @@
 .question-card {
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #1a1a1d;
   background: brown;
+  gap: 1rem;
+  padding: 10px;
+}
+.question-text {
+  background-color: rgb(49, 121, 121);
 }
 
 .question-card-btn-container {
