@@ -3,13 +3,12 @@
   background: #17171a;
   background: url(../../assets/settings.png);
   background-size: 300px;
+  background: red;
 }
 
 /* FORMULARIO */
 .section-admin__form {
-  background: blue;
   background: rgb(83, 81, 99);
-
   /* background: #2a2d35; */
 
   display: flex;

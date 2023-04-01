@@ -12,7 +12,7 @@ export const InputOption = ({ number, formData }) => {
           <option value='code'>Codigo</option>
         </select>
 
-        <select className='section-admin__select' name={`option-${number}-content-language`} value={formData[`option-${number}-content-language`]} >
+        <select className='section-admin__select' name={`option-${number}-content-language`} value={formData[`option-${number}-content-language`]}>
           <option value='html'>HTML</option>
           <option value='css'>CSS</option>
           <option value='javascript'>Javascript</option>

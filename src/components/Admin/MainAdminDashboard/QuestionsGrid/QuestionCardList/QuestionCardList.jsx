@@ -1,5 +1,5 @@
-import React from "react";
-import QuestionCard from "./QuestionCard/QuestionCard";
+import React from 'react'
+import QuestionCard from './QuestionCard/QuestionCard'
 
 const QuestionCardList = ({ questions }) => {
   return (
@@ -8,7 +8,7 @@ const QuestionCardList = ({ questions }) => {
         <QuestionCard key={question._id} questionId={question._id} questionText={question.question} />
       ))}
     </>
-  );
-};
+  )
+}
 
-export default QuestionCardList;
+export default QuestionCardList

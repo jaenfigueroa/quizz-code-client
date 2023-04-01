@@ -1,15 +1,14 @@
-import React, { useContext } from "react";
-import "./AddQuestionButton.css";
-import AdminPageContext from "../../../../../../context/AdminPageContext";
+import React, { useContext } from 'react'
+import AdminPageContext from '../../../../../../context/AdminPageContext'
 
 export const AddQuestionButton = () => {
-  const { setUserCurrentAction } = useContext(AdminPageContext);
+  const { setUserCurrentAction } = useContext(AdminPageContext)
   return (
     <input
-      className="add-question-button"
-      type="submit"
-      value="Agregar pregunta"
-      onClick={() => setUserCurrentAction("adding")}
+      className='add-question-button'
+      type='submit'
+      value='Agregar pregunta'
+      onClick={() => setUserCurrentAction('adding')}
     />
-  );
-};
+  )
+}

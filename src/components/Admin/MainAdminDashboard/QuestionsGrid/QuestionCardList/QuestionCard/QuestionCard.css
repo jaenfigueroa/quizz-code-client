@@ -1,13 +1,17 @@
 .question-card {
   padding: 10px;
-  height: 45px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #1a1a1d;
+  background: brown;
 }
 
 .question-card-btn-container {
-    width: 8%;
-    display: flex;
-    justify-content: space-between;
+  background: blue;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+  width: max-content;
+  gap: 1rem;
 }

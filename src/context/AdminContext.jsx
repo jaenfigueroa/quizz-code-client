@@ -1,5 +1,5 @@
-import { createContext } from "react";
+import { createContext } from 'react'
 
-const AdminContext = createContext(null);
+const AdminContext = createContext(null)
 
 export default AdminContext

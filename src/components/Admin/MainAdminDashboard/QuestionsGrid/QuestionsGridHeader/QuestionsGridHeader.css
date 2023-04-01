@@ -1,10 +1,9 @@
 .questions-grid-header {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 10px;
+    background: goldenrod;
 }
 
 .questions-grid-header-subcontainer {
     display: flex;
     align-items: center;
+    background: crimson;
 }
