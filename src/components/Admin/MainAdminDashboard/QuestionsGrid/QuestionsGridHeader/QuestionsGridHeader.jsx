@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import CategorySelect from './CategorySelect/CategorySelect'
+import CategorySelect from './CategorySelect'
 import AdminPageContext from '../../../../../context/AdminPageContext'
 
 const QuestionsGridHeader = () => {

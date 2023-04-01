@@ -1,15 +1,22 @@
 .questions-grid-pagination {
   display: flex;
   align-items: center;
-  background: blue;
+  /* background: blue; */
   padding: 1rem;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .questions-pagination-info {
-  background: green;
+  /* background: green; */
 }
 
 .pagination-button-container {
-  background: goldenrod;
+  /* background: goldenrod; */
+}
+
+@media (min-width: 780px) {
+  .questions-pagination-info {
+    font-size: 1.8rem;
+  }
 }

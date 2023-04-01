@@ -3,7 +3,9 @@
   background: #17171a;
   background: url(../../assets/settings.png);
   background-size: 300px;
-  background: red;
+  /* background: red; */
+
+
 }
 
 /* FORMULARIO */
@@ -19,9 +21,13 @@
   margin: 0 auto;
 }
 
+.section-admin__form > input{
+  border: none;
+  border-radius: .5rem;
+}
+
 /* CADA BLOQUE (5) */
 .section-admin__block {
-  background: green;
 
   /* background: #2a2d35; */
   /* background: #272931; */
@@ -125,6 +131,13 @@
     gap: 2rem;
     gap: 4rem;
     gap: 3rem;
+  }
+  .section-admin__form > input{
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    height: max-content;
+    font-size: 1.8rem;
   }
 
   /* CADA BLOQUE (5) */
