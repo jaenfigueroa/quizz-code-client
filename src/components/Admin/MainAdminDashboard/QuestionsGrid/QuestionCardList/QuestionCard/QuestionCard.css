@@ -19,3 +19,23 @@
   width: max-content;
   gap: 1rem;
 }
+
+.question-card-btn-container span{
+  background: rgb(201, 74, 215);
+  position: relative;
+}
+
+.question-card-btn-container span:after{
+  content: attr(data-text);
+  background: green;
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+}
+
+.question-card-btn-container span:hover:after{
+  display: flex;
+}
