@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import './CurrentPageInfo.css'
 import AdminContext from '../../../../../../context/AdminContext'
 
 export const CurrentPageInfo = () => {

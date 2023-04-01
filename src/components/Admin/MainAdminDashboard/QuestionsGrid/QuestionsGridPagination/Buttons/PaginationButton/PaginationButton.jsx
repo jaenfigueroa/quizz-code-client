@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import './PaginationButton.css'
 import AdminContext from '../../../../../../../context/AdminContext'
 
 export const PaginationButton = ({ action, pathDefinition }) => {
