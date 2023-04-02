@@ -1,0 +1,51 @@
+/* HEADER DEL GRID /////////////////////////////////////*/
+.questions-grid-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* border: 2px dashed black; */
+  padding: 1rem;
+  /* background: violet; */
+}
+
+.questions-grid-title {
+  font-size: 2rem;
+}
+
+.questions-grid-header>div {
+  display: flex;
+  gap: .5rem;
+  /* background: green; */
+  width: max-content;
+}
+
+.questions-grid-header select,
+.questions-grid-header input {
+  padding: .5rem;
+  border: none;
+  border-radius: .5rem;
+  outline: none;
+}
+
+@media (min-width: 560px) {
+  .questions-grid-header {
+    flex-direction: row;
+    justify-content: space-between;
+    /* background: red; */
+  }
+
+  .questions-grid-header>div {
+    gap: 2rem;
+  }
+
+  .questions-grid-header select,
+  .questions-grid-header input {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 780px) {
+  .questions-grid-title {
+    font-size: 2.5rem;
+  }
+}

@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import NewQuestionFormInputField from './NewQuestionFormInputField'
 import QuestionChoicesField from './QuestionChoicesField'
 import NewQuestionFormSubmitButton from './NewQuestionFormSubmitButton'
 import { getUser } from '../../../helpers/log/getUser'
 import { sendNewQuestionForm } from '../../../helpers/sendNewQuestionForm'
 import { NewQuestionCategorySelect } from './NewQuestionCategorySelect'
+import { GoBackButton } from './GoBackButton/GoBackButton'
+import AdminPageContext from '../../../context/AdminPageContext'
+import { getQuestionById } from '../../../helpers/getQuestionById'
+import { parseQuestionFormResponse } from '../../../helpers/parseQuestionFormResponse'
+import { sendQuestionUpdateForm } from '../../../helpers/sendQuestionUpdateForm'
 
 const NewQuestionForm = () => {
   const user = getUser()
@@ -31,7 +36,13 @@ const NewQuestionForm = () => {
   })
   const onSubmit = async (e) => {
     e.preventDefault()
-    const { status } = await sendNewQuestionForm(formData, user._id)
+    let status
+    if (userCurrentAction === 'adding') {
+      status = await sendNewQuestionForm(formData, user._id).status
+    } else if (userCurrentAction === 'editing') {
+      status = await sendQuestionUpdateForm(formData, questionInEditionId).status
+    }
+
     // console.log(status)
     if (status === 'error' || status >= 400) {
       console.log('render error')
@@ -40,35 +51,55 @@ const NewQuestionForm = () => {
       console.log('redirect to success page')
     }
   }
+
   const getValues = (e) => {
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
   }
+
+  const { questionInEditionId, userCurrentAction } = useContext(AdminPageContext)
+
+  console.log(questionInEditionId)
+  useEffect(() => {
+    const fetchQuestionById = async () => {
+      const response = await getQuestionById(questionInEditionId)
+      const newFormData = parseQuestionFormResponse(response.question)
+      setFormData(newFormData)
+    }
+    if (questionInEditionId) {
+      fetchQuestionById()
+    }
+  }, [])
+
   return (
     <form
       className='section-admin__form'
       onChange={getValues}
       onSubmit={onSubmit}
     >
+      <GoBackButton setFormData={setFormData} />
       <NewQuestionCategorySelect />
       <NewQuestionFormInputField
         title='Pregunta'
         name='question'
         type='text'
         placeholder='Pregunta General'
+        value={formData.question}
       />
       <NewQuestionFormInputField
         title='Código (opcional)'
         name='optional-code'
         type='code'
         placeholder='Código que acompaña la pregunta'
+        value={formData['optional-code']}
       />
-      <QuestionChoicesField />
+      <QuestionChoicesField formData={formData} />
       <NewQuestionFormInputField
         title='Opción Correcta'
         name='correct-answer'
         type='number'
         placeholder='Número de la opción correcta'
+        value={formData['correct-answer']}
       />
       <NewQuestionFormSubmitButton />
     </form>

@@ -1,13 +1,13 @@
 import { global } from './global'
 import { parseQuestionBody } from './parseQuestionBody'
 
-export const sendNewQuestionForm = async (body, userId) => {
+export const sendQuestionUpdateForm = async (body, questionId) => {
   const requestBody = parseQuestionBody(body);
   try {
     const response = await fetch(
-      `${global.urlServer}/questions?user-id=${userId}`,
+      `${global.urlServer}/questions/${questionId}`,
       {
-        method: 'POST',
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -15,6 +15,7 @@ export const sendNewQuestionForm = async (body, userId) => {
       }
     )
     const data = await response.json()
+    
     return {
       status: response.status,
       data

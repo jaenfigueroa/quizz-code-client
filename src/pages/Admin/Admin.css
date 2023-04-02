@@ -3,13 +3,14 @@
   background: #17171a;
   background: url(../../assets/settings.png);
   background-size: 300px;
+  /* background: red; */
+
+
 }
 
 /* FORMULARIO */
 .section-admin__form {
-  background: blue;
   background: rgb(83, 81, 99);
-
   /* background: #2a2d35; */
 
   display: flex;
@@ -20,12 +21,16 @@
   margin: 0 auto;
 }
 
+.section-admin__form > input{
+  border: none;
+  border-radius: .5rem;
+}
+
 /* CADA BLOQUE (5) */
 .section-admin__block {
-  background: green;
 
-  background: #2a2d35;
-  background: #272931;
+  /* background: #2a2d35; */
+  /* background: #272931; */
 
   background: #1a1a1d;
   background: #1e1e22;
@@ -126,6 +131,13 @@
     gap: 2rem;
     gap: 4rem;
     gap: 3rem;
+  }
+  .section-admin__form > input{
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    height: max-content;
+    font-size: 1.8rem;
   }
 
   /* CADA BLOQUE (5) */

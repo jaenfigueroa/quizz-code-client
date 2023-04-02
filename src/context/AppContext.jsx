@@ -9,7 +9,7 @@ export const AppContext = createContext(null)
 
 /// ////////////////////////////////////////////////////////
 export const ContextProvider = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState(true)
   const [isAdmin, setIsAdmin] = useState(true)
   const [modal, setModal] = useState({ visible: false, status: 'unregistered', name: '' })
 

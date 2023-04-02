@@ -1,0 +1,21 @@
+.questions-grid {
+  background: rgb(83, 81, 99);
+  padding: 20px;
+
+  width: 100%;
+  /* background: green; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: .5rem;
+}
+
+@media (min-width: 920px) {
+  .questions-grid {
+    margin: 4rem auto;
+    padding: 3rem 3rem 2rem;
+  }
+}
