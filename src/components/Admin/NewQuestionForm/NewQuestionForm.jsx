@@ -17,23 +17,24 @@ const NewQuestionForm = () => {
     category: '',
     question: '',
     'optional-code': '',
-    'option-1-content-type': 'texto',
-    'option-1-content-language': 'html',
+    'option-1-content-type': 'text',
+    'option-1-content-language': null,
     'option-1': '',
-    'option-2-content-type': 'texto',
-    'option-2-content-language': 'html',
+    'option-2-content-type': 'text',
+    'option-2-content-language': null,
     'option-2': '',
-    'option-3-content-type': 'texto',
-    'option-3-content-language': 'html',
+    'option-3-content-type': 'text',
+    'option-3-content-language': null,
     'option-3': '',
-    'option-4-content-type': 'texto',
-    'option-4-content-language': 'html',
+    'option-4-content-type': 'text',
+    'option-4-content-language': null,
     'option-4': '',
-    'option-5-content-type': 'texto',
-    'option-5-content-language': 'html',
+    'option-5-content-type': 'text',
+    'option-5-content-language': null,
     'option-5': '',
     'correct-answer': ''
   })
+  console.log(formData)
   const onSubmit = async (e) => {
     e.preventDefault()
     let status
@@ -54,7 +55,7 @@ const NewQuestionForm = () => {
 
   const getValues = (e) => {
     const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
+    setFormData({ ...formData, [name]: value })  
   }
 
   const { questionInEditionId, userCurrentAction } = useContext(AdminPageContext)
@@ -71,6 +72,18 @@ const NewQuestionForm = () => {
     }
   }, [])
 
+  useEffect(() => {
+    const numberOfAnswers = 5;
+    for (let number = 1; number <= numberOfAnswers; number++) {
+      if (formData[`option-${number}-content-language`] === null && formData[`option-${number}-content-type`] === "code") {
+        setFormData({
+          ...formData,
+          [`option-${number}-content-language`]: "html"
+        })
+      }
+    }
+    
+  }, [formData])
   return (
     <form
       className='section-admin__form'
