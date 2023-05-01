@@ -81,6 +81,12 @@ const NewQuestionForm = () => {
           [`option-${number}-content-language`]: "html"
         })
       }
+      if (formData[`option-${number}-content-type`] === "text" && formData[`option-${number}-content-language`] !== null) {
+        setFormData({
+          ...formData,
+          [`option-${number}-content-language`]: null
+        })
+      }
     }
     
   }, [formData])
