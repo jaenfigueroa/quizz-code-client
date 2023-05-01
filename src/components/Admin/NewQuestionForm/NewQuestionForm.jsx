@@ -8,7 +8,7 @@ import { NewQuestionCategorySelect } from './NewQuestionCategorySelect'
 import { GoBackButton } from './GoBackButton/GoBackButton'
 import AdminPageContext from '../../../context/AdminPageContext'
 import { getQuestionById } from '../../../helpers/getQuestionById'
-import { parseQuestionFormResponse } from '../../../helpers/parseQuestionFormResponse'
+import { parseQuestionFromResponse } from '../../../helpers/parseQuestionFromResponse'
 import { sendQuestionUpdateForm } from '../../../helpers/sendQuestionUpdateForm'
 
 const NewQuestionForm = () => {
@@ -64,7 +64,7 @@ const NewQuestionForm = () => {
   useEffect(() => {
     const fetchQuestionById = async () => {
       const response = await getQuestionById(questionInEditionId)
-      const newFormData = parseQuestionFormResponse(response.question)
+      const newFormData = parseQuestionFromResponse(response.question)
       setFormData(newFormData)
     }
     if (questionInEditionId) {
@@ -97,7 +97,7 @@ const NewQuestionForm = () => {
       onSubmit={onSubmit}
     >
       <GoBackButton setFormData={setFormData} />
-      <NewQuestionCategorySelect />
+      <NewQuestionCategorySelect formData={formData} />
       <NewQuestionFormInputField
         title='Pregunta'
         name='question'
