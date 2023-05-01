@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { getUser } from '../../../helpers/log/getUser'
 import './GlobalTable.css'
+import UserCardModal from '../../../components/Ranking/UserCardModal/UserCardModal'
 
 /// ///////////////////////////////////
 export const GlobalTable = ({ listTable }) => {
@@ -9,7 +10,6 @@ export const GlobalTable = ({ listTable }) => {
   /// ///////////////////////////////////
   return (
     <section className='global-table'>
-
       <div className='global-table__top-container'>
         {listTable.length >= 1 && (
           <div>
@@ -38,19 +38,39 @@ export const GlobalTable = ({ listTable }) => {
       </header>
 
       <main>
-        {
-          listTable && listTable.map((user, index) => (
-            <article key={index} className={userSaved && user.name === userSaved.name ? 'user' : ''}>
-              <span>
-                <img src={user.avatar} alt={`foto de ${user.name}`} />
-                <p className='ranking-table__name'>{user.name}</p>
-              </span>
-              <p className='ranking-table__numbers'>{user.points}</p>
-              <p className='ranking-table__numbers ranking-table__numbers--2'>{user.challenges}</p>
-            </article>
-          ))
-        }
+        {listTable &&
+          listTable.map((user, index) => {
+            const [isOpen, setIsOpen] = useState(false);
+            function handleOpen() {
+              setIsOpen(true);
+            }
+
+            function handleClose() {
+              setIsOpen(false);
+            }
+            return (
+              <>
+                <UserCardModal user={user} isOpen={isOpen} onClose={handleClose} />
+                <article
+                  key={index}
+                  className={
+                    userSaved && user.name === userSaved.name ? 'user' : ''
+                  }
+                  onClick={handleOpen}
+                >
+                  <span>
+                    <img src={user.avatar} alt={`foto de ${user.name}`} />
+                    <p className='ranking-table__name'>{user.name}</p>
+                  </span>
+                  <p className='ranking-table__numbers'>{user.points}</p>
+                  <p className='ranking-table__numbers ranking-table__numbers--2'>
+                    {user.challenges}
+                  </p>
+                </article>
+              </>
+            );
+          })}
       </main>
     </section>
-  )
-}
+  );
+};

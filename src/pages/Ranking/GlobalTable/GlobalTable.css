@@ -99,6 +99,7 @@
   align-items: center;
   color: white;
   position: relative;
+  cursor: pointer;
 }
 
 /* .global-table article:after{
