@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./UserCardModal.css";
 
 function UserCardModal({ user, isOpen, onClose }) {
   if (!isOpen) {
     return null;
   }
-
+  useEffect(() => {
+    setTimeout(() => {
+      const element = document.querySelector(".modal-overlay");
+      if (element) {
+        element.className = "modal-overlay-open"
+      }
+    }, 50)
+  }, [])
   return (
     <div className="modal-overlay">
       <div className="modal">
