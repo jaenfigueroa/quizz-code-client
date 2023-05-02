@@ -1,5 +1,6 @@
-export const parseQuestionFormResponse = (questionObject) => {
+export const parseQuestionFromResponse = (questionObject) => {
     const newFormData = {};
+    newFormData.category = questionObject.category;
     newFormData.question = questionObject.question;
     newFormData["optional-code"] = questionObject.optionalCode;
     newFormData["correct-answer"] = questionObject.correctAnswer;

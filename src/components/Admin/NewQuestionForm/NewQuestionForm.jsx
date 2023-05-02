@@ -8,7 +8,7 @@ import { NewQuestionCategorySelect } from './NewQuestionCategorySelect'
 import { GoBackButton } from './GoBackButton/GoBackButton'
 import AdminPageContext from '../../../context/AdminPageContext'
 import { getQuestionById } from '../../../helpers/getQuestionById'
-import { parseQuestionFormResponse } from '../../../helpers/parseQuestionFormResponse'
+import { parseQuestionFromResponse } from '../../../helpers/parseQuestionFromResponse'
 import { sendQuestionUpdateForm } from '../../../helpers/sendQuestionUpdateForm'
 
 const NewQuestionForm = () => {
@@ -17,23 +17,24 @@ const NewQuestionForm = () => {
     category: '',
     question: '',
     'optional-code': '',
-    'option-1-content-type': 'texto',
-    'option-1-content-language': 'html',
+    'option-1-content-type': 'text',
+    'option-1-content-language': null,
     'option-1': '',
-    'option-2-content-type': 'texto',
-    'option-2-content-language': 'html',
+    'option-2-content-type': 'text',
+    'option-2-content-language': null,
     'option-2': '',
-    'option-3-content-type': 'texto',
-    'option-3-content-language': 'html',
+    'option-3-content-type': 'text',
+    'option-3-content-language': null,
     'option-3': '',
-    'option-4-content-type': 'texto',
-    'option-4-content-language': 'html',
+    'option-4-content-type': 'text',
+    'option-4-content-language': null,
     'option-4': '',
-    'option-5-content-type': 'texto',
-    'option-5-content-language': 'html',
+    'option-5-content-type': 'text',
+    'option-5-content-language': null,
     'option-5': '',
     'correct-answer': ''
   })
+  console.log(formData)
   const onSubmit = async (e) => {
     e.preventDefault()
     let status
@@ -54,7 +55,7 @@ const NewQuestionForm = () => {
 
   const getValues = (e) => {
     const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
+    setFormData({ ...formData, [name]: value })  
   }
 
   const { questionInEditionId, userCurrentAction } = useContext(AdminPageContext)
@@ -63,7 +64,7 @@ const NewQuestionForm = () => {
   useEffect(() => {
     const fetchQuestionById = async () => {
       const response = await getQuestionById(questionInEditionId)
-      const newFormData = parseQuestionFormResponse(response.question)
+      const newFormData = parseQuestionFromResponse(response.question)
       setFormData(newFormData)
     }
     if (questionInEditionId) {
@@ -71,6 +72,24 @@ const NewQuestionForm = () => {
     }
   }, [])
 
+  useEffect(() => {
+    const numberOfAnswers = 5;
+    for (let number = 1; number <= numberOfAnswers; number++) {
+      if (formData[`option-${number}-content-language`] === null && formData[`option-${number}-content-type`] === "code") {
+        setFormData({
+          ...formData,
+          [`option-${number}-content-language`]: "html"
+        })
+      }
+      if (formData[`option-${number}-content-type`] === "text" && formData[`option-${number}-content-language`] !== null) {
+        setFormData({
+          ...formData,
+          [`option-${number}-content-language`]: null
+        })
+      }
+    }
+    
+  }, [formData])
   return (
     <form
       className='section-admin__form'
@@ -78,7 +97,7 @@ const NewQuestionForm = () => {
       onSubmit={onSubmit}
     >
       <GoBackButton setFormData={setFormData} />
-      <NewQuestionCategorySelect />
+      <NewQuestionCategorySelect formData={formData} />
       <NewQuestionFormInputField
         title='Pregunta'
         name='question'

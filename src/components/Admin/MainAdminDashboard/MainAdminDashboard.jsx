@@ -13,11 +13,10 @@ export const MainAdminDashboard = () => {
   const handlePageChange = (action) => {
     if (currentPage !== 1 && action === 'prev') {
       setCurrentPage(currentPage - 1)
-    } else if (action === 'next') {
+    } else if (action === 'next' && (currentPage) * 10 < totalQuestionsCount) {
       setCurrentPage(currentPage + 1)
     }
   }
-  const pageSize = 10
   useEffect(() => {
     const fetchAllCategories = async () => {
       try {
@@ -61,7 +60,6 @@ export const MainAdminDashboard = () => {
     setTotalQuestionsCount,
     currentPage,
     setCurrentPage,
-    pageSize,
     handlePageChange
   }
   if (!renderedQuestions?.length) {
