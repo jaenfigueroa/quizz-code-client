@@ -1,8 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { getUser } from '../../helpers/log/getUser'
 import './Profile.css'
 import { SettingAvatar } from './SettingAvatar/SettingAvatar'
 import { SettingOption } from './SettingOption/SettingOption'
+import { resetPassword } from '../../helpers/resetPassword'
+import { deleteUser } from '../../helpers/log/deleteUser'
+import { useNavigate } from 'react-router-dom'
+import { AppContext } from '../../context/AppContext'
 
 /// /////////////////////////////////////
 export const Profile = () => {
@@ -11,6 +15,9 @@ export const Profile = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const { setIsAuthenticated } = useContext(AppContext)
+  const navigate = useNavigate()
 
   /// /////////////////////////////////////
   return (
@@ -42,13 +49,24 @@ export const Profile = () => {
             value={user.email}
             editable={false}
           />
-          {/* <SettingOption
-            label='Contraseña'
-            type='password'
-            name='newPassword'
-            editable
-          /> */}
+
+          {/* RESETEAR CONTRASEÑA */}
+          <section className='setting-card'>
+            <p className='setting-card__title'>Contraseña</p>
+            <button
+              type='submit'
+              className='setting-card__button'
+              onClick={() => {
+                resetPassword()
+                deleteUser() // eliminar datos del usario del local storage
+                setIsAuthenticated(false)
+                navigate('/login')
+              }}
+            >Resetear Contraseña
+            </button>
+          </section>
         </section>
+
       </div>
 
     </section>
