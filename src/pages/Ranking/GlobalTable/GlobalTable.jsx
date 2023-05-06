@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { getUser } from '../../../helpers/log/getUser'
 import './GlobalTable.css'
 import UserCardModal from '../../../components/Ranking/UserCardModal/UserCardModal'
@@ -40,19 +40,18 @@ export const GlobalTable = ({ listTable }) => {
       <main>
         {listTable &&
           listTable.map((user, index) => {
-            const [isOpen, setIsOpen] = useState(false);
-            function handleOpen() {
-              setIsOpen(true);
+            const [isOpen, setIsOpen] = useState(false)
+            function handleOpen () {
+              setIsOpen(true)
             }
 
-            function handleClose() {
-              setIsOpen(false);
+            function handleClose () {
+              setIsOpen(false)
             }
             return (
-              <>
+              <div key={index}>
                 <UserCardModal user={user} isOpen={isOpen} onClose={handleClose} />
                 <article
-                  key={index}
                   className={
                     userSaved && user.name === userSaved.name ? 'user' : ''
                   }
@@ -67,10 +66,10 @@ export const GlobalTable = ({ listTable }) => {
                     {user.challenges}
                   </p>
                 </article>
-              </>
-            );
+              </div>
+            )
           })}
       </main>
     </section>
-  );
-};
+  )
+}
